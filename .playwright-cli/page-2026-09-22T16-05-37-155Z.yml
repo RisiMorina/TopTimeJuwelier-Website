@@ -1,0 +1,240 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: Spijkerboorsteeg 10, Deventer · Vandaag 10:00–17:30
+    - generic [ref=e5]:
+      - link "(0570) 61 21 17" [ref=e6] [cursor=pointer]:
+        - /url: tel:+31570612117
+      - link "Route & openingstijden" [ref=e7] [cursor=pointer]:
+        - /url: "#visit"
+  - navigation [ref=e8]:
+    - generic [ref=e9]:
+      - link "Top Time Juwelier" [ref=e10] [cursor=pointer]:
+        - /url: "#top"
+        - text: Top Time
+        - generic [ref=e11]: Juwelier
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "Verhaal" [ref=e14] [cursor=pointer]:
+            - /url: "#story"
+        - listitem [ref=e15]:
+          - link "Horloges" [ref=e16] [cursor=pointer]:
+            - /url: "#brands"
+        - listitem [ref=e17]:
+          - link "Sieraden" [ref=e18] [cursor=pointer]:
+            - /url: "#collections"
+        - listitem [ref=e19]:
+          - link "Reparatie" [ref=e20] [cursor=pointer]:
+            - /url: "#services"
+        - listitem [ref=e21]:
+          - link "Bezoek ons" [ref=e22] [cursor=pointer]:
+            - /url: "#visit"
+      - link "Plan een bezoek" [ref=e23] [cursor=pointer]:
+        - /url: "#visit"
+  - banner [ref=e24]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - text: 100 jaar vakmanschap ·
+        - generic [ref=e29]: sinds 1926
+      - heading "Al honderd jaar de tijd van Deventer." [level=1] [ref=e30]
+      - paragraph [ref=e31]: Sinds 1926 uw juwelier aan de Spijkerboorsteeg — voor een horloge dat meegaat en een sieraad dat blijft. Van Seiko tot lab-grown diamant.
+      - generic [ref=e32]:
+        - link "Bezoek de winkel" [ref=e33] [cursor=pointer]:
+          - /url: "#visit"
+        - link "Bel (0570) 61 21 17" [ref=e34] [cursor=pointer]:
+          - /url: tel:+31570612117
+  - generic [ref=e36]:
+    - figure [ref=e37]:
+      - img "De etalages van Top Time Juwelier met horloges van Lorus, Seiko en Mondaine op houten displays" [ref=e38]
+    - generic [ref=e39]:
+      - text: Ons verhaal
+      - heading "Eén adres, vier generaties klanten." [level=2] [ref=e40]
+      - paragraph [ref=e41]: Al sinds 1926 staat Top Time aan een van de gezelligste steegjes van Deventer. Wat begon als een klein horlogeatelier is uitgegroeid tot een vertrouwde juwelier waar de sfeer van hout en messing nog altijd de toon zet — en waar elk horloge en elk sieraad met evenveel zorg over de toonbank gaat als honderd jaar geleden.
+      - paragraph [ref=e42]: "We combineren tijdloze merken met een moderne kijk op sieraden: gecertificeerd goud, en lab-grown diamant voor wie mooi wil dragen met een goed geweten."
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]: "1926"
+          - text: Jaar van oprichting
+        - generic [ref=e46]:
+          - generic [ref=e47]: "100"
+          - text: Jaar in de Spijkerboorsteeg
+        - generic [ref=e48]:
+          - generic [ref=e49]: "6"
+          - text: Horlogemerken op voorraad
+  - generic [ref=e51]:
+    - generic [ref=e52]:
+      - text: Horlogemerken
+      - heading "Klassiek en modern, naast elkaar in de vitrine." [level=2] [ref=e53]
+      - paragraph [ref=e54]: Van het Zwitsers-strakke Mondaine tot het Japanse vakmanschap van Seiko — wij kiezen merken die jaren meegaan.
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - text: Seiko
+        - generic [ref=e58]: Presage & Prospex
+      - generic [ref=e59]:
+        - text: Danish Design
+        - generic [ref=e60]: Scandinavisch minimalisme
+      - generic [ref=e61]:
+        - text: Jacob Jensen
+        - generic [ref=e62]: Deens designhorloge
+      - generic [ref=e63]:
+        - text: Mondaine
+        - generic [ref=e64]: Zwitsers stationsuurwerk
+      - generic [ref=e65]:
+        - text: Lorus
+        - generic [ref=e66]: Toegankelijk & veelzijdig
+      - generic [ref=e67]:
+        - text: Nomination
+        - generic [ref=e68]: Italiaanse bedelarmbanden
+  - generic [ref=e70]:
+    - generic [ref=e71]:
+      - text: Sieraden
+      - heading "Gecertificeerd goud, met een moderne twist." [level=2] [ref=e72]
+      - paragraph [ref=e73]: Van 9 karaats dagelijkse sieraden tot 14 karaats lab-grown diamant — elk stuk in onze vitrines is gekeurd en gestempeld goud.
+    - generic [ref=e74]:
+      - generic [ref=e75]:
+        - heading "Yara" [level=3] [ref=e77]
+        - paragraph [ref=e78]: 9 karaats goud gezet met lab-grown diamant. Licht, draagbaar en verantwoord — voor elke dag.
+        - generic [ref=e79]: 9K goud · lab-grown diamant
+      - generic [ref=e80]:
+        - heading "Blush" [level=3] [ref=e82]
+        - paragraph [ref=e83]: 14 karaats goud met lab-grown diamant, en losse goud-only ontwerpen voor wie liever puur goud draagt.
+        - generic [ref=e84]: 14K goud · lab-grown diamant
+      - generic [ref=e85]:
+        - heading "Fjory" [level=3] [ref=e87]
+        - paragraph [ref=e88]: Nederlands ontworpen sieraden — eigenzinnig en verfijnd, gemaakt met oog voor detail.
+        - generic [ref=e89]: Nederlands ontwerp
+      - generic [ref=e90]:
+        - heading "Verguld op zilver" [level=3] [ref=e92]
+        - paragraph [ref=e93]: Sieraden met een zilveren kern en een laag echt goud — betaalbaar, gekeurd en met een warme uitstraling.
+        - generic [ref=e94]: Gestempeld goud
+      - generic [ref=e95]:
+        - heading "Herenarmbanden" [level=3] [ref=e97]
+        - paragraph [ref=e98]: Stoere en verfijnde armbanden in goud en zilver — een tijdloos cadeau of statement voor zichzelf.
+        - generic [ref=e99]: Goud & zilver
+      - generic [ref=e100]:
+        - heading "Op maat advies" [level=3] [ref=e102]
+        - paragraph [ref=e103]: Twijfel over karaat, maat of steen? In de winkel kijken we graag persoonlijk met u mee.
+        - generic [ref=e104]: Persoonlijk advies
+  - generic [ref=e106]:
+    - generic [ref=e107]:
+      - text: Diensten
+      - heading "Voor onderhoud dat net zo lang meegaat." [level=2] [ref=e108]
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - text: "01"
+        - heading "Batterij vervangen, snel en waterdicht" [level=3] [ref=e111]
+        - paragraph [ref=e112]: Terwijl u wacht vervangen wij de batterij van uw horloge, waarna we de kast opnieuw op waterdichtheid testen.
+        - list [ref=e113]:
+          - listitem [ref=e114]: — Klaar terwijl u wacht
+          - listitem [ref=e115]: — Waterdichtheidstest inbegrepen
+          - listitem [ref=e116]: — Voor vrijwel alle merken
+      - generic [ref=e117]:
+        - text: "02"
+        - heading "Horlogereparatie door vakmensen" [level=3] [ref=e118]
+        - paragraph [ref=e119]: "Van een kapot bandje tot een uurwerk dat achterloopt: wij repareren uw horloge met dezelfde zorg als honderd jaar geleden."
+        - list [ref=e120]:
+          - listitem [ref=e121]: — Onderhoud & revisie
+          - listitem [ref=e122]: — Bandjes en sluitingen
+          - listitem [ref=e123]: — Vrijblijvende inschatting vooraf
+  - generic [ref=e125]:
+    - generic [ref=e126]:
+      - text: Een kijkje binnen
+      - heading "De sfeer van onze winkel." [level=2] [ref=e127]
+    - generic [ref=e128]:
+      - figure "De vitrine, vol merken" [ref=e129]:
+        - img "Vitrine met horloges en sieraden bij Top Time Juwelier" [ref=e130]
+      - figure "Gouden sieraden" [ref=e132]:
+        - img "Gouden sieraden uitgestald op buste-standaards" [ref=e133]
+      - figure "Ons atelier" [ref=e135]:
+        - img "Interieur van Top Time Juwelier met houten vitrinekasten" [ref=e136]
+      - figure "Aan de balie" [ref=e138]:
+        - img "De balie van Top Time Juwelier in Deventer" [ref=e139]
+    - generic [ref=e141]:
+      - figure [ref=e142]:
+        - img "Gouden ketting uitgestald op dienblad" [ref=e143]
+      - figure [ref=e144]:
+        - img "Gouden oorbellen op display" [ref=e145]
+      - figure [ref=e146]:
+        - img "Ringen met blauwe stenen" [ref=e147]
+      - figure [ref=e148]:
+        - img "Horloge op houten ondergrond" [ref=e149]
+      - figure [ref=e150]:
+        - img "Zilveren armbanden op hout" [ref=e151]
+      - figure [ref=e152]:
+        - img "Model draagt een gelaagde gouden ketting" [ref=e153]
+      - figure [ref=e154]:
+        - img "Model draagt een gouden armband" [ref=e155]
+      - figure [ref=e156]:
+        - img "Horloge gedragen aan de pols" [ref=e157]
+    - paragraph [ref=e158]: Een greep uit onze sieraden en horloges, gefotografeerd door Top Time.
+  - generic [ref=e160]:
+    - generic [ref=e161]:
+      - text: Bezoek ons
+      - heading "Loop binnen aan de Spijkerboorsteeg." [level=2] [ref=e162]
+      - paragraph [ref=e163]: Geen afspraak nodig — kom langs voor advies, een reparatie of gewoon om te kijken.
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - generic [ref=e166]: Adres
+          - generic [ref=e167]: Spijkerboorsteeg 107411 JG Deventer
+        - generic [ref=e168]:
+          - generic [ref=e169]: Telefoon
+          - generic [ref=e170]:
+            - link "(0570) 61 21 17" [ref=e171] [cursor=pointer]:
+              - /url: tel:+31570612117
+            - link "06 57 54 87 22" [ref=e172] [cursor=pointer]:
+              - /url: tel:+31657548722
+        - generic [ref=e173]:
+          - generic [ref=e174]: E-mail
+          - link "Info@toptimejuwelier.nl" [ref=e176] [cursor=pointer]:
+            - /url: mailto:Info@toptimejuwelier.nl
+        - generic [ref=e177]:
+          - generic [ref=e178]: Sinds
+          - generic [ref=e179]: 1926 — 100 jaar in 2026
+      - generic [ref=e180]:
+        - text: ★★★★★ 100% aanbevolen door klanten
+        - generic [ref=e181]: — op basis van Facebook-beoordelingen
+      - table [ref=e183]:
+        - rowgroup [ref=e184]:
+          - row [ref=e185]:
+            - cell "Maandag" [ref=e186]
+            - cell "Gesloten" [ref=e187]
+          - row [ref=e188]:
+            - cell "Dinsdag" [ref=e189]
+            - cell "10:00 – 17:30" [ref=e190]
+          - row [ref=e191]:
+            - cell "Woensdag" [ref=e192]
+            - cell "10:00 – 17:30" [ref=e193]
+          - row [ref=e194]:
+            - cell "Donderdag" [ref=e195]
+            - cell "10:00 – 21:00" [ref=e196]
+          - row [ref=e197]:
+            - cell "Vrijdag" [ref=e198]
+            - cell "10:00 – 17:30" [ref=e199]
+          - row [ref=e200]:
+            - cell "Zaterdag" [ref=e201]
+            - cell "10:00 – 17:00" [ref=e202]
+          - row [ref=e203]:
+            - cell "Zondag" [ref=e204]
+            - cell "Gesloten" [ref=e205]
+    - generic [ref=e206]:
+      - generic [ref=e207]: 📍
+      - paragraph [ref=e209]:
+        - strong [ref=e210]: Spijkerboorsteeg 10
+        - text: 7411 JG Deventer — vlak bij de Brink, op loopafstand van de parkeergarages in de binnenstad.
+      - link "Open route in Google Maps" [ref=e211] [cursor=pointer]:
+        - /url: https://www.google.com/maps?q=Spijkerboorsteeg+10,+7411+JG+Deventer
+  - contentinfo [ref=e212]:
+    - generic [ref=e213]: Top Time Juwelier — Spijkerboorsteeg 10, 7411 JG Deventer
+    - generic [ref=e215]:
+      - link "Top Time" [ref=e216] [cursor=pointer]:
+        - /url: "#top"
+      - list [ref=e217]:
+        - listitem [ref=e218]:
+          - link "(0570) 61 21 17" [ref=e219] [cursor=pointer]:
+            - /url: tel:+31570612117
+        - listitem [ref=e220]:
+          - link "Info@toptimejuwelier.nl" [ref=e221] [cursor=pointer]:
+            - /url: mailto:Info@toptimejuwelier.nl
+        - listitem [ref=e222]:
+          - link "Route" [ref=e223] [cursor=pointer]:
+            - /url: "#visit"
+        - listitem [ref=e224]: © 2026 Top Time Juwelier

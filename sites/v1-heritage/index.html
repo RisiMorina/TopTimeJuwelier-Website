@@ -1,0 +1,490 @@
+<title>Top Time Juwelier</title>
+<meta name="description" content="Top Time Juwelier — sinds 1926 aan de Spijkerboorsteeg in Deventer. Horloges, gouden sieraden en vakkundige reparatie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cream:#f6f0e3;
+    --cream-2:#efe6d2;
+    --ink:#221f1b;
+    --ink-soft:#4a453d;
+    --navy:#1b2743;
+    --navy-2:#14203a;
+    --brass:#a9803f;
+    --brass-light:#cba05c;
+    --brass-deep:#83621f;
+    --line:#ddd0ad;
+    --surface:#fffdf8;
+    --focus:#1b5fd6;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#1b1712;
+      --cream-2:#221d16;
+      --ink:#f3ecdd;
+      --ink-soft:#cabfa9;
+      --navy:#0e1729;
+      --navy-2:#0a1120;
+      --brass:#cba05c;
+      --brass-light:#e0bd82;
+      --brass-deep:#cba05c;
+      --line:#3a3226;
+      --surface:#221d16;
+      --focus:#7aa6ff;
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream:#1b1712;
+    --cream-2:#221d16;
+    --ink:#f3ecdd;
+    --ink-soft:#cabfa9;
+    --navy:#0e1729;
+    --navy-2:#0a1120;
+    --brass:#cba05c;
+    --brass-light:#e0bd82;
+    --brass-deep:#cba05c;
+    --line:#3a3226;
+    --surface:#221d16;
+    --focus:#7aa6ff;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Work Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    text-wrap:balance;
+    color:var(--ink);
+    margin:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:24px;}
+  section{padding-block:88px;}
+  @media (max-width:720px){ section{padding-block:56px;} }
+
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{
+    outline:2.5px solid var(--focus);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .eyebrow{
+    font-family:"Work Sans",sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass-deep);
+  }
+
+  .wordmark{
+    font-family:"Fraunces",serif;font-weight:600;font-size:23px;
+    letter-spacing:-0.01em;text-decoration:none;color:var(--ink);
+    display:flex;align-items:baseline;gap:8px;
+  }
+
+  /* ---- Hero ---- */
+  .hero{position:relative;color:#fff;overflow:hidden;}
+  .hero img{
+    width:100%;height:min(88vh,780px);object-fit:cover;object-position:center 62%;
+  }
+  @media (max-width:720px){
+    .hero img{height:62vh;object-position:center 74%;}
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(100deg, rgba(12,17,30,.93) 0%, rgba(12,17,30,.72) 34%, rgba(12,17,30,.22) 62%, transparent 78%),
+      linear-gradient(0deg, rgba(14,20,35,.9) 4%, rgba(14,20,35,.5) 42%, rgba(14,20,35,.22) 65%, rgba(14,20,35,.14) 100%);
+  }
+  .hero-content{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;
+    padding:0 24px 56px;
+  }
+  .hero-inner{max-width:1180px;margin:0 auto;}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;
+    background:rgba(246,240,227,0.14);
+    border:1px solid rgba(246,240,227,.4);
+    color:#f6f0e3;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .badge b{color:var(--brass-light);font-weight:700;}
+  .hero h1{
+    color:#fff;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.04;max-width:15ch;
+  }
+  .hero p.lede{
+    color:#e9e2cf;font-size:clamp(1.02rem,1.6vw,1.2rem);max-width:46ch;margin-top:20px;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:2px;font-size:14.5px;font-weight:600;
+    text-decoration:none;border:1px solid transparent;
+  }
+  .btn-brass{background:var(--brass);color:#1b1409;}
+  .btn-brass:hover{background:var(--brass-light);}
+  .btn-outline{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(15,12,8,.5);backdrop-filter:blur(3px);}
+  .btn-outline:hover{background:rgba(15,12,8,.7);}
+
+  /* ---- Story ---- */
+  .story .wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  @media (max-width:860px){ .story .wrap{grid-template-columns:1fr;gap:36px;} }
+  .story figure{margin:0;position:relative;}
+  .story img{border-radius:2px;}
+  .story figure::before{
+    content:"";position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;
+    border:1px solid var(--brass);border-radius:2px;z-index:-1;
+  }
+  .story h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-top:10px;}
+  .story p{color:var(--ink-soft);margin-top:18px;font-size:1.03rem;}
+  .factrow{
+    display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;
+    border-top:1px solid var(--line);padding-top:26px;
+  }
+  .fact b{display:block;font-family:"Fraunces",serif;font-size:1.9rem;color:var(--brass);font-weight:600;}
+  .fact span{font-size:12.5px;color:var(--ink-soft);letter-spacing:.03em;}
+
+  /* ---- Brand marquee ---- */
+  .brands{background:var(--navy);color:#f1ecdd;}
+  .brands .wrap{padding-block:0;}
+  .brands-head{padding-top:88px;text-align:center;}
+  @media (max-width:720px){.brands-head{padding-top:56px;}}
+  .brands-head h2{color:#fff;font-size:clamp(1.7rem,3vw,2.2rem);margin-top:8px;}
+  .brands-head p{color:#c7c0a9;max-width:52ch;margin:14px auto 0;}
+  .brand-strip{
+    margin-top:52px;border-top:1px solid rgba(241,236,221,.16);
+  }
+  .brand-row{
+    display:grid;grid-template-columns:repeat(3,1fr);
+  }
+  @media (max-width:860px){ .brand-row{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .brand-row{grid-template-columns:1fr;} }
+  .brand-item{
+    padding:30px 22px;
+    border-right:1px solid rgba(241,236,221,.16);
+    border-bottom:1px solid rgba(241,236,221,.16);
+    text-align:center;
+  }
+  .brand-item .name{font-family:"Fraunces",serif;font-size:1.32rem;font-weight:600;}
+  .brand-item .sub{display:block;font-size:12px;color:#a79f81;margin-top:5px;letter-spacing:.03em;}
+
+  /* ---- Collections ---- */
+  .collections{background:var(--cream);}
+  .sec-head{max-width:64ch;margin-bottom:52px;}
+  .sec-head h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-top:10px;}
+  .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:1.05rem;}
+  .card-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+  }
+  @media (max-width:860px){.card-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.card-grid{grid-template-columns:1fr;}}
+  .coll-card{background:var(--surface);padding:34px 28px;min-height:230px;display:flex;flex-direction:column;}
+  .swatch{width:34px;height:34px;border-radius:50%;margin-bottom:20px;}
+  .coll-card h3{font-size:1.28rem;}
+  .coll-card p{color:var(--ink-soft);font-size:.94rem;margin-top:10px;flex:1;}
+  .coll-card .tag{
+    margin-top:16px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brass-deep);
+  }
+
+  /* ---- Services ---- */
+  .services{background:var(--cream-2);}
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media (max-width:760px){.svc-grid{grid-template-columns:1fr;}}
+  .svc-card{background:var(--surface);padding:44px 38px;}
+  .svc-num{font-family:"Fraunces",serif;font-size:2rem;color:var(--brass);font-weight:500;}
+  .svc-card h3{font-size:1.4rem;margin-top:14px;}
+  .svc-card p{color:var(--ink-soft);margin-top:12px;}
+  .svc-card ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .svc-card li{font-size:.92rem;color:var(--ink-soft);padding-left:20px;position:relative;}
+  .svc-card li::before{content:"—";position:absolute;left:0;color:var(--brass-deep);}
+
+  /* ---- Visit ---- */
+  .visit{background:var(--navy-2);color:#efe9d6;}
+  .visit .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;}
+  @media (max-width:900px){.visit .wrap{grid-template-columns:1fr;}}
+  .visit h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.4rem);margin-top:10px;}
+  .visit p.lede{color:#bfb79c;margin-top:14px;max-width:48ch;}
+  .infogrid{margin-top:38px;display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  @media (max-width:480px){.infogrid{grid-template-columns:1fr;}}
+  .infogrid .k{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#a79f81;}
+  .infogrid .v{font-size:1rem;margin-top:6px;color:#f3ecdd;}
+  .trustline{
+    margin-top:28px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+    font-size:13.5px;color:var(--brass-light);font-weight:600;
+  }
+  .trustline span{color:#a79f81;font-weight:400;font-size:12.5px;}
+  .hours{margin-top:34px;border-top:1px solid rgba(239,233,214,.18);padding-top:22px;}
+  .hours table{width:100%;border-collapse:collapse;font-size:.94rem;}
+  .hours td{padding:6px 0;border-bottom:1px solid rgba(239,233,214,.1);}
+  .hours td:last-child{text-align:right;color:#cfc8ac;}
+  .hours tr.today td{color:var(--brass-light);font-weight:600;}
+  .mapwrap{
+    border-radius:2px;border:1px solid rgba(239,233,214,.18);min-height:340px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding:40px;
+    background:
+      repeating-linear-gradient(0deg, rgba(239,233,214,.05) 0 1px, transparent 1px 46px),
+      repeating-linear-gradient(90deg, rgba(239,233,214,.05) 0 1px, transparent 1px 46px);
+  }
+  .mapwrap .pin{
+    width:52px;height:52px;border-radius:50% 50% 50% 0;background:var(--brass);
+    transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;
+  }
+  .mapwrap .pin span{transform:rotate(45deg);font-size:20px;}
+  .mapwrap p{color:#efe9d6;font-size:.95rem;max-width:32ch;margin:0;}
+  .mapwrap .btn{margin-top:2px;}
+
+  /* ---- Legal ---- */
+  .legal{background:var(--cream-2);padding-block:64px;}
+  .legal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 48px;}
+  @media (max-width:720px){.legal-grid{grid-template-columns:1fr;gap:28px;}}
+  .legal-item h3{font-family:"Work Sans",sans-serif;font-size:13.5px;font-weight:600;letter-spacing:.03em;color:var(--ink);margin-bottom:8px;}
+  .legal-item p{font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0;}
+  .legal-item p + p{margin-top:8px;}
+  .legal-item a{text-decoration:underline;color:var(--ink-soft);}
+  .legal-item .fill-in{font-style:italic;}
+  .legal-note{
+    margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--ink-soft);
+  }
+
+  /* ---- Footer ---- */
+  footer{background:var(--navy);color:#ada683;padding-block:40px;}
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+    border-top:1px solid rgba(241,236,221,.14);padding-top:28px;
+  }
+  footer .wordmark{color:#f1ecdd;}
+  footer .flinks{display:flex;gap:22px;list-style:none;padding:0;margin:0;flex-wrap:wrap;}
+  footer .flinks a{text-decoration:none;font-size:13px;color:#ada683;}
+  footer .flinks a:hover{color:var(--brass-light);}
+  .foot-top{padding-bottom:20px;font-size:13px;}
+</style>
+
+<header class="hero" id="top">
+  <img src="assets/storefront-1.jpg" alt="De gevel van Top Time Juwelier aan de Spijkerboorsteeg in Deventer, met verlichte etalages vol horloges en sieraden">
+  <div class="hero-content">
+    <div class="hero-inner">
+      <span class="badge">100 jaar vakmanschap · <b>sinds 1926</b></span>
+      <h1>Al honderd jaar de tijd van Deventer.</h1>
+      <p class="lede">Sinds 1926 uw juwelier aan de Spijkerboorsteeg — voor een horloge dat meegaat en een sieraad dat blijft. Van Seiko tot lab-grown diamant.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-brass" href="#visit">Bezoek de winkel</a>
+        <a class="btn btn-outline" href="tel:+31570612117">Bel (0570) 61 21 17</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <figure>
+      <img src="assets/storefront-2.jpg" alt="De etalages van Top Time Juwelier met horloges van Lorus, Seiko en Mondaine op houten displays">
+    </figure>
+    <div>
+      <span class="eyebrow">Ons verhaal</span>
+      <h2>Eén adres, honderd jaar geschiedenis.</h2>
+      <p>Al sinds 1926 staat Top Time aan een van de gezelligste steegjes van Deventer. Wat begon als een klein horlogeatelier is uitgegroeid tot een vertrouwde juwelier waar de sfeer van hout en messing nog altijd de toon zet — en waar elk horloge en elk sieraad met evenveel zorg over de toonbank gaat als honderd jaar geleden.</p>
+      <p>We combineren tijdloze merken met een moderne kijk op sieraden: gecertificeerd goud, en lab-grown diamant voor wie mooi wil dragen met een goed geweten.</p>
+      <div class="factrow">
+        <div class="fact"><b>1926</b><span>Jaar van oprichting</span></div>
+        <div class="fact"><b>100</b><span>Jaar in de Spijkerboorsteeg</span></div>
+        <div class="fact"><b>6</b><span>Horlogemerken op voorraad</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands" id="brands">
+  <div class="wrap">
+    <div class="brands-head">
+      <span class="eyebrow" style="color:var(--brass-light)">Horlogemerken</span>
+      <h2>Klassiek en modern, naast elkaar in de vitrine.</h2>
+      <p>Van het Zwitsers-strakke Mondaine tot het Japanse vakmanschap van Seiko — wij kiezen merken die jaren meegaan.</p>
+    </div>
+    <div class="brand-strip">
+      <div class="brand-row">
+        <div class="brand-item"><span class="name">Seiko</span><span class="sub">Presage &amp; Prospex</span></div>
+        <div class="brand-item"><span class="name">Danish Design</span><span class="sub">Scandinavisch minimalisme</span></div>
+        <div class="brand-item"><span class="name">Jacob Jensen</span><span class="sub">Deens designhorloge</span></div>
+        <div class="brand-item"><span class="name">Mondaine</span><span class="sub">Zwitsers stationsuurwerk</span></div>
+        <div class="brand-item"><span class="name">Lorus</span><span class="sub">Toegankelijk &amp; veelzijdig</span></div>
+        <div class="brand-item"><span class="name">Nomination</span><span class="sub">Italiaanse bedelarmbanden</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="collections" id="collections">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Sieraden</span>
+      <h2>Gecertificeerd goud, met een moderne twist.</h2>
+      <p>Van 9 karaats dagelijkse sieraden tot 14 karaats lab-grown diamant — elk stuk in onze vitrines is gekeurd en gestempeld goud.</p>
+    </div>
+    <div class="card-grid">
+      <div class="coll-card">
+        <span class="swatch" style="background:linear-gradient(135deg,#e8cf9a,#c9a45f)"></span>
+        <h3>Yara</h3>
+        <p>9 karaats goud gezet met lab-grown diamant. Licht, draagbaar en verantwoord — voor elke dag.</p>
+        <span class="tag">9K goud · lab-grown diamant</span>
+      </div>
+      <div class="coll-card">
+        <span class="swatch" style="background:linear-gradient(135deg,#f3e0b8,#d8ad5f)"></span>
+        <h3>Blush</h3>
+        <p>14 karaats goud met lab-grown diamant, en losse goud-only ontwerpen voor wie liever puur goud draagt.</p>
+        <span class="tag">14K goud · lab-grown diamant</span>
+      </div>
+      <div class="coll-card">
+        <span class="swatch" style="background:linear-gradient(135deg,#d7c9a6,#9c8a5c)"></span>
+        <h3>Fjory</h3>
+        <p>Nederlands ontworpen sieraden — eigenzinnig en verfijnd, gemaakt met oog voor detail.</p>
+        <span class="tag">Nederlands ontwerp</span>
+      </div>
+      <div class="coll-card">
+        <span class="swatch" style="background:linear-gradient(135deg,#e9e2cf,#bdb28c)"></span>
+        <h3>Verguld op zilver</h3>
+        <p>Sieraden met een zilveren kern en een laag echt goud — betaalbaar, gekeurd en met een warme uitstraling.</p>
+        <span class="tag">Gestempeld goud</span>
+      </div>
+      <div class="coll-card">
+        <span class="swatch" style="background:linear-gradient(135deg,#3b3730,#615746)"></span>
+        <h3>Herenarmbanden</h3>
+        <p>Stoere en verfijnde armbanden in goud en zilver — een tijdloos cadeau of statement voor zichzelf.</p>
+        <span class="tag">Goud &amp; zilver</span>
+      </div>
+      <div class="coll-card">
+        <span class="swatch" style="background:linear-gradient(135deg,#cba05c,#8a6a34)"></span>
+        <h3>Op maat advies</h3>
+        <p>Twijfel over karaat, maat of steen? In de winkel kijken we graag persoonlijk met u mee.</p>
+        <span class="tag">Persoonlijk advies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Diensten</span>
+      <h2>Voor onderhoud dat net zo lang meegaat.</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="svc-num">01</span>
+        <h3>Batterij vervangen, snel en waterdicht</h3>
+        <p>Terwijl u wacht vervangen wij de batterij van uw horloge, waarna we de kast opnieuw op waterdichtheid testen.</p>
+        <ul>
+          <li>Klaar terwijl u wacht</li>
+          <li>Waterdichtheidstest inbegrepen</li>
+          <li>Voor vrijwel alle merken</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">02</span>
+        <h3>Horlogereparatie door vakmensen</h3>
+        <p>Van een kapot bandje tot een uurwerk dat achterloopt: wij repareren uw horloge met dezelfde zorg als honderd jaar geleden.</p>
+        <ul>
+          <li>Onderhoud &amp; revisie</li>
+          <li>Bandjes en sluitingen</li>
+          <li>Vrijblijvende inschatting vooraf</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--brass-light)">Bezoek ons</span>
+      <h2>Loop binnen aan de Spijkerboorsteeg.</h2>
+      <p class="lede">Geen afspraak nodig — kom langs voor advies, een reparatie of gewoon om te kijken.</p>
+      <div class="infogrid">
+        <div><div class="k">Adres</div><div class="v">Spijkerboorsteeg 10<br>7411 JG Deventer</div></div>
+        <div><div class="k">Telefoon</div><div class="v"><a href="tel:+31570612117">(0570) 61 21 17</a><br><a href="tel:+31657548722">06 57 54 87 22</a></div></div>
+        <div><div class="k">E-mail</div><div class="v"><a href="mailto:Info@toptimejuwelier.nl">Info@toptimejuwelier.nl</a></div></div>
+        <div><div class="k">Sinds</div><div class="v">1926 — 100 jaar in 2026</div></div>
+      </div>
+      <div class="trustline">★★★★★ &nbsp;100% aanbevolen door klanten <span>— op basis van Facebook-beoordelingen</span></div>
+      <div class="hours">
+        <table>
+          <tr><td>Maandag</td><td>Gesloten</td></tr>
+          <tr class="today"><td>Dinsdag</td><td>10:00 – 17:30</td></tr>
+          <tr><td>Woensdag</td><td>10:00 – 17:30</td></tr>
+          <tr><td>Donderdag</td><td>10:00 – 21:00</td></tr>
+          <tr><td>Vrijdag</td><td>10:00 – 17:30</td></tr>
+          <tr><td>Zaterdag</td><td>10:00 – 17:00</td></tr>
+          <tr><td>Zondag</td><td>Gesloten</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="mapwrap">
+      <span class="pin"><span>📍</span></span>
+      <p><strong style="color:var(--brass-light)">Spijkerboorsteeg 10</strong><br>7411 JG Deventer — vlak bij de Brink, op loopafstand van de parkeergarages in de binnenstad.</p>
+      <a class="btn btn-brass" href="https://www.google.com/maps?q=Spijkerboorsteeg+10,+7411+JG+Deventer" target="_blank" rel="noopener">Open route in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="legal">
+  <div class="wrap">
+    <div class="legal-grid">
+      <div class="legal-item">
+        <h3>Privacy</h3>
+        <p>Top Time Juwelier verzamelt geen persoonsgegevens via deze website — er zijn geen formulieren en we gebruiken geen tracking- of marketingcookies. Voor de lettertypen laadt deze pagina Google Fonts; daarbij kan uw IP-adres kort met Google worden gedeeld.</p>
+        <p>Vragen over uw gegevens? Mail naar <a href="mailto:Info@toptimejuwelier.nl">Info@toptimejuwelier.nl</a>.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Cookies</h3>
+        <p>Deze website plaatst zelf geen tracking- of analysecookies.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Aankopen &amp; herroeping</h3>
+        <p>U koopt bij ons in de winkel aan de Spijkerboorsteeg — deze website is geen webshop. Er is daarom geen 14-dagen herroepingsrecht zoals bij online aankopen; de gewone regels voor aankopen in een fysieke winkel zijn van toepassing.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Ruilen &amp; garantie</h3>
+        <p>Niet helemaal tevreden of twijfelt u? Neem contact op of kom langs — we denken graag met u mee. Op sieraden en horloges gelden de wettelijke garantiebepalingen.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Bedrijfsgegevens</h3>
+        <p>Top Time Juwelier<br>Spijkerboorsteeg 10, 7411 JG Deventer</p>
+        <p>KvK: <span class="fill-in">in te vullen</span> · BTW: <span class="fill-in">in te vullen</span></p>
+      </div>
+    </div>
+    <p class="legal-note">Deze informatie is een korte samenvatting, geen juridisch advies. Top Time Juwelier kan deze tekst aanvullen of laten toetsen door een adviseur.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-top">
+    <span>Top Time Juwelier — Spijkerboorsteeg 10, 7411 JG Deventer</span>
+  </div>
+  <div class="wrap">
+    <a class="wordmark" href="#top">Top Time</a>
+    <ul class="flinks">
+      <li><a href="tel:+31570612117">(0570) 61 21 17</a></li>
+      <li><a href="mailto:Info@toptimejuwelier.nl">Info@toptimejuwelier.nl</a></li>
+      <li><a href="#visit">Route</a></li>
+      <li><a href="#legal">Privacy &amp; voorwaarden</a></li>
+      <li>© 2026 Top Time Juwelier</li>
+    </ul>
+  </div>
+</footer>
