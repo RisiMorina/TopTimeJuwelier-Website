@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Time Juwelier</title>
+<meta name="description" content="Top Time Juwelier — sinds 1926 aan de Spijkerboorsteeg in Deventer. Horloges, gouden sieraden en vakkundige reparatie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+  :root{
+    /* Dark leather palette: espresso hide, oxblood, cognac, with brass hardware */
+    --cream:#1c130e;
+    --cream-2:#2a1a11;
+    --ink:#f2e7d3;
+    --ink-soft:#c6b397;
+    --navy:#34150f;
+    --navy-2:#140c08;
+    --brass:#c69a55;
+    --brass-light:#e3c186;
+    --brass-deep:#d1a863;
+    --line:#46301f;
+    --surface:#261912;
+    --focus:#7aa6ff;
+    --ruby:#b3263a;
+    --open:#4fb374;
+    --stitch:rgba(227,193,134,.38);
+
+    /* Leather grain: fine pores + soft pebbled highlights */
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.3 0 0 0 -.42'/%3E%3C/filter%3E%3Cfilter id='h' x='0' y='0'%3E%3CfeTurbulence type='turbulence' baseFrequency='.075' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9 0 0 0 0 .75 .1 0 0 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23h)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --sheen:radial-gradient(120% 90% at 15% 0%, rgba(255,214,160,.07), transparent 55%),
+            radial-gradient(120% 90% at 100% 100%, rgba(0,0,0,.38), transparent 60%);
+
+    --ease-out:cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out:cubic-bezier(0.77, 0, 0.175, 1);
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:72px;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Work Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.15;
+    text-wrap:balance;
+    color:var(--ink);
+    margin:0;
+  }
+  a{color:inherit;}
+  img,video{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:24px;}
+  section{padding-block:88px;}
+  @media (max-width:720px){ section{padding-block:56px;} .wrap{padding-inline:16px;} }
+
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{
+    outline:2.5px solid var(--focus);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  /* Eyebrow with a small minute-track rule in front of it */
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:"Work Sans",sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass-deep);
+  }
+  .eyebrow::before{
+    content:"";width:34px;height:9px;flex:none;
+    background:
+      linear-gradient(currentColor,currentColor) left bottom/1.5px 9px no-repeat,
+      repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 5px) left bottom/100% 5px no-repeat;
+    opacity:.7;
+  }
+  .eyebrow.light{color:var(--brass-light);}
+  .center .eyebrow::after{
+    content:"";width:34px;height:9px;flex:none;
+    background:
+      linear-gradient(currentColor,currentColor) right bottom/1.5px 9px no-repeat,
+      repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 5px) left bottom/100% 5px no-repeat;
+    opacity:.7;
+  }
+
+  .wordmark{
+    font-family:"Fraunces",serif;font-weight:600;font-size:23px;
+    letter-spacing:-0.01em;text-decoration:none;color:var(--ink);
+    display:flex;align-items:baseline;gap:8px;
+  }
+  .wordmark small{font-family:"Work Sans",sans-serif;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-deep);}
+
+  /* ---- Buttons ---- */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:2px;font-size:14.5px;font-weight:600;
+    text-decoration:none;border:1px solid transparent;min-height:48px;
+    transition:background-color .18s ease, color .18s ease, transform .12s var(--ease-out);
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-brass{background:var(--brass);color:#1b1409;}
+  .btn-brass:hover{background:var(--brass-light);}
+  .btn-outline{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(15,12,8,.5);backdrop-filter:blur(3px);}
+  .btn-outline:hover{background:rgba(15,12,8,.7);}
+
+  /* ---- Open/closed status ---- */
+  .status{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;}
+  .status .dot{
+    position:relative;width:9px;height:9px;border-radius:50%;background:#9a927d;flex:none;
+  }
+  .status.is-open .dot{background:var(--open);}
+  .status.is-open .dot::after{
+    content:"";position:absolute;inset:0;border-radius:50%;background:var(--open);
+    animation:pulse 2.4s var(--ease-out) infinite;
+  }
+  @keyframes pulse{
+    0%{transform:scale(1);opacity:.7;}
+    80%,100%{transform:scale(3);opacity:0;}
+  }
+
+  /* ---- Sticky bar (appears after the hero) ---- */
+  .bar{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:color-mix(in srgb, var(--cream) 92%, transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    transform:translateY(-100%);
+    transition:transform .32s var(--ease-out);
+  }
+  .bar.show{transform:translateY(0);}
+  .bar .wrap{display:flex;align-items:center;gap:28px;height:64px;}
+  .bar nav{display:flex;gap:24px;margin-left:auto;}
+  .bar nav a{
+    position:relative;font-size:14px;font-weight:500;text-decoration:none;color:var(--ink-soft);padding-block:6px;
+    transition:color .18s ease;
+  }
+  .bar nav a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--brass);
+    transform:scaleX(0);transform-origin:left;transition:transform .22s var(--ease-out);
+  }
+  .bar nav a:hover{color:var(--ink);}
+  .bar nav a.active{color:var(--ink);}
+  .bar nav a.active::after{transform:scaleX(1);}
+  .bar .status{color:var(--ink-soft);font-size:13px;}
+  .bar .btn{padding:9px 16px;min-height:40px;font-size:13.5px;}
+  @media (max-width:960px){ .bar nav{display:none;} .bar .status{margin-left:auto;} }
+  @media (max-width:480px){ .bar .status .label{display:none;} .bar .wrap{gap:14px;} }
+
+  /* ---- Hero ---- */
+  .hero{position:relative;color:#fff;overflow:hidden;}
+  .hero-photo{
+    width:100%;height:min(88vh,780px);object-fit:cover;object-position:center 62%;
+  }
+  @media (max-width:720px){
+    .hero-photo{height:78vh;min-height:560px;object-position:center 74%;}
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(100deg, rgba(20,11,7,.95) 0%, rgba(20,11,7,.78) 34%, rgba(20,11,7,.3) 62%, rgba(20,11,7,.08) 80%),
+      linear-gradient(0deg, rgba(22,12,8,.94) 4%, rgba(22,12,8,.55) 42%, rgba(22,12,8,.3) 65%, rgba(22,12,8,.28) 100%);
+  }
+  .hero-content{
+    position:absolute;left:0;right:0;bottom:0;z-index:2;
+    padding:0 24px 56px;
+  }
+  @media (max-width:720px){ .hero-content{padding:0 16px 36px;} }
+  .hero-inner{max-width:1180px;margin:0 auto;}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;
+    background:rgba(246,240,227,0.14);
+    border:1px solid rgba(246,240,227,.4);
+    color:#f6f0e3;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .badge b{color:var(--brass-light);font-weight:700;}
+  .hero h1{
+    color:#fff;font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.04;max-width:15ch;
+  }
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--brass-light);}
+  .hero p.lede{
+    color:#e9e2cf;font-size:clamp(1.02rem,1.6vw,1.2rem);max-width:46ch;margin-top:20px;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .hero .status{margin-top:22px;color:#e9e2cf;}
+
+  /* Hero entrance: photo settles, copy rises in sequence */
+  .hero-photo{animation:settle 2.4s var(--ease-out) both;}
+  @keyframes settle{from{transform:scale(1.07);}to{transform:scale(1);}}
+  .rise{animation:rise .9s var(--ease-out) both;animation-delay:calc(var(--i,0) * 90ms + 250ms);}
+  @keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+
+  /* ---- Live shop clock ---- */
+  .clock{
+    position:absolute;z-index:2;margin:0;right:max(24px, calc((100vw - 1180px) / 2 + 24px));top:50%;
+    width:clamp(200px,20vw,260px);aspect-ratio:1;
+    transform:translateY(-58%);
+    animation:clockIn 1.1s var(--ease-out) .5s both;
+  }
+  @keyframes clockIn{from{opacity:0;transform:translateY(-58%) scale(.94);}to{opacity:1;transform:translateY(-58%) scale(1);}}
+  .clock svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45));}
+  .clock figcaption{
+    text-align:center;margin-top:14px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#d8cfb6;font-weight:600;
+  }
+  @media (max-width:860px){
+    .clock{width:104px;top:18px;right:16px;transform:none;animation-name:clockInSm;}
+    .clock figcaption{display:none;}
+  }
+  @keyframes clockInSm{from{opacity:0;transform:scale(.94);}to{opacity:1;transform:none;}}
+  .hand{transform-box:view-box;transform-origin:100px 100px;animation:turn linear infinite;}
+  .hand.h{animation-duration:43200s;}
+  .hand.m{animation-duration:3600s;}
+  .hand.s{animation-duration:60s;}
+  @keyframes turn{to{transform:rotate(360deg);}}
+  .clock:not(.synced) .hand{visibility:hidden;}
+
+  /* ---- Reveal on scroll ---- */
+  .js .reveal{
+    opacity:0;transform:translateY(22px);
+    transition:opacity .8s var(--ease-out), transform .8s var(--ease-out);
+    transition-delay:calc(var(--d,0) * 70ms);
+  }
+  .js .reveal.in{opacity:1;transform:none;}
+
+  /* ---- Story ---- */
+  .story .wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  }
+  @media (max-width:860px){ .story .wrap{grid-template-columns:1fr;gap:36px;} }
+  .story figure{margin:0;position:relative;isolation:isolate;}
+  .story img{border-radius:2px;}
+  .story figure::before{
+    content:"";position:absolute;inset:0;
+    border:1px solid var(--brass);border-radius:2px;z-index:-1;
+    transform:translate(-16px,-16px);
+    transition:transform 1.2s var(--ease-out) .25s;
+  }
+  .js .story figure:not(.in)::before{transform:translate(0,0);}
+  .story h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-top:10px;}
+  .story p{color:var(--ink-soft);margin-top:18px;font-size:1.03rem;}
+  .factrow{
+    display:flex;gap:34px;margin-top:34px;flex-wrap:wrap;
+    border-top:1px solid var(--line);padding-top:26px;
+  }
+  .fact b{display:block;font-family:"Fraunces",serif;font-size:1.9rem;color:var(--brass);font-weight:600;font-variant-numeric:tabular-nums;}
+  .fact span{font-size:12.5px;color:var(--ink-soft);letter-spacing:.03em;}
+
+  /* ---- Brands ---- */
+  .brands{background:var(--navy);color:#f1ecdd;padding-bottom:0;overflow:hidden;}
+  .brands-head{text-align:center;}
+  .brands-head h2{color:#fff;font-size:clamp(1.7rem,3vw,2.2rem);margin-top:8px;}
+  .brands-head p{color:#c7c0a9;max-width:52ch;margin:14px auto 0;}
+
+  .marquee{
+    margin-top:52px;padding-block:26px;
+    border-block:1px solid rgba(241,236,221,.16);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  }
+  .marquee-track{display:flex;width:max-content;animation:marquee 42s linear infinite;}
+  .marquee:hover .marquee-track{animation-play-state:paused;}
+  .marquee-group{display:flex;align-items:center;flex:none;}
+  .marquee-group span{
+    font-family:"Fraunces",serif;font-size:clamp(1.9rem,4vw,3.1rem);font-weight:500;font-style:italic;
+    color:#f1ecdd;white-space:nowrap;padding-inline:34px;
+  }
+  .marquee-group i{
+    width:9px;height:9px;flex:none;background:var(--brass-light);transform:rotate(45deg);
+  }
+  @keyframes marquee{to{transform:translateX(-50%);}}
+
+  .brand-row{display:grid;grid-template-columns:repeat(3,1fr);}
+  @media (max-width:860px){ .brand-row{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .brand-row{grid-template-columns:1fr;} }
+  .brand-item{
+    position:relative;padding:30px 22px;
+    border-right:1px solid rgba(241,236,221,.16);
+    border-bottom:1px solid rgba(241,236,221,.16);
+    text-align:center;
+  }
+  .brand-item::after{
+    content:"";position:absolute;left:22px;right:22px;bottom:-1px;height:2px;background:var(--brass-light);
+    transform:scaleX(0);transition:transform .3s var(--ease-out);
+  }
+  .brand-item .name{font-family:"Fraunces",serif;font-size:1.32rem;font-weight:600;}
+  .brand-item .sub{display:block;font-size:12px;color:#a79f81;margin-top:5px;letter-spacing:.03em;}
+  @media (hover:hover) and (pointer:fine){
+    .brand-item:hover::after{transform:scaleX(1);}
+  }
+
+  /* ---- Collections ---- */
+  .sec-head{max-width:64ch;margin-bottom:52px;}
+  .sec-head h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-top:10px;}
+  .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:1.05rem;}
+  .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media (max-width:860px){.card-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.card-grid{grid-template-columns:1fr;}}
+  .coll-card{
+    position:relative;background:var(--surface);padding:34px 28px;min-height:230px;display:flex;flex-direction:column;
+  }
+  .swatch{
+    position:relative;overflow:hidden;
+    width:34px;height:34px;border-radius:50%;margin-bottom:20px;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.12), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .swatch::after{
+    content:"";position:absolute;inset:-20%;
+    background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.85) 50%,transparent 65%);
+    transform:translateX(-120%);
+  }
+  .coll-card h3{font-size:1.28rem;}
+  .coll-card p{color:var(--ink-soft);font-size:.94rem;margin-top:10px;flex:1;}
+  .coll-card .tag{
+    margin-top:16px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brass-deep);
+  }
+  @media (hover:hover) and (pointer:fine){
+    .coll-card:hover .swatch::after{transform:translateX(120%);transition:transform .9s var(--ease-out);}
+  }
+  /* Each swatch catches the light once as it scrolls in */
+  .coll-card.in .swatch::after{animation:glint 1.1s var(--ease-out) both;animation-delay:calc(var(--d,0) * 70ms + 350ms);}
+  @keyframes glint{from{transform:translateX(-120%);}to{transform:translateX(120%);}}
+
+  /* ---- Inside the shop ---- */
+  .inside{background:var(--cream-2);}
+  .inside .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center;}
+  @media (max-width:860px){ .inside .wrap{grid-template-columns:1fr;gap:32px;} }
+  .inside-media{position:relative;margin:0;}
+  .inside-media video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:2px;background:var(--navy);}
+  .inside-media figcaption{margin-top:12px;font-size:13px;color:var(--ink-soft);}
+  .inside h2{font-size:clamp(1.9rem,3.2vw,2.5rem);margin-top:10px;}
+  .inside p{color:var(--ink-soft);margin-top:18px;font-size:1.03rem;}
+  .checks{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:12px;}
+  .checks li{display:flex;gap:12px;align-items:baseline;}
+  .checks li::before{
+    content:"";width:8px;height:8px;flex:none;background:var(--brass);transform:rotate(45deg) translateY(-2px);
+  }
+
+  /* ---- Services ---- */
+  .services .top{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end;margin-bottom:52px;}
+  .services .sec-head{margin-bottom:0;}
+  @media (max-width:760px){ .services .top{grid-template-columns:1fr;gap:28px;} }
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:760px){.svc-grid{grid-template-columns:1fr;}}
+  .svc-card{background:var(--surface);padding:44px 38px;}
+  @media (max-width:480px){.svc-card{padding:34px 24px;}}
+  .svc-num{font-family:"Fraunces",serif;font-size:2rem;color:var(--brass);font-weight:500;}
+  .svc-card h3{font-size:1.4rem;margin-top:14px;}
+  .svc-card p{color:var(--ink-soft);margin-top:12px;}
+  .svc-card ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .svc-card li{font-size:.92rem;color:var(--ink-soft);padding-left:20px;position:relative;}
+  .svc-card li::before{content:"—";position:absolute;left:0;color:var(--brass-deep);}
+
+  /* Watch movement illustration */
+  .movement{width:clamp(180px,22vw,240px);margin:0;}
+  .movement svg{width:100%;height:auto;display:block;}
+  .movement figcaption{font-size:12px;color:var(--ink-soft);text-align:center;margin-top:8px;letter-spacing:.04em;}
+  @media (max-width:760px){ .movement{width:190px;margin-inline:auto;} }
+  .gear{transform-box:fill-box;transform-origin:center;}
+  .gear.a{animation:turn 36s linear infinite;}
+  .gear.b{animation:turn 18s linear infinite reverse;}
+  .gear.esc{animation:turn 6s steps(30) infinite;}
+  .balance{transform-box:fill-box;transform-origin:center;animation:swing .42s ease-in-out infinite alternate;}
+  @keyframes swing{from{transform:rotate(-100deg);}to{transform:rotate(100deg);}}
+  .movement:not(.running) *{animation-play-state:paused;}
+
+  /* ---- Visit ---- */
+  .visit{background:var(--navy-2);color:#efe9d6;}
+  .visit .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;}
+  @media (max-width:900px){.visit .wrap{grid-template-columns:1fr;}}
+  .visit h2{color:#fff;font-size:clamp(1.9rem,3.2vw,2.4rem);margin-top:10px;}
+  .visit p.lede{color:#bfb79c;margin-top:14px;max-width:48ch;}
+  .visit .status{margin-top:18px;color:#f3ecdd;font-size:15px;}
+  .infogrid{margin-top:38px;display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  @media (max-width:480px){.infogrid{grid-template-columns:1fr;}}
+  .infogrid .k{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#a79f81;}
+  .infogrid .v{font-size:1rem;margin-top:6px;color:#f3ecdd;}
+  .infogrid .v a{display:inline-block;padding-block:3px;}
+  .trustline{
+    margin-top:28px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+    font-size:13.5px;color:var(--brass-light);font-weight:600;
+  }
+  .trustline span{color:#a79f81;font-weight:400;font-size:12.5px;}
+  .hours{margin-top:34px;border-top:1px solid rgba(239,233,214,.18);padding-top:22px;}
+  .hours table{width:100%;border-collapse:collapse;font-size:.94rem;}
+  .hours td{padding:6px 0;border-bottom:1px solid rgba(239,233,214,.1);}
+  .hours td:last-child{text-align:right;color:#cfc8ac;}
+  .hours tr.today td{color:var(--brass-light);font-weight:600;}
+  .hours tr.today td:first-child::after{
+    content:"vandaag";margin-left:10px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    padding:2px 7px;border:1px solid currentColor;border-radius:999px;vertical-align:1px;
+  }
+  .mapwrap{
+    position:relative;overflow:hidden;
+    border-radius:2px;border:1px solid rgba(239,233,214,.18);min-height:340px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding:40px 24px;
+    background:
+      repeating-linear-gradient(0deg, rgba(239,233,214,.05) 0 1px, transparent 1px 46px),
+      repeating-linear-gradient(90deg, rgba(239,233,214,.05) 0 1px, transparent 1px 46px);
+  }
+  .pinwrap{position:relative;width:52px;height:64px;display:flex;justify-content:center;}
+  .pinwrap::before{
+    content:"";position:absolute;left:50%;bottom:0;width:44px;height:14px;margin-left:-22px;border-radius:50%;
+    border:1.5px solid var(--brass-light);opacity:0;
+  }
+  .mapwrap.in .pinwrap::before{animation:ripple 2.6s var(--ease-out) 1s infinite;}
+  @keyframes ripple{0%{transform:scale(.4);opacity:.9;}100%{transform:scale(2.2);opacity:0;}}
+  .pin{
+    width:52px;height:52px;border-radius:50% 50% 50% 0;background:var(--brass);
+    transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;
+  }
+  .pin::after{content:"";width:16px;height:16px;border-radius:50%;background:var(--navy-2);}
+  .js .mapwrap .pin{opacity:0;transform:translateY(-26px) rotate(-45deg);transition:opacity .5s var(--ease-out) .2s, transform .7s var(--ease-out) .2s;}
+  .js .mapwrap.in .pin{opacity:1;transform:rotate(-45deg);}
+  .mapwrap p{color:#efe9d6;font-size:.95rem;max-width:32ch;margin:0;}
+  .mapwrap .btn{margin-top:2px;}
+
+  /* ---- Legal ---- */
+  .legal{background:var(--cream-2);padding-block:64px;}
+  .legal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 48px;}
+  @media (max-width:720px){.legal-grid{grid-template-columns:1fr;gap:28px;}}
+  .legal-item h3{font-family:"Work Sans",sans-serif;font-size:13.5px;font-weight:600;letter-spacing:.03em;color:var(--ink);margin-bottom:8px;}
+  .legal-item p{font-size:13px;color:var(--ink-soft);line-height:1.55;margin:0;}
+  .legal-item p + p{margin-top:8px;}
+  .legal-item a{text-decoration:underline;color:var(--ink-soft);}
+  .legal-item .fill-in{font-style:italic;}
+  .legal-note{
+    margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--ink-soft);
+  }
+
+  /* ---- Footer ---- */
+  footer{background:var(--navy);color:#ada683;padding-block:40px;}
+  .ticks{
+    height:14px;margin-bottom:28px;color:rgba(241,236,221,.28);
+    background:
+      repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 60px) left bottom/100% 14px no-repeat,
+      repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 12px) left bottom/100% 7px no-repeat;
+  }
+  footer .wrap.row{
+    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+  }
+  footer .wordmark{color:#f1ecdd;}
+  footer .flinks{display:flex;gap:22px;list-style:none;padding:0;margin:0;flex-wrap:wrap;}
+  footer .flinks a{text-decoration:none;font-size:13px;color:#ada683;transition:color .18s ease;}
+  footer .flinks a:hover{color:var(--brass-light);}
+  footer .flinks li{font-size:13px;}
+  .foot-top{padding-bottom:20px;font-size:13px;}
+
+  /* ---- Leather: grain on every surface, stitched edges on panels ---- */
+  body{background-image:var(--grain);}
+  .inside,.legal{background-image:var(--grain),var(--sheen);}
+  .brands{background-image:var(--grain),radial-gradient(90% 70% at 50% 0%, rgba(255,190,140,.08), transparent 70%),radial-gradient(120% 80% at 50% 110%, rgba(0,0,0,.45), transparent 70%);}
+  .visit,footer{background-image:var(--grain),var(--sheen);}
+  footer{background-color:#0f0805;}
+  .bar{background-image:var(--grain);}
+  .coll-card,.svc-card{
+    background-color:var(--surface);
+    background-image:var(--grain),var(--sheen);
+    border-radius:4px;
+    box-shadow:inset 0 1px 0 rgba(255,225,180,.06), inset 0 -3px 10px rgba(0,0,0,.35), 0 10px 24px -12px rgba(0,0,0,.7);
+  }
+  .coll-card::before,.svc-card::before,.mapwrap::after{
+    content:"";position:absolute;inset:9px;pointer-events:none;
+    border:1.5px dashed var(--stitch);border-radius:3px;
+  }
+  .svc-card{position:relative;}
+  /* Stitched seams where the leather panels meet */
+  .brands,.visit,footer{position:relative;}
+  .brands::before,.visit::before,footer::before{
+    content:"";position:absolute;left:0;right:0;top:10px;border-top:1.5px dashed var(--stitch);
+  }
+  .story figure img,.inside-media video{box-shadow:0 18px 40px -18px rgba(0,0,0,.8);}
+
+  /* ---- Reduced motion: keep fades, drop movement ---- */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .hero-photo{animation:none;}
+    .rise{animation-name:fade;}
+    .clock{animation:fade .6s ease both;}
+    @keyframes fade{from{opacity:0;}to{opacity:1;}}
+    .hand.s{display:none;}
+    .js .reveal{transform:none;transition:opacity .5s ease;}
+    .js .story figure:not(.in)::before{transform:translate(-16px,-16px);}
+    .marquee-track{animation:none;}
+    .marquee{-webkit-mask-image:none;mask-image:none;}
+    .marquee-track{width:auto;flex-wrap:wrap;justify-content:center;}
+    .marquee-group[aria-hidden]{display:none;}
+    .marquee-group{flex-wrap:wrap;justify-content:center;row-gap:8px;}
+    .coll-card.in .swatch::after{animation:none;}
+    .gear,.balance{animation:none;}
+    .status.is-open .dot::after{animation:none;}
+    .mapwrap.in .pinwrap::before{animation:none;}
+    .js .mapwrap .pin{transform:rotate(-45deg);}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Top Time <small>sinds 1926</small></a>
+    <nav aria-label="Hoofdmenu">
+      <a href="#story">Verhaal</a>
+      <a href="#brands">Horloges</a>
+      <a href="#collections">Sieraden</a>
+      <a href="#services">Service</a>
+      <a href="#visit">Bezoek</a>
+    </nav>
+    <span class="status" data-status><span class="dot"></span><span class="label">Openingstijden</span></span>
+    <a class="btn btn-brass" href="tel:+31570612117">Bel ons</a>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <img class="hero-photo" src="assets/storefront-1.jpg" alt="De gevel van Top Time Juwelier aan de Spijkerboorsteeg in Deventer, met verlichte etalages vol horloges en sieraden">
+
+  <figure class="clock" id="clock" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs>
+        <radialGradient id="dial" cx="50%" cy="38%" r="70%">
+          <stop offset="0" stop-color="#fbf7ee"/>
+          <stop offset="1" stop-color="#e9dfc8"/>
+        </radialGradient>
+        <linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#e6c585"/>
+          <stop offset=".45" stop-color="#a9803f"/>
+          <stop offset=".7" stop-color="#d8b26a"/>
+          <stop offset="1" stop-color="#83621f"/>
+        </linearGradient>
+      </defs>
+      <circle cx="100" cy="100" r="99" fill="url(#bezel)"/>
+      <circle cx="100" cy="100" r="91" fill="url(#dial)"/>
+      <g id="ticks"></g>
+      <g font-family="Fraunces, Georgia, serif" font-size="17" font-weight="600" fill="#2b170e" text-anchor="middle">
+        <text x="100" y="42">XII</text>
+        <text x="158" y="106">III</text>
+        <text x="100" y="170">VI</text>
+        <text x="42" y="106">IX</text>
+      </g>
+      <text x="100" y="68" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="9.5" font-style="italic" fill="#83621f">Top Time</text>
+      <text x="100" y="140" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="6" letter-spacing="1.6" fill="#4a453d">DEVENTER · 1926</text>
+      <g class="hand h"><path d="M97 104 L98.4 52 L100 46 L101.6 52 L103 104 Z" fill="#2b170e"/></g>
+      <g class="hand m"><path d="M98 106 L99 26 L100 20 L101 26 L102 106 Z" fill="#2b170e"/></g>
+      <g class="hand s"><rect x="99.3" y="18" width="1.4" height="100" fill="#b3263a"/><circle cx="100" cy="100" r="4.2" fill="#b3263a"/></g>
+      <circle cx="100" cy="100" r="1.8" fill="#e6c585"/>
+    </svg>
+    <figcaption>Tijd in de winkel</figcaption>
+  </figure>
+
+  <div class="hero-content">
+    <div class="hero-inner">
+      <span class="badge rise" style="--i:0">100 jaar vakmanschap · <b>sinds 1926</b></span>
+      <h1 class="rise" style="--i:1">Al honderd jaar <em>de tijd</em> van Deventer.</h1>
+      <p class="lede rise" style="--i:2">Sinds 1926 uw juwelier aan de Spijkerboorsteeg — voor een horloge dat meegaat en een sieraad dat blijft. Van Seiko tot lab-grown diamant.</p>
+      <div class="hero-ctas rise" style="--i:3">
+        <a class="btn btn-brass" href="#visit">Bezoek de winkel</a>
+        <a class="btn btn-outline" href="tel:+31570612117">Bel (0570) 61 21 17</a>
+      </div>
+      <div class="rise" style="--i:4"><span class="status" data-status><span class="dot"></span><span class="label">Bekijk de openingstijden</span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <figure class="reveal">
+      <img src="assets/storefront-2.jpg" alt="De etalages van Top Time Juwelier met horloges van Lorus, Seiko en Mondaine op houten displays" loading="lazy">
+    </figure>
+    <div>
+      <span class="eyebrow reveal">Ons verhaal</span>
+      <h2 class="reveal" style="--d:1">Eén adres, honderd jaar geschiedenis.</h2>
+      <p class="reveal" style="--d:2">Al sinds 1926 staat Top Time aan een van de gezelligste steegjes van Deventer. Wat begon als een klein horlogeatelier is uitgegroeid tot een vertrouwde juwelier waar de sfeer van hout en messing nog altijd de toon zet — en waar elk horloge en elk sieraad met evenveel zorg over de toonbank gaat als honderd jaar geleden.</p>
+      <p class="reveal" style="--d:3">We combineren tijdloze merken met een moderne kijk op sieraden: gecertificeerd goud, en lab-grown diamant voor wie mooi wil dragen met een goed geweten.</p>
+      <div class="factrow reveal" style="--d:4">
+        <div class="fact"><b>1926</b><span>Jaar van oprichting</span></div>
+        <div class="fact"><b data-count="100">100</b><span>Jaar in de Spijkerboorsteeg</span></div>
+        <div class="fact"><b data-count="6">6</b><span>Horlogemerken op voorraad</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands" id="brands">
+  <div class="wrap">
+    <div class="brands-head center">
+      <span class="eyebrow light reveal">Horlogemerken</span>
+      <h2 class="reveal" style="--d:1">Klassiek en modern, naast elkaar in de vitrine.</h2>
+      <p class="reveal" style="--d:2">Van het Zwitsers-strakke Mondaine tot het Japanse vakmanschap van Seiko — wij kiezen merken die jaren meegaan.</p>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span>Seiko</span><i></i><span>Danish Design</span><i></i><span>Jacob Jensen</span><i></i><span>Mondaine</span><i></i><span>Lorus</span><i></i><span>Nomination</span><i></i>
+      </div>
+      <div class="marquee-group" aria-hidden="true">
+        <span>Seiko</span><i></i><span>Danish Design</span><i></i><span>Jacob Jensen</span><i></i><span>Mondaine</span><i></i><span>Lorus</span><i></i><span>Nomination</span><i></i>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="brand-row">
+      <div class="brand-item reveal"><span class="name">Seiko</span><span class="sub">Presage &amp; Prospex</span></div>
+      <div class="brand-item reveal" style="--d:1"><span class="name">Danish Design</span><span class="sub">Scandinavisch minimalisme</span></div>
+      <div class="brand-item reveal" style="--d:2"><span class="name">Jacob Jensen</span><span class="sub">Deens designhorloge</span></div>
+      <div class="brand-item reveal" style="--d:3"><span class="name">Mondaine</span><span class="sub">Zwitsers stationsuurwerk</span></div>
+      <div class="brand-item reveal" style="--d:4"><span class="name">Lorus</span><span class="sub">Toegankelijk &amp; veelzijdig</span></div>
+      <div class="brand-item reveal" style="--d:5"><span class="name">Nomination</span><span class="sub">Italiaanse bedelarmbanden</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="collections" id="collections">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">Sieraden</span>
+      <h2 class="reveal" style="--d:1">Gecertificeerd goud, met een moderne twist.</h2>
+      <p class="reveal" style="--d:2">Van 9 karaats dagelijkse sieraden tot 14 karaats lab-grown diamant — elk stuk in onze vitrines is gekeurd en gestempeld goud.</p>
+    </div>
+    <div class="card-grid">
+      <div class="coll-card reveal">
+        <span class="swatch" style="background:linear-gradient(135deg,#e8cf9a,#c9a45f)"></span>
+        <h3>Yara</h3>
+        <p>9 karaats goud gezet met lab-grown diamant. Licht, draagbaar en verantwoord — voor elke dag.</p>
+        <span class="tag">9K goud · lab-grown diamant</span>
+      </div>
+      <div class="coll-card reveal" style="--d:1">
+        <span class="swatch" style="background:linear-gradient(135deg,#f3e0b8,#d8ad5f)"></span>
+        <h3>Blush</h3>
+        <p>14 karaats goud met lab-grown diamant, en losse goud-only ontwerpen voor wie liever puur goud draagt.</p>
+        <span class="tag">14K goud · lab-grown diamant</span>
+      </div>
+      <div class="coll-card reveal" style="--d:2">
+        <span class="swatch" style="background:linear-gradient(135deg,#d7c9a6,#9c8a5c)"></span>
+        <h3>Fjory</h3>
+        <p>Nederlands fabrikaat — eigenzinnig en verfijnd, gemaakt met oog voor detail.</p>
+        <span class="tag">Nederlands fabrikaat</span>
+      </div>
+      <div class="coll-card reveal" style="--d:3">
+        <span class="swatch" style="background:linear-gradient(135deg,#e9e2cf,#bdb28c)"></span>
+        <h3>Verguld op zilver</h3>
+        <p>Sieraden met een zilveren kern en een laag echt goud — betaalbaar, gekeurd en met een warme uitstraling.</p>
+        <span class="tag">Gestempeld goud</span>
+      </div>
+      <div class="coll-card reveal" style="--d:4">
+        <span class="swatch" style="background:linear-gradient(135deg,#3b3730,#615746)"></span>
+        <h3>Herenarmbanden</h3>
+        <p>Stoere en verfijnde armbanden in goud en zilver — een tijdloos cadeau of statement voor zichzelf.</p>
+        <span class="tag">Goud &amp; zilver</span>
+      </div>
+      <div class="coll-card reveal" style="--d:5">
+        <span class="swatch" style="background:linear-gradient(135deg,#cba05c,#8a6a34)"></span>
+        <h3>Op maat advies</h3>
+        <p>Twijfel over karaat, maat of steen? In de winkel kijken we graag persoonlijk met u mee.</p>
+        <span class="tag">Persoonlijk advies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="inside" id="inside">
+  <div class="wrap">
+    <figure class="inside-media reveal">
+      <video id="walkthrough" muted loop playsinline preload="none" poster="assets/walkthrough-poster.jpg" aria-label="Korte video: binnenlopen bij Top Time, langs de houten vitrines met horloges en sieraden">
+        <source src="assets/walkthrough-hero.mp4" type="video/mp4">
+      </video>
+      <figcaption>Binnenlopen bij Top Time, Spijkerboorsteeg 10.</figcaption>
+    </figure>
+    <div>
+      <span class="eyebrow reveal">Kijk even binnen</span>
+      <h2 class="reveal" style="--d:1">Horloges op ooghoogte, advies aan de toonbank.</h2>
+      <p class="reveal" style="--d:2">Achter de etalage vindt u houten vitrines vol horloges en sieraden. Pak er gerust een uit de vitrine, pas hem om en vraag wat u wilt weten.</p>
+      <ul class="checks reveal" style="--d:3">
+        <li>Geen afspraak nodig — loop gewoon binnen</li>
+        <li>Alles in de winkel, dit is geen webshop</li>
+        <li>Batterij vervangen terwijl u wacht</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="top">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Diensten</span>
+        <h2 class="reveal" style="--d:1">Voor onderhoud dat net zo lang meegaat.</h2>
+      </div>
+      <figure class="movement reveal" style="--d:2" aria-hidden="true">
+        <svg viewBox="0 0 240 240">
+          <circle cx="120" cy="120" r="116" fill="var(--navy)"/>
+          <circle cx="120" cy="120" r="116" fill="none" stroke="var(--brass)" stroke-width="3"/>
+          <circle cx="120" cy="120" r="106" fill="none" stroke="var(--brass)" stroke-opacity=".35" stroke-dasharray="1 5.5"/>
+          <g class="gear a" data-gear="46,28" transform="translate(92 100)"></g>
+          <g class="gear b" data-gear="24,14" transform="translate(158 72)"></g>
+          <g class="gear esc" data-gear="20,15,esc" transform="translate(98 172)"></g>
+          <g transform="translate(164 158)">
+            <g class="balance">
+              <circle r="34" fill="none" stroke="#d8b26a" stroke-width="5"/>
+              <path d="M-32 0 H32 M0 -32 V32" stroke="#d8b26a" stroke-width="3"/>
+              <circle cx="34" cy="0" r="3" fill="#e6c585"/><circle cx="-34" cy="0" r="3" fill="#e6c585"/>
+              <circle cx="0" cy="34" r="3" fill="#e6c585"/><circle cx="0" cy="-34" r="3" fill="#e6c585"/>
+            </g>
+            <path id="hairspring" fill="none" stroke="#e6c585" stroke-width=".8" stroke-opacity=".8"/>
+            <circle r="4" fill="var(--ruby)"/>
+          </g>
+          <circle cx="92" cy="100" r="4" fill="var(--ruby)"/>
+          <circle cx="158" cy="72" r="3.2" fill="var(--ruby)"/>
+          <circle cx="98" cy="172" r="3" fill="var(--ruby)"/>
+        </svg>
+        <figcaption>Een uurwerk in beweging</figcaption>
+      </figure>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <span class="svc-num">01</span>
+        <h3>Batterij vervangen, snel en waterdicht</h3>
+        <p>Terwijl u wacht vervangen wij de batterij van uw horloge, waarna we de kast opnieuw op waterdichtheid testen.</p>
+        <ul>
+          <li>Klaar terwijl u wacht</li>
+          <li>Waterdichtheidstest inbegrepen</li>
+          <li>Voor vrijwel alle merken</li>
+        </ul>
+      </div>
+      <div class="svc-card reveal" style="--d:1">
+        <span class="svc-num">02</span>
+        <h3>Horlogereparatie door vakmensen</h3>
+        <p>Van een kapot bandje tot een uurwerk dat achterloopt: wij repareren uw horloge met dezelfde zorg als honderd jaar geleden.</p>
+        <ul>
+          <li>Onderhoud &amp; revisie</li>
+          <li>Bandjes en sluitingen</li>
+          <li>Vrijblijvende inschatting vooraf</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow light reveal">Bezoek ons</span>
+      <h2 class="reveal" style="--d:1">Loop binnen aan de Spijkerboorsteeg.</h2>
+      <p class="lede reveal" style="--d:2">Geen afspraak nodig — kom langs voor advies, een reparatie of gewoon om te kijken.</p>
+      <div class="reveal" style="--d:3"><span class="status" data-status><span class="dot"></span><span class="label">Zie openingstijden hieronder</span></span></div>
+      <div class="infogrid reveal" style="--d:4">
+        <div><div class="k">Adres</div><div class="v">Spijkerboorsteeg 10<br>7411 JG Deventer</div></div>
+        <div><div class="k">Telefoon</div><div class="v"><a href="tel:+31570612117">(0570) 61 21 17</a><br><a href="tel:+31657548722">06 57 54 87 22</a></div></div>
+        <div><div class="k">E-mail</div><div class="v"><a href="mailto:Info@toptimejuwelier.nl">Info@toptimejuwelier.nl</a></div></div>
+        <div><div class="k">Sinds</div><div class="v">1926 — 100 jaar in 2026</div></div>
+      </div>
+      <div class="trustline reveal">★★★★★ &nbsp;100% aanbevolen door klanten <span>— op basis van Facebook-beoordelingen</span></div>
+      <div class="hours reveal">
+        <table>
+          <tr data-day="1"><td>Maandag</td><td>Gesloten</td></tr>
+          <tr data-day="2"><td>Dinsdag</td><td>10:00 – 17:30</td></tr>
+          <tr data-day="3"><td>Woensdag</td><td>10:00 – 17:30</td></tr>
+          <tr data-day="4"><td>Donderdag</td><td>10:00 – 21:00</td></tr>
+          <tr data-day="5"><td>Vrijdag</td><td>10:00 – 17:30</td></tr>
+          <tr data-day="6"><td>Zaterdag</td><td>10:00 – 17:00</td></tr>
+          <tr data-day="0"><td>Zondag</td><td>Gesloten</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="mapwrap reveal">
+      <span class="pinwrap"><span class="pin"></span></span>
+      <p><strong style="color:var(--brass-light)">Spijkerboorsteeg 10</strong><br>7411 JG Deventer — vlak bij de Brink, op loopafstand van de parkeergarages in de binnenstad.</p>
+      <a class="btn btn-brass" href="https://www.google.com/maps?q=Spijkerboorsteeg+10,+7411+JG+Deventer" target="_blank" rel="noopener">Open route in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="legal">
+  <div class="wrap">
+    <div class="legal-grid">
+      <div class="legal-item">
+        <h3>Privacy</h3>
+        <p>Top Time Juwelier verzamelt geen persoonsgegevens via deze website — er zijn geen formulieren en we gebruiken geen tracking- of marketingcookies. Voor de lettertypen laadt deze pagina Google Fonts; daarbij kan uw IP-adres kort met Google worden gedeeld.</p>
+        <p>Vragen over uw gegevens? Mail naar <a href="mailto:Info@toptimejuwelier.nl">Info@toptimejuwelier.nl</a>.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Cookies</h3>
+        <p>Deze website plaatst zelf geen tracking- of analysecookies.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Aankopen &amp; herroeping</h3>
+        <p>U koopt bij ons in de winkel aan de Spijkerboorsteeg — deze website is geen webshop. Er is daarom geen 14-dagen herroepingsrecht zoals bij online aankopen; de gewone regels voor aankopen in een fysieke winkel zijn van toepassing.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Ruilen &amp; garantie</h3>
+        <p>Niet helemaal tevreden of twijfelt u? Neem contact op of kom langs — we denken graag met u mee. Op sieraden en horloges gelden de wettelijke garantiebepalingen.</p>
+      </div>
+      <div class="legal-item">
+        <h3>Bedrijfsgegevens</h3>
+        <p>Top Time Juwelier<br>Spijkerboorsteeg 10, 7411 JG Deventer</p>
+        <p>KvK: <span class="fill-in">in te vullen</span> · BTW: <span class="fill-in">in te vullen</span></p>
+      </div>
+    </div>
+    <p class="legal-note">Deze informatie is een korte samenvatting, geen juridisch advies. Top Time Juwelier kan deze tekst aanvullen of laten toetsen door een adviseur.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="ticks"></div></div>
+  <div class="wrap foot-top">
+    <span>Top Time Juwelier — Spijkerboorsteeg 10, 7411 JG Deventer</span>
+  </div>
+  <div class="wrap row">
+    <a class="wordmark" href="#top">Top Time</a>
+    <ul class="flinks">
+      <li><a href="tel:+31570612117">(0570) 61 21 17</a></li>
+      <li><a href="mailto:Info@toptimejuwelier.nl">Info@toptimejuwelier.nl</a></li>
+      <li><a href="#visit">Route</a></li>
+      <li><a href="#legal">Privacy &amp; voorwaarden</a></li>
+      <li>© 2026 Top Time Juwelier</li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+
+  /* ---------- Shop time (Deventer = Europe/Amsterdam) ---------- */
+  function shopNow(){
+    var p = {};
+    new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Amsterdam',weekday:'short',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'})
+      .formatToParts(new Date()).forEach(function(x){ p[x.type]=x.value; });
+    var days = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {day:days[p.weekday], h:+p.hour, m:+p.minute, s:+p.second};
+  }
+
+  /* Opening hours: edit here and in the table above. [open, close] in minutes, null = closed */
+  var HOURS = {0:null, 1:null, 2:[600,1050], 3:[600,1050], 4:[600,1260], 5:[600,1050], 6:[600,1020]};
+  var DAYNAMES = ['zondag','maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag'];
+  function fmt(min){ return Math.floor(min/60) + ':' + ('0'+min%60).slice(-2); }
+
+  function updateStatus(){
+    var t = shopNow(), now = t.h*60 + t.m, today = HOURS[t.day], text, open = false;
+    if (today && now >= today[0] && now < today[1]) {
+      open = true; text = 'Nu open · tot ' + fmt(today[1]) + ' vandaag';
+    } else if (today && now < today[0]) {
+      text = 'Gesloten · vandaag open om ' + fmt(today[0]);
+    } else {
+      for (var i=1;i<=7;i++){
+        var d = (t.day+i)%7;
+        if (HOURS[d]) { text = 'Gesloten · ' + (i===1 ? 'morgen' : DAYNAMES[d]) + ' open om ' + fmt(HOURS[d][0]); break; }
+      }
+    }
+    document.querySelectorAll('[data-status]').forEach(function(el){
+      el.classList.toggle('is-open', open);
+      el.querySelector('.label').textContent = text;
+    });
+    document.querySelectorAll('.hours tr').forEach(function(tr){
+      tr.classList.toggle('today', +tr.dataset.day === t.day);
+    });
+  }
+  updateStatus();
+  setInterval(updateStatus, 30000);
+
+  /* ---------- Hero clock: CSS runs the hands, JS only sets the start position ---------- */
+  var ticks = document.getElementById('ticks');
+  for (var i=0;i<60;i++){
+    var major = i%5===0, l = document.createElementNS(NS,'line');
+    l.setAttribute('x1',100); l.setAttribute('x2',100);
+    l.setAttribute('y1',12); l.setAttribute('y2', major ? 22 : 16);
+    l.setAttribute('stroke', major ? '#2b170e' : '#83621f');
+    l.setAttribute('stroke-width', major ? 2.2 : 0.8);
+    l.setAttribute('transform','rotate('+(i*6)+' 100 100)');
+    ticks.appendChild(l);
+  }
+  var clock = document.getElementById('clock');
+  function syncClock(){
+    var t = shopNow(), ms = new Date().getMilliseconds();
+    var sec = t.s + ms/1000, min = t.m*60 + sec, hr = (t.h%12)*3600 + min;
+    clock.querySelector('.hand.s').style.animationDelay = (-sec) + 's';
+    clock.querySelector('.hand.m').style.animationDelay = (-min) + 's';
+    clock.querySelector('.hand.h').style.animationDelay = (-hr) + 's';
+    clock.classList.add('synced');
+  }
+  syncClock();
+  document.addEventListener('visibilitychange', function(){ if (!document.hidden) { syncClock(); updateStatus(); } });
+
+  /* ---------- Movement illustration: build gears ---------- */
+  function gear(g, r, teeth, esc){
+    var d = '', depth = esc ? 7 : 5, step = Math.PI*2/teeth;
+    for (var k=0;k<teeth;k++){
+      var a = k*step, pts;
+      if (esc) { // hooked escape-wheel teeth
+        pts = [[r-depth,a],[r,a+step*.15],[r-depth*.6,a+step*.5]];
+      } else {
+        pts = [[r-depth,a],[r,a+step*.2],[r,a+step*.5],[r-depth,a+step*.7]];
+      }
+      pts.forEach(function(p,j){
+        d += (k===0&&j===0?'M':'L') + (p[0]*Math.cos(p[1])).toFixed(2) + ' ' + (p[0]*Math.sin(p[1])).toFixed(2);
+      });
+    }
+    d += 'Z';
+    var body = document.createElementNS(NS,'path');
+    body.setAttribute('d', d); body.setAttribute('fill', '#c9a45f');
+    g.appendChild(body);
+    var hole = document.createElementNS(NS,'circle');
+    hole.setAttribute('r', r - depth - 4); hole.setAttribute('fill', 'var(--navy)');
+    g.appendChild(hole);
+    var spokes = esc ? 4 : 5;
+    for (var s=0;s<spokes;s++){
+      var sp = document.createElementNS(NS,'rect');
+      sp.setAttribute('x', -2.2); sp.setAttribute('y', -(r-depth-3)); sp.setAttribute('width', 4.4); sp.setAttribute('height', r-depth-3);
+      sp.setAttribute('fill','#c9a45f'); sp.setAttribute('transform','rotate('+(s*360/spokes)+')');
+      g.appendChild(sp);
+    }
+    var hub = document.createElementNS(NS,'circle');
+    hub.setAttribute('r', Math.max(6, r*.22)); hub.setAttribute('fill','#d8b26a');
+    g.appendChild(hub);
+  }
+  document.querySelectorAll('[data-gear]').forEach(function(g){
+    var a = g.dataset.gear.split(',');
+    // wrap in an inner group so the CSS rotation doesn't fight the translate
+    var inner = document.createElementNS(NS,'g');
+    inner.setAttribute('class', g.getAttribute('class'));
+    g.removeAttribute('class');
+    g.appendChild(inner);
+    gear(inner, +a[0], +a[1], a[2]==='esc');
+  });
+  var hs = document.getElementById('hairspring'), sd = '';
+  for (var th=0; th<=Math.PI*2*5; th+=0.2){
+    var rr = 5 + th*0.75;
+    sd += (th===0?'M':'L') + (rr*Math.cos(th)).toFixed(2) + ' ' + (rr*Math.sin(th)).toFixed(2);
+  }
+  hs.setAttribute('d', sd);
+
+  /* ---------- Count-up for facts ---------- */
+  function countUp(el){
+    var target = +el.dataset.count;
+    if (reduce) { el.textContent = target; return; }
+    var start = performance.now(), dur = 1400;
+    (function frame(now){
+      var p = Math.min(1, (now-start)/dur), e = 1 - Math.pow(1-p, 4);
+      el.textContent = Math.round(target*e);
+      if (p < 1) requestAnimationFrame(frame);
+    })(start);
+  }
+
+  /* ---------- Scroll reveals ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      en.target.classList.add('in');
+      en.target.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(en.target);
+    });
+  }, {rootMargin:'0px 0px -10% 0px', threshold:0.12});
+  document.querySelectorAll('.reveal, .mapwrap').forEach(function(el){ io.observe(el); });
+
+  /* Movement only runs while it's on screen */
+  var mv = document.querySelector('.movement');
+  new IntersectionObserver(function(en){ mv.classList.toggle('running', en[0].isIntersecting); }).observe(mv);
+
+  /* ---------- Walkthrough video: plays only while visible, never with reduced motion ---------- */
+  var vid = document.getElementById('walkthrough');
+  if (reduce) {
+    vid.controls = true;
+  } else {
+    new IntersectionObserver(function(en){
+      if (en[0].isIntersecting) { vid.preload = 'auto'; var p = vid.play(); if (p) p.catch(function(){ vid.controls = true; }); }
+      else vid.pause();
+    }, {threshold:0.35}).observe(vid);
+  }
+
+  /* ---------- Sticky bar + active section ---------- */
+  var bar = document.getElementById('bar'), hero = document.getElementById('top');
+  new IntersectionObserver(function(en){ bar.classList.toggle('show', !en[0].isIntersecting); }, {rootMargin:'-80px 0px 0px 0px'}).observe(hero);
+  var links = {};
+  bar.querySelectorAll('nav a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      Object.keys(links).forEach(function(k){ links[k].classList.toggle('active', k === en.target.id); });
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(links).forEach(function(id){ spy.observe(document.getElementById(id)); });
+})();
+</script>
+</body>
+</html>

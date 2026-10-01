@@ -1,5 +1,16 @@
 {
-  "description": "Impeccable design detector: immediate-tier checks after Edit/Write on UI files, full-rule deep pass on Stop.",
+  "permissions": {
+    "allow": [
+      "Bash(which playwright-cli *)",
+      "Read(//c/Users/risim/AppData/Local/ms-playwright/**)",
+      "Bash(playwright-cli resize *)",
+      "Bash(playwright-cli goto *)",
+      "Bash(playwright-cli eval *)",
+      "Bash(playwright-cli screenshot *)",
+      "Bash(playwright-cli console *)",
+      "Bash(playwright-cli reload *)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
@@ -26,5 +37,6 @@
         ]
       }
     ]
-  }
+  },
+  "description": "Impeccable design detector: immediate-tier checks after Edit/Write on UI files, full-rule deep pass on Stop."
 }

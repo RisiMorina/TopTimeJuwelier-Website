@@ -511,10 +511,19 @@ mark.todo,
 .service__text { color: var(--muted); }
 .service__text p { margin: 0; }
 
-/* Eén horloge in zijn doos: liggend uitgesneden rond het horloge, het merklogo op het deksel valt weg */
-.service__photo { margin: 1.5rem 0 0; max-width: 34rem; }
+/* Drie productfoto's (het maximum voor de hele pagina): onder elkaar op mobiel,
+   naast elkaar vanaf tablet. Alle 3:2, dus even hoog. */
+.service__photos { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
+@media (min-width: 48em) {
+  .service__photos { grid-template-columns: repeat(3, 1fr); }
+}
+.service__photo { margin: 0; }
 .service__photo .slot { --ratio: 3 / 2; }
-.service__photo img { object-position: 50% 82%; filter: var(--photo-filter-light); }
+.service__photo img { filter: var(--photo-filter-light); }
+/* Horloge: rond het horloge uitgesneden, het merklogo op het deksel valt weg */
+.service__photo--watch img { object-position: 50% 82%; }
+/* Kettingen: de linker twee derde, zodat het label aan de rechter paspop wegvalt */
+.service__photo--chains img { object-position: 0% 50%; }
 
 @media (min-width: 64em) {
   .service {
