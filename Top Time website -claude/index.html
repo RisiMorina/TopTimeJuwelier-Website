@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ===== SEO ===== -->
+  <title>Top Time | Juwelier en horlogereparatie in Deventer, sinds 1926</title>
+  <meta name="description" content="Top Time is uw juwelier in Deventer, sinds 1926. Gouden sieraden en horloges, horlogereparatie, sieradenreparatie en een nieuwe horlogebatterij terwijl u wacht.">
+  <meta name="theme-color" content="#14110F">
+  <!-- Vul [WEBSITE-URL] in zodra de site online staat, bijv. https://www.toptime-deventer.nl -->
+  <link rel="canonical" href="[WEBSITE-URL]/">
+
+  <!-- ===== Open Graph (voorbeeld bij het delen van een link) =====
+       Deze tags worden gelezen zonder JavaScript, daarom staan ze hier en niet in main.js.
+       og:image moet een volledige URL zijn: [WEBSITE-URL]/assets/images/og-image.jpg (1200 x 630). -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Top Time">
+  <meta property="og:title" content="Top Time | Uw juwelier in Deventer, sinds 1926">
+  <meta property="og:description" content="Gouden sieraden en horloges, horlogereparatie, sieradenreparatie en een nieuwe horlogebatterij terwijl u wacht. Loop gerust binnen.">
+  <meta property="og:url" content="[WEBSITE-URL]/">
+  <meta property="og:image" content="[WEBSITE-URL]/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- ===== Lettertypen ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Gestructureerde gegevens (JewelryStore) worden door js/main.js
+       gevuld vanuit de gegevens bovenin dat bestand. -->
+  <script type="application/ld+json" id="structured-data">{"@context":"https://schema.org","@type":"JewelryStore","name":"Top Time","foundingDate":"1926"}</script>
+
+  <!-- GSAP alleen voor subtiele animaties. Zonder GSAP werkt de site gewoon. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Direct naar de inhoud</a>
+
+  <!-- =========================================================
+       1. HEADER / NAVIGATIE
+       ========================================================= -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="wordmark" href="#top">
+        Top Time
+        <span class="wordmark__sub">Deventer &middot; sinds 1926</span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="#diensten">Diensten</a></li>
+          <li><a href="#verhaal">Ons verhaal</a></li>
+          <li><a href="#bezoek">Bezoek ons</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--gold btn--small header-call" href="#bezoek" data-tel>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
+        Bel ons
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         2. HERO
+         Foto: assets/images/hero-poster.jpg
+         ========================================================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img class="hero__img" src="assets/images/hero-poster.jpg" alt=""
+             width="1920" height="1080" fetchpriority="high" decoding="async">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <h1 id="hero-title" data-reveal>Uw juwelier in Deventer, sinds&nbsp;1926</h1>
+        <p class="hero__lead" data-reveal>Een nieuwe horlogebatterij zit er meestal in terwijl u wacht.</p>
+        <div class="hero__actions" data-reveal>
+          <a class="btn btn--gold" href="#bezoek" data-tel>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
+            Bel ons
+          </a>
+          <a class="btn btn--ghost" href="#bezoek" data-route target="_blank" rel="noopener">Route plannen</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero__bar">
+          <!-- Openingsstatus: wordt berekend in main.js uit de openingstijden. -->
+          <p class="open-status" data-open-status role="status">
+            <span class="open-status__dot" aria-hidden="true"></span>
+            <span data-open-status-text>Di t/m vr 10:00 – 17:30 &middot; za 10:00 – 17:00</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         3. DIENSTEN
+         ========================================================= -->
+    <section class="section section--cream" id="diensten" aria-labelledby="diensten-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <h2 id="diensten-title" data-reveal>Sieraden, horloges en reparaties in&nbsp;Deventer</h2>
+          </div>
+        </header>
+
+        <!-- Het ene bewegende moment van de site: de foto zoomt langzaam uit terwijl u scrolt (main.js). -->
+        <figure class="repair-zoom">
+          <div class="slot repair-zoom__frame">
+            <span class="slot__label">FOTO: pincet in een open horloge</span>
+            <img src="assets/images/horloge-uurwerk.jpg" data-repair-zoom
+                 alt="Met een pincet wordt een open horloge gerepareerd op de werkbank"
+                 width="1200" height="1200" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+        </figure>
+
+        <ol class="services">
+          <li class="service" data-reveal>
+            <h3 class="service__title">Horlogebatterij vervangen</h3>
+            <div class="service__text">
+              <p>Meestal klaar terwijl u wacht, zonder afspraak.</p>
+            </div>
+          </li>
+
+          <li class="service" data-reveal>
+            <h3 class="service__title">Horlogereparatie</h3>
+            <div class="service__text">
+              <p>Loopt uw horloge niet meer goed, breng het dan gerust langs.</p>
+            </div>
+          </li>
+
+          <li class="service" data-reveal>
+            <h3 class="service__title">Sieradenreparatie</h3>
+            <div class="service__text">
+              <p>Een gebroken schakel of los steentje maken we zo mogelijk weer heel.</p>
+            </div>
+          </li>
+
+          <li class="service" data-reveal>
+            <h3 class="service__title">Gouden sieraden en horloges</h3>
+            <div class="service__text">
+              <p>Wat er in de vitrine ligt, wisselt: kom gerust kijken.</p>
+              <figure class="service__photo">
+                <div class="slot">
+                  <span class="slot__label">FOTO: horloge in geschenkdoos</span>
+                  <img src="assets/images/horloges-vitrine.jpg"
+                       alt="Horloge met leren band in een geopende geschenkdoos"
+                       width="1200" height="1500" loading="lazy" decoding="async" onerror="this.remove()">
+                </div>
+              </figure>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         4. ONS VERHAAL
+         Alles tussen [VERHAAL: ...] is een plek voor echte details.
+         Vervang de hele <mark class="todo">...</mark> door uw eigen tekst.
+         ========================================================= -->
+    <section class="section section--dark story" id="verhaal" aria-labelledby="verhaal-title">
+      <div class="container story__grid">
+        <p class="story__year" aria-hidden="true" data-year-reveal>1926</p>
+
+        <figure class="story__photo" data-reveal>
+          <div class="slot" style="--ratio: 4 / 5">
+            <span class="slot__label">FOTO: de winkel van binnen</span>
+            <img class="story__img" src="assets/images/werkbank.jpg"
+                 alt="De toonbank van Top Time, met een Junghans-horloge in zijn doos en de wenteltrap erachter"
+                 width="1800" height="1200" loading="lazy" decoding="async"
+                 onerror="this.remove()">
+          </div>
+          <figcaption><span data-config="ownerName">[NAAM EIGENAAR]</span> in de winkel</figcaption>
+        </figure>
+
+        <div class="story__text">
+          <h2 id="verhaal-title" data-reveal>Een vertrouwd adres in Deventer, al sinds 1926</h2>
+
+          <div data-reveal>
+            <p>
+              In 1926 ging in Deventer voor het eerst de deur van Top Time open.
+              <mark class="todo">[VERHAAL: wie begon de zaak, en waar zat de winkel toen?]</mark>
+            </p>
+            <p>
+              Sindsdien zijn er heel wat Deventenaren bij ons binnengelopen: voor een ring,
+              een eerste horloge, of gewoon een batterij die op was.
+              <mark class="todo">[VERHAAL: een mooi moment of een bijzonder stuk uit de geschiedenis van de winkel]</mark>
+            </p>
+            <p>
+              Tegenwoordig staat <span data-config="ownerName">[NAAM EIGENAAR]</span> achter de toonbank.
+              <mark class="todo">[VERHAAL: sinds wanneer, hoe de eigenaar in het vak kwam, en wat het mooiste aan het werk is]</mark>
+            </p>
+            <p>
+              Wat al die jaren hetzelfde is gebleven: u wordt persoonlijk geholpen,
+              door iemand die de tijd voor u neemt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- =========================================================
+         5. BEZOEK ONS
+         ========================================================= -->
+    <section class="section section--cream visit" id="bezoek" aria-labelledby="bezoek-title">
+      <div class="container visit__grid">
+        <div class="visit__info">
+          <h2 id="bezoek-title" data-reveal>Loop gerust eens binnen</h2>
+          <p class="visit__intro" data-reveal>
+            U vindt ons in Deventer. Voor een nieuwe horlogebatterij hoeft u geen afspraak
+            te maken. Heeft u een vraag over een reparatie? Bel of app ons gerust even.
+          </p>
+
+          <dl class="contact" data-reveal>
+            <div>
+              <dt>Adres</dt>
+              <dd>
+                <span data-config="street">[ADRES]</span><br>
+                <span data-config="postalCode">[POSTCODE]</span> <span data-config="city">Deventer</span>
+              </dd>
+            </div>
+            <div>
+              <dt>Telefoon</dt>
+              <dd><a class="link" href="#bezoek" data-tel data-config="phone">[TELEFOONNUMMER]</a></dd>
+            </div>
+            <div>
+              <dt>WhatsApp</dt>
+              <dd><a class="link" href="#bezoek" data-whatsapp data-config="whatsappDisplay" target="_blank" rel="noopener">[WHATSAPP-NUMMER]</a></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a class="link" href="#bezoek" data-mail data-config="email">[E-MAILADRES]</a></dd>
+            </div>
+          </dl>
+
+          <p class="rating" data-reveal>
+            <a class="link" href="#bezoek" data-reviews-link target="_blank" rel="noopener"><span data-config="googleRating">[GOOGLE-SCORE]</span> op Google &middot; <span data-config="googleReviewCount">[AANTAL]</span> reviews<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
+          </p>
+
+          <h3 class="visit__subhead" data-reveal>Openingstijden</h3>
+          <table class="hours" data-reveal>
+            <caption class="sr-only">Openingstijden van Top Time</caption>
+            <tbody data-hours>
+              <!-- Wordt door main.js gevuld vanuit de openingstijden bovenin main.js. -->
+              <tr><th scope="row">Maandag t/m zondag</th><td>[OPENINGSTIJDEN]</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="visit__map" data-reveal>
+          <figure class="visit__photo">
+            <div class="slot">
+              <span class="slot__label">FOTO: de ronde wand met vitrines</span>
+              <img src="assets/images/winkel-interieur.jpg"
+                   alt="De ronde wand met verlichte vitrines vol horloges en sieraden in de winkel"
+                   width="1800" height="1200" loading="lazy" decoding="async" onerror="this.remove()">
+            </div>
+          </figure>
+
+          <!-- De kaart wordt pas geladen als deze in beeld komt (scheelt laadtijd). -->
+          <div class="map" data-map>
+            <p class="map__placeholder">KAART: verschijnt hier zodra het adres is ingevuld</p>
+          </div>
+          <p class="visit__maplink">
+            <a class="link" href="#bezoek" data-route target="_blank" rel="noopener">Open in Google Maps en plan uw route</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- =========================================================
+       6. FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__name">Top Time <span>Sinds 1926</span></p>
+      <p>
+        <span data-config="street">[ADRES]</span>, <span data-config="city">Deventer</span>
+        &middot; <a class="link" href="#bezoek" data-tel data-config="phone">[TELEFOONNUMMER]</a>
+      </p>
+      <p>&copy; <span data-year>2026</span> Top Time</p>
+    </div>
+  </footer>
+
+
+  <!-- Mobiele actiebalk (alleen op kleine schermen) -->
+  <nav class="mobile-bar" aria-label="Snel contact">
+    <a class="btn btn--gold" href="#bezoek" data-tel>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
+      Bellen
+    </a>
+    <a class="btn btn--ghost" href="#bezoek" data-route target="_blank" rel="noopener">Route</a>
+  </nav>
+</body>
+</html>

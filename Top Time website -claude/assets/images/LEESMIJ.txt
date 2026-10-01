@@ -1,0 +1,12 @@
+Zet hier de foto's neer, met precies deze bestandsnamen.
+Zolang een bestand ontbreekt, toont de site een neutraal vlak met een label.
+Exporteer als JPG (kwaliteit ~75-80%), of WebP als u de bestandsnaam in index.html aanpast.
+
+hero-poster.jpg           1920 x 1080  (16:9)  stilstaand beeld uit de winkelpui-video
+eigenaar-aan-het-werk.jpg 1200 x 1500  (4:5)   de eigenaar aan de werkbank
+winkel-interieur.jpg      1800 x 1200  (3:2)   de winkel van binnen
+gouden-sieraden.jpg       1200 x 1500  (4:5)   close-up gouden sieraden
+horloge-uurwerk.jpg       1200 x 1200  (1:1)   open horloge-uurwerk
+werkbank.jpg              1800 x 1200  (3:2)   de werkbank met gereedschap
+horloges-vitrine.jpg      1200 x 1500  (4:5)   horloges in de vitrine
+og-image.jpg              1200 x  630  (1,91:1) voorbeeldplaatje bij het delen van een link
