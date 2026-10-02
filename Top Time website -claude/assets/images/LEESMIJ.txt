@@ -1,12 +1,12 @@
-Zet hier de foto's neer, met precies deze bestandsnamen.
-Zolang een bestand ontbreekt, toont de site een neutraal vlak met een label.
-Exporteer als JPG (kwaliteit ~75-80%), of WebP als u de bestandsnaam in index.html aanpast.
+Dit zijn alle foto's die index.html gebruikt (en niets anders).
+Vervang een foto door een bestand met dezelfde naam en dezelfde verhouding.
+Originelen en bewerkte versies staan buiten de sitefolder in ../../../fotos/.
 
-hero-poster.jpg           1920 x 1080  (16:9)  stilstaand beeld uit de winkelpui-video
-eigenaar-aan-het-werk.jpg 1200 x 1500  (4:5)   de eigenaar aan de werkbank
-winkel-interieur-vitrines.webp 1400 x 1050 (4:3)  de vitrines (uitsnede van IMG_3660)
-gouden-sieraden.jpg       1200 x 1500  (4:5)   close-up gouden sieraden
-horloge-uurwerk.jpg       1200 x 1200  (1:1)   open horloge-uurwerk
-werkbank.jpg              1800 x 1200  (3:2)   de werkbank met gereedschap
-horloges-vitrine.jpg      1200 x 1500  (4:5)   horloges in de vitrine
-og-image.jpg              1200 x  630  (1,91:1) voorbeeldplaatje bij het delen van een link
+bandjes.webp                   1366 x  341   57 KB   horlogebandjes (uitsnede van fotos/originelen/bandjes-volle-foto.jpeg)
+gouden-kettingen.jpg           1932 x  869  257 KB   gouden kettingen
+hero-poster.jpg                1920 x 1080  252 KB   hero, de winkelpui
+horloge-uurwerk.jpg            1200 x 1200  182 KB   open horloge-uurwerk
+horloges-vitrine.jpg           1200 x 1500  108 KB   horloges in de vitrine
+og-image.jpg                   1200 x  630   98 KB   voorbeeldplaatje bij het delen van een link
+werkbank.jpg                   1800 x 1200  248 KB   de werkbank met gereedschap
+winkel-interieur-vitrines.webp 1400 x 1050  173 KB   de vitrines (uitsnede van IMG_3660)
