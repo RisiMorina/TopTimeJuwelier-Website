@@ -3,7 +3,7 @@
 
    ▸ STAP 1: vul hieronder de bedrijfsgegevens in.
      Alles op de website (telefoon, adres, openingstijden,
-     links, gestructureerde gegevens voor Google) komt hieruit.
+     links) komt hieruit. De JSON-LD voor Google staat vast in index.html.
      Waarden tussen [VIERKANTE HAKEN] zijn nog niet ingevuld.
 
    De rest van dit bestand hoeft u normaal niet aan te passen.
@@ -61,7 +61,6 @@ const TOPTIME = {
    ========================================================= */
 
 const DAYS = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
-const SCHEMA_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 /** true als een waarde nog een [PLACEHOLDER] is */
@@ -211,52 +210,6 @@ function renderHoursTable() {
 }
 
 
-/* ---------- Gestructureerde gegevens (JSON-LD voor Google) ---------- */
-function renderStructuredData() {
-  const el = document.getElementById("structured-data");
-  if (!el) return;
-
-  const data = {
-    "@context": "https://schema.org",
-    "@type": "JewelryStore",
-    name: TOPTIME.name,
-    description: "Juwelier en horlogemaker in Deventer, op dit adres sinds 1926: gouden sieraden en horloges, horlogereparatie, sieradenreparatie en horlogebatterij vervangen.",
-    foundingDate: String(TOPTIME.foundingYear),
-    telephone: intlPhone(),
-    email: TOPTIME.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: TOPTIME.street,
-      postalCode: TOPTIME.postalCode,
-      addressLocality: TOPTIME.city,
-      addressCountry: "NL",
-    },
-  };
-
-  if (hoursKnown()) {
-    data.openingHoursSpecification = DAYS
-      .map((day, i) => ({ h: TOPTIME.hours[day], i }))
-      .filter(({ h }) => h)
-      .map(({ h, i }) => ({
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "https://schema.org/" + SCHEMA_DAYS[i],
-        opens: h[0],
-        closes: h[1],
-      }));
-  } else {
-    data.openingHours = "[OPENINGSTIJDEN]";
-  }
-
-  if (!isPlaceholder(TOPTIME.websiteUrl)) {
-    const site = TOPTIME.websiteUrl.replace(/\/$/, "");
-    data.url = site + "/";
-    data.image = site + "/assets/images/og-image.jpg";
-  }
-  if (reviewsHref()) data.sameAs = [reviewsHref()];
-  el.textContent = JSON.stringify(data);
-}
-
-
 /* ---------- Google Maps: pas laden als de kaart in beeld komt ---------- */
 function setupMap() {
   const box = document.querySelector("[data-map]");
@@ -365,7 +318,6 @@ function setupMotion() {
 fillConfigText();
 renderOpenStatus();
 renderHoursTable();
-renderStructuredData();
 setupMap();
 setupHeader();
 setupMotion();

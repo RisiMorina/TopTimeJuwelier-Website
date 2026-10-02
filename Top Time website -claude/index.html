@@ -33,9 +33,64 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Gestructureerde gegevens (JewelryStore): staan hier al ingevuld,
-       js/main.js werkt ze bij vanuit de gegevens bovenin dat bestand. -->
-  <script type="application/ld+json" id="structured-data">{"@context":"https://schema.org","@type":"JewelryStore","name":"Top Time","description":"Juwelier en horlogemaker in Deventer, op dit adres sinds 1926: gouden sieraden en horloges, horlogereparatie, sieradenreparatie en horlogebatterij vervangen.","foundingDate":"1989","telephone":"+31570612117","email":"Info@toptimejuwelier.nl","address":{"@type":"PostalAddress","streetAddress":"Spijkerboorsteeg 10","postalCode":"7411 JG","addressLocality":"Deventer","addressCountry":"NL"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Tuesday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Wednesday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Thursday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Friday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Saturday","opens":"10:00","closes":"17:00"}],"sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs"]}</script>
+  <!-- Gestructureerde gegevens (JewelryStore), vast in de HTML.
+       LET OP: de openingstijden hieronder en in de tabel in "Bezoek ons" moeten gelijk zijn
+       aan TOPTIME.hours in js/main.js. Pas ze altijd samen aan. -->
+  <script type="application/ld+json" id="structured-data">
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Top Time",
+    "description": "Juwelier en horlogemaker in Deventer, op dit adres sinds 1926: gouden sieraden en horloges, horlogereparatie, sieradenreparatie en horlogebatterij vervangen.",
+    "foundingDate": "1989",
+    "telephone": "+31570612117",
+    "email": "Info@toptimejuwelier.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Spijkerboorsteeg 10",
+      "postalCode": "7411 JG",
+      "addressLocality": "Deventer",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Tuesday",
+        "opens": "10:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Wednesday",
+        "opens": "10:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Thursday",
+        "opens": "10:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Friday",
+        "opens": "10:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "https://schema.org/Saturday",
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs"
+    ],
+    "url": "https://toptimejuwelier.nl/",
+    "image": "https://toptimejuwelier.nl/assets/images/og-image.jpg"
+  }
+  </script>
 
   <!-- GSAP alleen voor subtiele animaties. Zonder GSAP werkt de site gewoon. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>

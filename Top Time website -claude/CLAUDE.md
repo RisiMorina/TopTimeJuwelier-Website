@@ -4,8 +4,8 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 
 ## Structuur
 - Secties in `index.html`: header, hero, diensten, ons verhaal, bezoek ons, footer, mobiele actiebalk.
-- Alle contactgegevens staan **hard in de HTML** (werkt zonder JavaScript). `js/main.js` heeft bovenin het object `TOPTIME` en werkt de HTML daaruit bij (`data-config`, `data-tel`, `data-route`, openingstijden, JSON-LD). Wijzig gegevens dus op **beide** plekken, of controleer dat ze gelijk zijn.
-- Openingstijden: `TOPTIME.hours` in `main.js` (tabel, openingsstatus en JSON-LD volgen daaruit). De tabel en JSON-LD in de HTML moeten daarmee overeenkomen.
+- Alle contactgegevens staan **hard in de HTML** (werkt zonder JavaScript). `js/main.js` heeft bovenin het object `TOPTIME` en werkt de HTML daaruit bij (`data-config`, `data-tel`, `data-route`, openingstijden). Wijzig gegevens dus op **beide** plekken, of controleer dat ze gelijk zijn.
+- Openingstijden: `TOPTIME.hours` in `main.js` (tabel en openingsstatus volgen daaruit). De tabel en het JSON-LD-blok in de `<head>` van `index.html` (vast, niet meer door JavaScript gegenereerd) moeten daarmee overeenkomen: pas alle drie samen aan.
 - Foto's krijgen de gouden lijst + schaduw via `.photo`. Dienstenfoto's: `.service__photo` (bandjes en reparatie: `--straps`, `--repair`, volle breedte). De reparatiefoto zoomt langzaam uit bij scrollen (`data-repair-zoom`, alleen als `prefers-reduced-motion` niet aan staat).
 - Foto's staan in `assets/images/` (zonder spaties in de naam). Bandjes: `bandjes.webp` (uitsnede van `bandjes volle foto.jpeg` / `bandjes.jpg`, 90° gedraaid, de warme filter zit in de CSS, niet in het bestand).
 - Bandjesfoto-uitsnede: de Morellato-stickers en de gespen horen goed zichtbaar te zijn; het prijskaartje op het bruine bandje (28,00 €) mag in beeld, want het staat echt in de foto. De punten met de gaatjes mogen deels wegvallen. Geen rand van de bak of tafel. Dit vervangt de oude regel "geen labels, geen prijssticker".
@@ -26,3 +26,4 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 - Site-URL is `https://toptimejuwelier.nl` (zonder www): canonical, og:url, og:image in de `<head>` en `TOPTIME.websiteUrl` in `main.js`. Bij een domeinwissel overal aanpassen.
 - `TOPTIME.priceBattery` is niet in gebruik; alleen invullen als de eigenaar een prijs wil tonen.
 - `privacy.html` (statisch, zonder JavaScript, gelinkt vanuit de footer) heeft nog drie gemarkeerde TODO's: bewaartermijn van berichten, of de Google Maps-kaart cookies plaatst, waar de site gehost wordt en of er IP-logs zijn. Controleer ook bij een nieuwe tool (analytics, formulier, WhatsApp) of de privacytekst nog klopt.
+- `robots.txt` en `sitemap.xml` staan in de root (sitemap: `index.html` en `privacy.html`).
