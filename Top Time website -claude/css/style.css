@@ -516,20 +516,11 @@ mark.todo,
 
 
 /* ---------- 7. Diensten ---------- */
-/* Reparatiefoto: begint ingezoomd op het open horloge en zoomt uit tijdens het scrollen (main.js).
-   Zonder JavaScript of bij 'minder beweging' staat het volledige beeld er gewoon. */
-.repair-zoom { margin: 0 0 clamp(3rem, 6vw, 5rem); }
-.repair-zoom__frame { --ratio: 4 / 3; }
-.repair-zoom img {
+/* Reparatiefoto (in de dienst Horlogereparatie): begint ingezoomd op het open horloge en zoomt uit
+   tijdens het scrollen (main.js). Zonder JavaScript of bij 'minder beweging' staat het volledige beeld er. */
+.service__photo--repair img {
   object-position: 50% 45%;
   transform-origin: 47% 46%;
-}
-@media (min-width: 48em) {
-  .repair-zoom__frame { --ratio: 16 / 9; }
-}
-/* Vanaf desktop kleiner en links uitgelijnd: 65% van de inhoudsbreedte */
-@media (min-width: 64em) {
-  .repair-zoom { width: 65%; margin-right: auto; }
 }
 
 .services {
@@ -556,9 +547,12 @@ mark.todo,
 /* Bandjes: brede strook over de volle inhoudsbreedte (4:1), mobiel 2:1 rond het midden.
    De lijst begint op de bovenrand van de foto en steekt alleen rechts en onder uit,
    en eindigt precies waar de scheidingslijn eindigt (de foto is daarom een lijstbreedte smaller). */
-.service__photo--straps { grid-column: 1 / -1; width: calc(100% - var(--frame-offset)); }
-.service__photo--straps .slot { --ratio: 2 / 1; box-shadow: 0 14px 26px -18px rgba(40, 25, 10, 0.3); }
-.service__photo--straps::before { inset: 0 calc(var(--frame-offset) * -1) calc(var(--frame-offset) * -1) 0; transform: none; }
+.service__photo--straps,
+.service__photo--repair { grid-column: 1 / -1; width: calc(100% - var(--frame-offset)); }
+.service__photo--straps .slot,
+.service__photo--repair .slot { --ratio: 2 / 1; box-shadow: 0 14px 26px -18px rgba(40, 25, 10, 0.3); }
+.service__photo--straps::before,
+.service__photo--repair::before { inset: 0 calc(var(--frame-offset) * -1) calc(var(--frame-offset) * -1) 0; transform: none; }
 /* Horloge: rond het horloge uitgesneden, het merklogo op het deksel valt weg */
 .service__photo--watch img { object-position: 50% 82%; }
 /* Kettingen: de linker twee derde, zodat het label aan de rechter paspop wegvalt */
@@ -570,6 +564,7 @@ mark.todo,
 
 @media (min-width: 64em) {
   .service__photo--straps .slot { --ratio: 4 / 1; }
+  .service__photo--repair .slot { --ratio: 3 / 1; }
   .service {
     grid-template-columns: 5fr 6fr;
     align-items: baseline;

@@ -34,9 +34,9 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Gestructureerde gegevens (JewelryStore) worden door js/main.js
-       gevuld vanuit de gegevens bovenin dat bestand. -->
-  <script type="application/ld+json" id="structured-data">{"@context":"https://schema.org","@type":"JewelryStore","name":"Top Time","foundingDate":"1989"}</script>
+  <!-- Gestructureerde gegevens (JewelryStore): staan hier al ingevuld,
+       js/main.js werkt ze bij vanuit de gegevens bovenin dat bestand. -->
+  <script type="application/ld+json" id="structured-data">{"@context":"https://schema.org","@type":"JewelryStore","name":"Top Time","description":"Juwelier en horlogemaker in Deventer, op dit adres sinds 1926: gouden sieraden en horloges, horlogereparatie, sieradenreparatie en horlogebatterij vervangen.","foundingDate":"1989","telephone":"+31570612117","email":"Info@toptimejuwelier.nl","address":{"@type":"PostalAddress","streetAddress":"Spijkerboorsteeg 10","postalCode":"7411 JG","addressLocality":"Deventer","addressCountry":"NL"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Tuesday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Wednesday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Thursday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Friday","opens":"10:00","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"https://schema.org/Saturday","opens":"10:00","closes":"17:00"}],"sameAs":["https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs"]}</script>
 
   <!-- GSAP alleen voor subtiele animaties. Zonder GSAP werkt de site gewoon. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -54,7 +54,7 @@
     <div class="container site-header__inner">
       <a class="wordmark" href="#top">
         Top Time
-        <span class="wordmark__sub">Deventer &middot; sinds 1926</span>
+        <span class="wordmark__sub">Deventer &middot; Spijkerboorsteeg 10</span>
       </a>
 
       <nav class="nav" id="site-nav" aria-label="Hoofdmenu">
@@ -65,7 +65,7 @@
         </ul>
       </nav>
 
-      <a class="btn btn--gold btn--small header-call" href="#bezoek" data-tel>
+      <a class="btn btn--gold btn--small header-call" href="tel:+31570612117" data-tel>
         <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
         Bel ons
       </a>
@@ -94,11 +94,11 @@
         <h1 id="hero-title">Juwelier en horlogemaker in Deventer, sinds&nbsp;1926</h1>
         <p class="hero__lead">Een nieuwe horlogebatterij zit er meestal binnen enkele minuten in.</p>
         <div class="hero__actions">
-          <a class="btn btn--gold" href="#bezoek" data-tel>
+          <a class="btn btn--gold" href="tel:+31570612117" data-tel>
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
             Bel ons
           </a>
-          <a class="btn btn--ghost" href="#bezoek" data-route target="_blank" rel="noopener">Route plannen</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Top%20Time%2C%20Spijkerboorsteeg%2010%2C%207411%20JG%20Deventer" data-route target="_blank" rel="noopener">Route plannen</a>
         </div>
       </div>
 
@@ -125,16 +125,6 @@
           </div>
         </header>
 
-        <!-- Het ene bewegende moment van de site: de foto zoomt langzaam uit terwijl u scrolt (main.js). -->
-        <figure class="repair-zoom photo">
-          <div class="slot repair-zoom__frame">
-            <span class="slot__label">FOTO: pincet in een open horloge</span>
-            <img src="assets/images/horloge-uurwerk.jpg" data-repair-zoom
-                 alt="Met een pincet wordt een open horloge gerepareerd op de werkbank"
-                 width="1200" height="1200" loading="lazy" decoding="async" onerror="this.remove()">
-          </div>
-        </figure>
-
         <ol class="services">
           <li class="service" data-reveal>
             <h3 class="service__title">Horlogebatterij vervangen</h3>
@@ -155,6 +145,15 @@
             <div class="service__text">
               <p>Loopt uw horloge niet meer goed, breng het dan gerust langs.</p>
             </div>
+            <figure class="service__photo service__photo--repair photo">
+              <!-- Het ene bewegende moment van de site: de foto zoomt langzaam uit terwijl u scrolt (main.js). -->
+              <div class="slot">
+                <span class="slot__label">FOTO: pincet in een open horloge</span>
+                <img src="assets/images/horloge-uurwerk.jpg" data-repair-zoom
+                     alt="Met een pincet wordt een open horloge gerepareerd op de werkbank"
+                     width="1200" height="1200" loading="lazy" decoding="async" onerror="this.remove()">
+              </div>
+            </figure>
           </li>
 
           <li class="service" data-reveal>
@@ -165,9 +164,9 @@
             <figure class="service__photo service__photo--straps photo">
               <div class="slot">
                 <span class="slot__label">FOTO: horlogebandjes</span>
-                <img src="assets/images/horlogebandjes.webp"
+                <img src="assets/images/bandjes.webp"
                      alt="Leren horlogebandjes in verschillende kleuren"
-                     width="1750" height="389" loading="lazy" decoding="async" onerror="this.remove()">
+                     width="1440" height="360" loading="lazy" decoding="async" onerror="this.remove()">
               </div>
             </figure>
           </li>
@@ -256,41 +255,49 @@
         <div class="visit__info">
           <h2 id="bezoek-title" data-reveal>Loop gerust eens binnen</h2>
           <p class="visit__intro" data-reveal>
-            U vindt ons in Deventer. Heeft u een vraag over een reparatie? Bel of app ons gerust even.
+            U vindt ons in Deventer. Heeft u een vraag over een reparatie? Bel ons gerust even.
           </p>
 
           <dl class="contact" data-reveal>
             <div>
               <dt>Adres</dt>
               <dd>
-                <span data-config="street">[ADRES]</span><br>
-                <span data-config="postalCode">[POSTCODE]</span> <span data-config="city">Deventer</span>
+                <span data-config="street">Spijkerboorsteeg 10</span><br>
+                <span data-config="postalCode">7411 JG</span> <span data-config="city">Deventer</span>
               </dd>
             </div>
             <div>
               <dt>Telefoon</dt>
-              <dd><a class="link" href="#bezoek" data-tel data-config="phone">[TELEFOONNUMMER]</a></dd>
+              <dd><a class="link" href="tel:+31570612117" data-tel data-config="phone">(0570) 61 21 17</a></dd>
             </div>
+            <!-- WhatsApp: nog niet bevestigd door de eigenaar, zie CLAUDE.md.
             <div>
               <dt>WhatsApp</dt>
-              <dd><a class="link" href="#bezoek" data-whatsapp data-config="whatsappDisplay" target="_blank" rel="noopener">[WHATSAPP-NUMMER]</a></dd>
+              <dd><a class="link" href="#bezoek" data-whatsapp data-config="whatsappDisplay" target="_blank" rel="noopener">06 57 54 87 22</a></dd>
             </div>
+            -->
             <div>
               <dt>E-mail</dt>
-              <dd><a class="link" href="#bezoek" data-mail data-config="email">[E-MAILADRES]</a></dd>
+              <dd><a class="link" href="mailto:Info@toptimejuwelier.nl" data-mail data-config="email">Info@toptimejuwelier.nl</a></dd>
             </div>
           </dl>
 
           <p class="rating" data-reveal>
-            <a class="link" href="#bezoek" data-reviews-link target="_blank" rel="noopener"><span data-config="googleRating">[GOOGLE-SCORE]</span> op Google &middot; <span data-config="googleReviewCount">[AANTAL]</span> reviews<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
+            <a class="link" href="https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs" data-reviews-link target="_blank" rel="noopener"><span data-config="googleRating">4,4</span> op Google &middot; <span data-config="googleReviewCount">74</span> reviews<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
           </p>
 
           <h3 class="visit__subhead" data-reveal>Openingstijden</h3>
           <table class="hours" data-reveal>
             <caption class="sr-only">Openingstijden van Top Time</caption>
             <tbody data-hours>
-              <!-- Wordt door main.js gevuld vanuit de openingstijden bovenin main.js. -->
-              <tr><th scope="row">Maandag t/m zondag</th><td>[OPENINGSTIJDEN]</td></tr>
+              <!-- Staat hier al ingevuld; main.js werkt de tabel bij vanuit de openingstijden bovenin main.js. -->
+              <tr><th scope="row">Maandag</th><td>Gesloten</td></tr>
+              <tr><th scope="row">Dinsdag</th><td>10:00 – 17:30</td></tr>
+              <tr><th scope="row">Woensdag</th><td>10:00 – 17:30</td></tr>
+              <tr><th scope="row">Donderdag</th><td>10:00 – 17:30</td></tr>
+              <tr><th scope="row">Vrijdag</th><td>10:00 – 17:30</td></tr>
+              <tr><th scope="row">Zaterdag</th><td>10:00 – 17:00</td></tr>
+              <tr><th scope="row">Zondag</th><td>Gesloten</td></tr>
             </tbody>
           </table>
         </div>
@@ -310,7 +317,7 @@
             <p class="map__placeholder">KAART: verschijnt hier zodra het adres is ingevuld</p>
           </div>
           <p class="visit__maplink">
-            <a class="link" href="#bezoek" data-route target="_blank" rel="noopener">Open in Google Maps en plan uw route</a>
+            <a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Top%20Time%2C%20Spijkerboorsteeg%2010%2C%207411%20JG%20Deventer" data-route target="_blank" rel="noopener">Open in Google Maps en plan uw route</a>
           </p>
         </div>
       </div>
@@ -323,10 +330,10 @@
        ========================================================= -->
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p class="site-footer__name">Top Time <span>Sinds 1926</span></p>
+      <p class="site-footer__name">Top Time <span>Deventer &middot; Spijkerboorsteeg 10</span></p>
       <p>
-        <span data-config="street">[ADRES]</span>, <span data-config="city">Deventer</span>
-        &middot; <a class="link" href="#bezoek" data-tel data-config="phone">[TELEFOONNUMMER]</a>
+        <span data-config="street">Spijkerboorsteeg 10</span>, <span data-config="city">Deventer</span>
+        &middot; <a class="link" href="tel:+31570612117" data-tel data-config="phone">(0570) 61 21 17</a>
       </p>
       <p>&copy; <span data-year>2026</span> Top Time &middot; KvK 38009063</p>
     </div>
@@ -335,11 +342,11 @@
 
   <!-- Mobiele actiebalk (alleen op kleine schermen) -->
   <nav class="mobile-bar" aria-label="Snel contact">
-    <a class="btn btn--gold" href="#bezoek" data-tel>
+    <a class="btn btn--gold" href="tel:+31570612117" data-tel>
       <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
       Bellen
     </a>
-    <a class="btn btn--ghost" href="#bezoek" data-route target="_blank" rel="noopener">Route</a>
+    <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Top%20Time%2C%20Spijkerboorsteeg%2010%2C%207411%20JG%20Deventer" data-route target="_blank" rel="noopener">Route</a>
   </nav>
 </body>
 </html>
