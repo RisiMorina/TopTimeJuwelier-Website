@@ -8,6 +8,7 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 - Openingstijden: `TOPTIME.hours` in `main.js` (tabel, openingsstatus en JSON-LD volgen daaruit). De tabel en JSON-LD in de HTML moeten daarmee overeenkomen.
 - Foto's krijgen de gouden lijst + schaduw via `.photo`. Dienstenfoto's: `.service__photo` (bandjes en reparatie: `--straps`, `--repair`, volle breedte). De reparatiefoto zoomt langzaam uit bij scrollen (`data-repair-zoom`, alleen als `prefers-reduced-motion` niet aan staat).
 - Foto's staan in `assets/images/` (zonder spaties in de naam). Bandjes: `bandjes.webp` (uitsnede van `bandjes volle foto.jpeg` / `bandjes.jpg`, 90° gedraaid, de warme filter zit in de CSS, niet in het bestand).
+- Bandjesfoto-uitsnede: de Morellato-stickers en de gespen horen goed zichtbaar te zijn; het prijskaartje op het bruine bandje (28,00 €) mag in beeld, want het staat echt in de foto. De punten met de gaatjes mogen deels wegvallen. Geen rand van de bak of tafel. Dit vervangt de oude regel "geen labels, geen prijssticker".
 
 ## Bedrijfsgegevens
 - Top Time, Spijkerboorsteeg 10, 7411 JG Deventer. Tel (0570) 61 21 17, `tel:+31570612117`. E-mail Info@toptimejuwelier.nl. KvK 38009063.

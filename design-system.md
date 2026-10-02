@@ -120,6 +120,8 @@ Files are Eris's IMG_ numbers. Crop all to landscape and give them one consisten
 | Hero | IMG_3664 | Hands at the bench, loupe, knife, parts drawers, his own watch on his wrist. Full-bleed, one short headline on top, nothing else. |
 | 1926 / story | IMG_3666 | Crop tight on hands and watch. Set "1926" large as a typographic element; no historic photo exists. |
 | Repairs | IMG_3665 + bandjes volle foto.jpeg | Tweezers in the open watch, then the strap tray (straps and batteries are why locals walk in). This section gets the one memorable motion moment. |
+
+Strap photo crop (bandjes.webp): rotated so the straps stand upright, cropped so the Morellato stickers and buckles are clearly visible. The price tag on the brown strap may show, since it is really in the photo. The hole-punched tips may be cut off. No tray edge or table. Warm filter comes from CSS, not baked in. This replaces the earlier "no labels, no price sticker" rule.
 | The watches | IMG_3672 | Junghans in its box, the single watch close-up. Optional second: IMG_3667 (Mondaine). |
 | Visit | IMG_3660 | Curved wall of cases. Crop off the bottom third (carpet). Beside it: address, hours, phone, map. Alternative: IMG_3673 (counter and workbench). |
 
