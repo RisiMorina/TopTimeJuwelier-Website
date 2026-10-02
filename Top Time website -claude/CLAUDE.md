@@ -23,6 +23,6 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 
 ## TODO
 - **WhatsApp**: nog niet bevestigd door de eigenaar. De WhatsApp-regel in "Bezoek ons" staat in commentaar in `index.html` (nummer 06 57 54 87 22). Terugzetten (en "Bel ons gerust even" weer naar "Bel of app ons gerust even" op de plek in `visit__intro`) zodra de eigenaar akkoord geeft.
-- **`[WEBSITE-URL]`** in de `<head>` (canonical, og:url, og:image) en `TOPTIME.websiteUrl` in `main.js`: invullen zodra de site online staat.
+- Site-URL is `https://toptimejuwelier.nl` (zonder www): canonical, og:url, og:image in de `<head>` en `TOPTIME.websiteUrl` in `main.js`. Bij een domeinwissel overal aanpassen.
 - `TOPTIME.priceBattery` is niet in gebruik; alleen invullen als de eigenaar een prijs wil tonen.
 - `privacy.html` (statisch, zonder JavaScript, gelinkt vanuit de footer) heeft nog drie gemarkeerde TODO's: bewaartermijn van berichten, of de Google Maps-kaart cookies plaatst, waar de site gehost wordt en of er IP-logs zijn. Controleer ook bij een nieuwe tool (analytics, formulier, WhatsApp) of de privacytekst nog klopt.

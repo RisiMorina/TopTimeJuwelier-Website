@@ -25,7 +25,7 @@ const TOPTIME = {
   email: "Info@toptimejuwelier.nl",
 
   /* --- Links --- */
-  websiteUrl: "[WEBSITE-URL]",  // bijv. "https://www.toptime-deventer.nl" (zonder / aan het eind)
+  websiteUrl: "https://toptimejuwelier.nl",  // zonder / aan het eind
   googleReviewsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs",
   googleRating: "4,4",           // score op Google, zoals op de site
   googleReviewCount: "74",       // aantal reviews op Google (af en toe bijwerken)
