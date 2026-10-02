@@ -11,7 +11,7 @@
 
 const TOPTIME = {
   name: "Top Time",
-  foundingYear: 1926,
+  foundingYear: 1989,
 
   /* --- Adres --- */
   street: "Spijkerboorsteeg 10", // straat + huisnummer
@@ -32,7 +32,7 @@ const TOPTIME = {
   mapsQuery: "",                // optioneel: exacte zoekterm voor Google Maps. Leeg = het adres hierboven.
 
   /* --- Overig --- */
-  ownerName: "[NAAM EIGENAAR]",
+  ownerName: "Josja Houtermans",
   priceBattery: "[PRIJS BATTERIJ]", // bijv. "€ 12,50"
 
   /* --- Openingstijden ---
@@ -220,7 +220,7 @@ function renderStructuredData() {
     "@context": "https://schema.org",
     "@type": "JewelryStore",
     name: TOPTIME.name,
-    description: "Juwelier in Deventer sinds 1926: gouden sieraden en horloges, horlogereparatie, sieradenreparatie en horlogebatterij vervangen.",
+    description: "Juwelier en horlogemaker in Deventer, op dit adres sinds 1926: gouden sieraden en horloges, horlogereparatie, sieradenreparatie en horlogebatterij vervangen.",
     foundingDate: String(TOPTIME.foundingYear),
     telephone: intlPhone(),
     email: TOPTIME.email,

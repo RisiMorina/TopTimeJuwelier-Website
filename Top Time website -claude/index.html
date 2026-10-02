@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- ===== SEO ===== -->
-  <title>Top Time | Juwelier en horlogereparatie in Deventer, sinds 1926</title>
-  <meta name="description" content="Top Time is uw juwelier in Deventer, sinds 1926. Gouden sieraden en horloges, horlogereparatie, sieradenreparatie en een nieuwe horlogebatterij terwijl u wacht.">
+  <title>Top Time | Juwelier en horlogemaker in Deventer, sinds 1926</title>
+  <meta name="description" content="Top Time is juwelier en horlogemaker in Deventer, op dit adres sinds 1926. Gouden sieraden en horloges, horlogereparatie, sieradenreparatie en een nieuwe horlogebatterij, meestal binnen enkele minuten.">
   <meta name="theme-color" content="#14110F">
   <!-- Vul [WEBSITE-URL] in zodra de site online staat, bijv. https://www.toptime-deventer.nl -->
   <link rel="canonical" href="[WEBSITE-URL]/">
@@ -17,8 +17,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="nl_NL">
   <meta property="og:site_name" content="Top Time">
-  <meta property="og:title" content="Top Time | Uw juwelier in Deventer, sinds 1926">
-  <meta property="og:description" content="Gouden sieraden en horloges, horlogereparatie, sieradenreparatie en een nieuwe horlogebatterij terwijl u wacht. Loop gerust binnen.">
+  <meta property="og:title" content="Top Time | Juwelier en horlogemaker in Deventer, sinds 1926">
+  <meta property="og:description" content="Gouden sieraden en horloges, horlogereparatie, sieradenreparatie en een nieuwe horlogebatterij, meestal binnen enkele minuten. Loop gerust binnen.">
   <meta property="og:url" content="[WEBSITE-URL]/">
   <meta property="og:image" content="[WEBSITE-URL]/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -36,7 +36,7 @@
 
   <!-- Gestructureerde gegevens (JewelryStore) worden door js/main.js
        gevuld vanuit de gegevens bovenin dat bestand. -->
-  <script type="application/ld+json" id="structured-data">{"@context":"https://schema.org","@type":"JewelryStore","name":"Top Time","foundingDate":"1926"}</script>
+  <script type="application/ld+json" id="structured-data">{"@context":"https://schema.org","@type":"JewelryStore","name":"Top Time","foundingDate":"1989"}</script>
 
   <!-- GSAP alleen voor subtiele animaties. Zonder GSAP werkt de site gewoon. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -91,9 +91,9 @@
       </div>
 
       <div class="container hero__content">
-        <h1 id="hero-title" data-reveal>Uw juwelier in Deventer, sinds&nbsp;1926</h1>
-        <p class="hero__lead" data-reveal>Een nieuwe horlogebatterij zit er meestal in terwijl u wacht.</p>
-        <div class="hero__actions" data-reveal>
+        <h1 id="hero-title">Juwelier en horlogemaker in Deventer, sinds&nbsp;1926</h1>
+        <p class="hero__lead">Een nieuwe horlogebatterij zit er meestal binnen enkele minuten in.</p>
+        <div class="hero__actions">
           <a class="btn btn--gold" href="#bezoek" data-tel>
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="currentColor"/></svg>
             Bel ons
@@ -126,7 +126,7 @@
         </header>
 
         <!-- Het ene bewegende moment van de site: de foto zoomt langzaam uit terwijl u scrolt (main.js). -->
-        <figure class="repair-zoom">
+        <figure class="repair-zoom photo">
           <div class="slot repair-zoom__frame">
             <span class="slot__label">FOTO: pincet in een open horloge</span>
             <img src="assets/images/horloge-uurwerk.jpg" data-repair-zoom
@@ -139,7 +139,14 @@
           <li class="service" data-reveal>
             <h3 class="service__title">Horlogebatterij vervangen</h3>
             <div class="service__text">
-              <p>Meestal klaar terwijl u wacht, zonder afspraak.</p>
+              <p>Meestal binnen enkele minuten.</p>
+            </div>
+          </li>
+
+          <li class="service" data-reveal>
+            <h3 class="service__title">Waterdichtheid testen</h3>
+            <div class="service__text">
+              <p>Meestal binnen enkele minuten.</p>
             </div>
           </li>
 
@@ -148,6 +155,21 @@
             <div class="service__text">
               <p>Loopt uw horloge niet meer goed, breng het dan gerust langs.</p>
             </div>
+          </li>
+
+          <li class="service" data-reveal>
+            <h3 class="service__title">Horlogebandje vervangen</h3>
+            <div class="service__text">
+              <p>Leer, staal of kunststof, vaak direct omgezet.</p>
+            </div>
+            <figure class="service__photo service__photo--straps photo">
+              <div class="slot">
+                <span class="slot__label">FOTO: horlogebandjes</span>
+                <img src="assets/images/horlogebandjes.webp"
+                     alt="Leren horlogebandjes in verschillende kleuren"
+                     width="1750" height="389" loading="lazy" decoding="async" onerror="this.remove()">
+              </div>
+            </figure>
           </li>
 
           <li class="service" data-reveal>
@@ -161,32 +183,24 @@
             <h3 class="service__title">Gouden sieraden en horloges</h3>
             <div class="service__text">
               <p>Wat er in de vitrine ligt, wisselt: kom gerust kijken.</p>
-              <div class="service__photos">
-                <figure class="service__photo service__photo--watch">
-                  <div class="slot">
-                    <span class="slot__label">FOTO: horloge in geschenkdoos</span>
-                    <img src="assets/images/horloges-vitrine.jpg"
-                         alt="Horloge met leren band in een geopende geschenkdoos"
-                         width="1200" height="1500" loading="lazy" decoding="async" onerror="this.remove()">
-                  </div>
-                </figure>
-                <figure class="service__photo service__photo--chains">
-                  <div class="slot">
-                    <span class="slot__label">FOTO: gouden kettingen</span>
-                    <img src="assets/images/gouden-kettingen.jpg"
-                         alt="Gouden kettingen op witte paspoppen in de vitrine"
-                         width="1932" height="869" loading="lazy" decoding="async" onerror="this.remove()">
-                  </div>
-                </figure>
-                <figure class="service__photo">
-                  <div class="slot">
-                    <span class="slot__label">FOTO: gouden armbanden</span>
-                    <img src="assets/images/armbanden-kussens.jpg"
-                         alt="Gouden armbanden op witte kussentjes in de vitrine"
-                         width="774" height="516" loading="lazy" decoding="async" onerror="this.remove()">
-                  </div>
-                </figure>
-              </div>
+            </div>
+            <div class="service__photos">
+              <figure class="service__photo service__photo--watch photo">
+                <div class="slot">
+                  <span class="slot__label">FOTO: horloge in geschenkdoos</span>
+                  <img src="assets/images/horloges-vitrine.jpg"
+                       alt="Horloge met leren band in een geopende geschenkdoos"
+                       width="1200" height="1500" loading="lazy" decoding="async" onerror="this.remove()">
+                </div>
+              </figure>
+              <figure class="service__photo service__photo--chains photo">
+                <div class="slot">
+                  <span class="slot__label">FOTO: gouden kettingen</span>
+                  <img src="assets/images/gouden-kettingen.jpg"
+                       alt="Gouden kettingen op witte paspoppen in de vitrine"
+                       width="1932" height="869" loading="lazy" decoding="async" onerror="this.remove()">
+                </div>
+              </figure>
             </div>
           </li>
         </ol>
@@ -196,14 +210,13 @@
 
     <!-- =========================================================
          4. ONS VERHAAL
-         Alles tussen [VERHAAL: ...] is een plek voor echte details.
-         Vervang de hele <mark class="todo">...</mark> door uw eigen tekst.
          ========================================================= -->
     <section class="section section--dark story" id="verhaal" aria-labelledby="verhaal-title">
       <div class="container story__grid">
         <p class="story__year" aria-hidden="true" data-year-reveal>1926</p>
 
         <figure class="story__photo" data-reveal>
+          <div class="photo">
           <div class="slot" style="--ratio: 4 / 5">
             <span class="slot__label">FOTO: de winkel van binnen</span>
             <img class="story__img" src="assets/images/werkbank.jpg"
@@ -211,29 +224,19 @@
                  width="1800" height="1200" loading="lazy" decoding="async"
                  onerror="this.remove()">
           </div>
-          <figcaption><span data-config="ownerName">[NAAM EIGENAAR]</span> in de winkel</figcaption>
+          </div>
+          <figcaption><span data-config="ownerName">Josja Houtermans</span></figcaption>
         </figure>
 
         <div class="story__text">
-          <h2 id="verhaal-title" data-reveal>Een vertrouwd adres in Deventer, al sinds 1926</h2>
+          <h2 id="verhaal-title" data-reveal>Hier zit al een juwelier sinds 1926</h2>
 
           <div data-reveal>
             <p>
-              In 1926 ging in Deventer voor het eerst de deur van Top Time open.
-              <mark class="todo">[VERHAAL: wie begon de zaak, en waar zat de winkel toen?]</mark>
-            </p>
-            <p>
-              Sindsdien zijn er heel wat Deventenaren bij ons binnengelopen: voor een ring,
-              een eerste horloge, of gewoon een batterij die op was.
-              <mark class="todo">[VERHAAL: een mooi moment of een bijzonder stuk uit de geschiedenis van de winkel]</mark>
-            </p>
-            <p>
-              Tegenwoordig staat <span data-config="ownerName">[NAAM EIGENAAR]</span> achter de toonbank.
-              <mark class="todo">[VERHAAL: sinds wanneer, hoe de eigenaar in het vak kwam, en wat het mooiste aan het werk is]</mark>
-            </p>
-            <p>
-              Wat al die jaren hetzelfde is gebleven: u wordt persoonlijk geholpen,
-              door iemand die de tijd voor u neemt.
+              In 1926 begon de familie Bouwhuis hier een juwelier en horlogemaker.
+              De zaak ging over van vader op zoon.
+              In 1989 nam ik hem over, sindsdien heet hij Top Time.
+              Ik groeide op in het vak: mijn ouders hadden Firma Houtermans in de Lange Bisschopstraat.
             </p>
           </div>
         </div>
@@ -253,8 +256,7 @@
         <div class="visit__info">
           <h2 id="bezoek-title" data-reveal>Loop gerust eens binnen</h2>
           <p class="visit__intro" data-reveal>
-            U vindt ons in Deventer. Voor een nieuwe horlogebatterij hoeft u geen afspraak
-            te maken. Heeft u een vraag over een reparatie? Bel of app ons gerust even.
+            U vindt ons in Deventer. Heeft u een vraag over een reparatie? Bel of app ons gerust even.
           </p>
 
           <dl class="contact" data-reveal>
@@ -294,7 +296,7 @@
         </div>
 
         <div class="visit__map" data-reveal>
-          <figure class="visit__photo">
+          <figure class="visit__photo photo">
             <div class="slot">
               <span class="slot__label">FOTO: de ronde wand met vitrines</span>
               <img src="assets/images/winkel-interieur.jpg"
@@ -326,7 +328,7 @@
         <span data-config="street">[ADRES]</span>, <span data-config="city">Deventer</span>
         &middot; <a class="link" href="#bezoek" data-tel data-config="phone">[TELEFOONNUMMER]</a>
       </p>
-      <p>&copy; <span data-year>2026</span> Top Time</p>
+      <p>&copy; <span data-year>2026</span> Top Time &middot; KvK 38009063</p>
     </div>
   </footer>
 
