@@ -775,6 +775,16 @@ mark.todo,
 }
 
 
+/* ---------- Tekstpagina (privacy.html) ---------- */
+.page { padding-top: calc(5rem + clamp(2rem, 5vw, 4rem)); }
+.prose { max-width: 44rem; margin-inline: auto; }
+.prose h1 { font-size: clamp(2.35rem, 3.6vw + 1.2rem, 4rem); }
+.prose h2 { margin: 2.5rem 0 0.75rem; font-size: clamp(1.5rem, 1vw + 1.25rem, 2rem); }
+.prose__date { margin: 0.75rem 0 2rem; color: var(--muted); font-size: 0.875rem; }
+.prose ul { margin: 0 0 1em; padding-left: 1.25rem; }
+.prose li { margin-bottom: 0.6em; max-width: 65ch; }
+
+
 /* ---------- 10. Footer ---------- */
 .site-footer {
   padding-block: 3rem;

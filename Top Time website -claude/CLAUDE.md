@@ -1,6 +1,6 @@
 # Top Time (juwelier, Deventer): one-page site
 
-Statische one-pager: `index.html`, `css/style.css`, `js/main.js`, `assets/images/`. Geen build, geen framework. GSAP via CDN voor subtiele scroll-animatie (de site werkt ook zonder).
+Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/main.js`, `assets/images/`. Geen build, geen framework. GSAP via CDN voor subtiele scroll-animatie (de site werkt ook zonder).
 
 ## Structuur
 - Secties in `index.html`: header, hero, diensten, ons verhaal, bezoek ons, footer, mobiele actiebalk.
@@ -24,4 +24,4 @@ Statische one-pager: `index.html`, `css/style.css`, `js/main.js`, `assets/images
 - **WhatsApp**: nog niet bevestigd door de eigenaar. De WhatsApp-regel in "Bezoek ons" staat in commentaar in `index.html` (nummer 06 57 54 87 22). Terugzetten (en "Bel ons gerust even" weer naar "Bel of app ons gerust even" op de plek in `visit__intro`) zodra de eigenaar akkoord geeft.
 - **`[WEBSITE-URL]`** in de `<head>` (canonical, og:url, og:image) en `TOPTIME.websiteUrl` in `main.js`: invullen zodra de site online staat.
 - `TOPTIME.priceBattery` is niet in gebruik; alleen invullen als de eigenaar een prijs wil tonen.
-- Privacylink in de footer ontbreekt nog (huisregel).
+- `privacy.html` (statisch, zonder JavaScript, gelinkt vanuit de footer) heeft nog drie gemarkeerde TODO's: bewaartermijn van berichten, of de Google Maps-kaart cookies plaatst, waar de site gehost wordt en of er IP-logs zijn. Controleer ook bij een nieuwe tool (analytics, formulier, WhatsApp) of de privacytekst nog klopt.
