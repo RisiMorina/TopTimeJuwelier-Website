@@ -4,7 +4,7 @@ Exporteer als JPG (kwaliteit ~75-80%), of WebP als u de bestandsnaam in index.ht
 
 hero-poster.jpg           1920 x 1080  (16:9)  stilstaand beeld uit de winkelpui-video
 eigenaar-aan-het-werk.jpg 1200 x 1500  (4:5)   de eigenaar aan de werkbank
-winkel-interieur.jpg      1800 x 1200  (3:2)   de winkel van binnen
+winkel-interieur-vitrines.webp 1400 x 1050 (4:3)  de vitrines (uitsnede van IMG_3660)
 gouden-sieraden.jpg       1200 x 1500  (4:5)   close-up gouden sieraden
 horloge-uurwerk.jpg       1200 x 1200  (1:1)   open horloge-uurwerk
 werkbank.jpg              1800 x 1200  (3:2)   de werkbank met gereedschap

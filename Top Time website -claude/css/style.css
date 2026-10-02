@@ -754,18 +754,11 @@ mark.todo,
 }
 .visit__maplink { margin-top: 1.25rem; }
 
-/* Ronde wand met vitrines: het onderste derde (vloerbedekking) en de rechterrand
-   (Nomination-poster) vallen weg. Breedte 130% en verhouding 26:15 tonen precies
-   de bovenste twee derde en de linker 77% van de foto. */
+/* Vitrines: eigen uitsnede (4:3) van IMG_3660 zonder de gebogen glazen deur links en het plafond.
+   Zonder de Nomination-poster rechts en de stoel onderin. */
 .visit__photo { margin: 0 0 2.25rem; }
-.visit__photo .slot { --ratio: 26 / 15; }
-.visit__photo .slot img {
-  filter: var(--photo-filter-light);
-  inset: 0 auto auto 0;
-  width: 130%;
-  max-width: none;
-  height: auto;
-}
+.visit__photo .slot { --ratio: 4 / 3; }
+.visit__photo .slot img { filter: var(--photo-filter-light); }
 .visit__map .map { aspect-ratio: 16 / 9; }
 
 @media (min-width: 64em) {
