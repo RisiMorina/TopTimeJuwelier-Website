@@ -26,3 +26,6 @@ Regels
 - Formaat: SVG (liefst) of PNG met transparante achtergrond. Wisselt u SVG voor PNG (of andersom), pas dan ook de bestandsnaam in index.html aan.
 - De site kleurt alle logo's zelf zilver (CSS-filter), op de donkere merkenband. De achtergrond moet dus echt transparant zijn (geen wit vlak).
 - Optische grootte: elk logo heeft in index.html een eigen breedte (style="--w: ...rem"), zodat brede en hoge logo's even groot ogen. Pas die aan bij een nieuw logo met een andere verhouding.
+
+Nomination (toegevoegd):
+  nomination.svg     https://www.nomination.com/static/version1790850882/frontend/Nomination/default/it_IT/images/logo.svg  (logo in de header van https://www.nomination.com/, onbewerkt)

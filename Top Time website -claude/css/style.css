@@ -634,13 +634,14 @@ mark.todo,
   .brands__list--watches .brand:last-child { grid-column: span 2; }
   .brands__list--watches .brand:nth-child(n+4),
   .brands__list--watches .brand:last-child { grid-column: span 3; }
-  .brands__list--jewels { grid-template-columns: repeat(3, 1fr); }
+  .brands__list--jewels { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 64em) {
   .brands__list { --logo-k: 1; }
   .brands__list--watches { grid-template-columns: repeat(5, 1fr); }
   .brands__list--watches .brand,
   .brands__list--watches .brand:nth-child(n+4) { grid-column: auto; }
+  .brands__list--jewels { grid-template-columns: repeat(4, 1fr); }
 }
 
 .brand {
@@ -755,6 +756,7 @@ mark.todo,
 }
 
 .story__text p { color: #D5DDE7; }
+.story__note { margin: 0 0 1.25rem; max-width: none; font-family: var(--serif); font-size: clamp(1.35rem, 1vw + 1.1rem, 1.75rem); color: var(--silver); }
 .story__text h2 { max-width: 14ch; margin-bottom: 2rem; }
 
 .story__photo { margin: 0; }
