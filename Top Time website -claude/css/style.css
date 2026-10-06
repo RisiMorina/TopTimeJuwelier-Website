@@ -664,8 +664,8 @@ mark.todo,
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(ellipse 75% 85% at 50% 0%, rgba(195, 200, 206, 0.16), rgba(195, 200, 206, 0) 72%);
-  opacity: 0.75;
+  background: radial-gradient(ellipse 75% 85% at 50% 0%, rgba(195, 200, 206, 0.22), rgba(195, 200, 206, 0) 74%);
+  opacity: 0.8;
   transition: opacity 0.6s var(--ease);
 }
 
@@ -699,7 +699,7 @@ mark.todo,
 }
 .brand.has-logo .brand__logo {
   opacity: 1;
-  filter: brightness(0) invert(0.78); /* één kleur: zilver */
+  filter: brightness(0) invert(0.76) sepia(0.14) hue-rotate(176deg) saturate(1); /* één kleur: koel zilver (ca. #C3C8CE) */
 }
 /* Tweede, lichtere kopie van het logo; een schuin lichtvlak maakt hem één keer zichtbaar (alleen hover) */
 .brand.has-logo .brand__sheen {
