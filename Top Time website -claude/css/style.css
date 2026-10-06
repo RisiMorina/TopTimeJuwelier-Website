@@ -14,41 +14,43 @@
    8. Ons verhaal
    9. Bezoek ons
    10. Footer
-   11. Mobiele actiebalk
+   11. Mobiele actiebalk (met 10b. Merken tussen Diensten en Verhaal)
    ========================================================= */
 
 
 /* ---------- 1. Variabelen ---------- */
 :root {
   /* Kleuren */
-  --ink: #14110F;            /* diep bijna-zwart: donkere secties */
-  --cream: #F5EFE6;          /* warm ivoor: lichte secties */
-  --gold: #B8964E;           /* accent op donker: lijnen, details, 1926 */
-  --gold-hover: #CDAF6D;
-  --gold-deep: #7A5E26;      /* goud voor tekst/lijnen op crème (contrast AA) */
-  --text-on-dark: #EFE8DC;
-  --muted-on-dark: #B3A999;
-  --text-on-cream: #2A2420;
-  --muted-on-cream: #5E544A;
-  --line-on-dark: rgba(184, 150, 78, 0.42);
-  --line-on-cream: rgba(122, 94, 38, 0.32);
+  --ink: #1E3550;            /* diep marineblauw (huiskleur): donkere secties */
+  --paper: #EEF2F6;          /* koel gebroken wit: lichte secties */
+  --mist: #E3E9EF;           /* iets diepere lichte tint (merken) */
+  --silver: #C3C8CE;         /* accent op donker: lijnen, details, 1926 */
+  --silver-hover: #DADEE3;
+  --silver-deep: #4D5967;     /* zilvergrijs voor tekst/lijnen op licht (contrast AA) */
+  --silver-frame: #9BA5B1;   /* fotolijst op licht (decoratief) */
+  --text-on-dark: #EEF2F6;
+  --muted-on-dark: #A9B6C6;
+  --text-on-light: #14233A;
+  --muted-on-light: #455264;
+  --line-on-dark: rgba(195, 200, 206, 0.34);
+  --line-on-light: rgba(77, 89, 103, 0.3);
 
-  /* Eén gedempte, warme toon voor alle foto's */
-  --photo-filter: saturate(0.35) sepia(0.15) brightness(0.85);
+  /* Eén neutrale, koele toon voor alle foto's (geen geel naast het blauw) */
+  --photo-filter: saturate(0.4) brightness(0.88);
   /* Lichtere variant voor de foto's binnen in de winkel */
-  --photo-filter-light: saturate(0.6) sepia(0.12) brightness(0.95);
+  --photo-filter-light: saturate(0.7) brightness(0.97);
 
   /* Fotolijst: dunne lijn, 18px (mobiel 10px) naar rechtsonder verschoven achter de foto,
-     plus een zachte, diepe schaduw in warm bruin. Eén keer gedefinieerd, gebruikt via .photo. */
+     plus een zachte, diepe schaduw in marineblauw. Eén keer gedefinieerd, gebruikt via .photo. */
   --frame-offset: 18px;
   --frame-line: var(--accent);
-  --photo-shadow: 0 30px 60px -20px rgba(40, 25, 10, 0.45);
+  --photo-shadow: 0 30px 60px -20px rgba(10, 22, 40, 0.45);
 
   /* Per sectie ingestelde waarden (standaard: donker) */
-  --accent: var(--gold);
+  --accent: var(--silver);
   --muted: var(--muted-on-dark);
   --line: var(--line-on-dark);
-  --focus: var(--gold);
+  --focus: var(--silver);
 
   /* Lettertypen */
   --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
@@ -122,7 +124,7 @@ a { color: inherit; }
   left: 1rem; top: -4rem;
   z-index: 100;
   padding: 0.75rem 1rem;
-  background: var(--cream);
+  background: var(--paper);
   color: var(--ink);
   font-weight: 600;
   text-decoration: none;
@@ -132,7 +134,7 @@ a { color: inherit; }
 /* Plekken die u nog moet invullen vallen zo op. Verwijder de <mark> zodra de tekst er staat. */
 mark.todo,
 .is-placeholder {
-  background: rgba(184, 150, 78, 0.16);
+  background: rgba(195, 200, 206, 0.28);
   color: inherit;
   padding: 0 0.2em;
   outline: 1px dashed var(--accent);
@@ -167,11 +169,11 @@ mark.todo,
 }
 .btn svg { width: 1rem; height: 1rem; flex: none; }
 
-.btn--gold { background: var(--gold); color: var(--ink); }
-.btn--gold:hover { background: var(--gold-hover); }
+.btn--silver { background: var(--silver); color: var(--ink); }
+.btn--silver:hover { background: var(--silver-hover); }
 
-.btn--ghost { border-color: rgba(239, 232, 220, 0.55); color: var(--text-on-dark); }
-.btn--ghost:hover { border-color: var(--gold); color: var(--gold); }
+.btn--ghost { border-color: rgba(238, 242, 246, 0.55); color: var(--text-on-dark); }
+.btn--ghost:hover { border-color: var(--silver); color: var(--silver); }
 
 .btn--small { min-height: 2.5rem; padding: 0.6rem 1.1rem; }
 
@@ -191,14 +193,14 @@ mark.todo,
 /* Foto-vak: toont een neutraal vlak met label totdat de foto bestaat.
    De verhouding komt uit style="--ratio: 4 / 5" in de HTML. */
 .slot {
-  --slot-bg: #231E1A;
-  --slot-fg: #A0968A;
+  --slot-bg: #2A4565;
+  --slot-fg: #A9B6C6;
   position: relative;
   overflow: hidden;
   aspect-ratio: var(--ratio, 4 / 3);
   background: var(--slot-bg);
 }
-.section--cream .slot { --slot-bg: #E7DECF; --slot-fg: #62574C; }
+.section--light .slot { --slot-bg: #D9E0E8; --slot-fg: #455264; }
 
 .slot__label {
   position: absolute;
@@ -263,7 +265,7 @@ mark.todo,
 
 /* Compact zodra er gescrold is (klasse wordt gezet in main.js) */
 .site-header.is-compact {
-  background: rgba(20, 17, 15, 0.97);
+  background: rgba(30, 53, 80, 0.97);
   border-bottom-color: var(--line-on-dark);
 }
 .site-header.is-open {
@@ -277,7 +279,7 @@ mark.todo,
   flex-direction: column;
   margin-right: auto;
   font-family: var(--serif);
-  font-size: 1.75rem;
+  font-size: 2.375rem;
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0.01em;
@@ -290,7 +292,7 @@ mark.todo,
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--silver);
   transition: opacity 0.3s var(--ease);
 }
 .site-header.is-compact .wordmark__sub { display: none; }
@@ -343,12 +345,12 @@ mark.todo,
   .nav a {
     display: block;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(239, 232, 220, 0.1);
+    border-bottom: 1px solid rgba(238, 242, 246, 0.12);
     font-family: var(--serif);
     font-size: 1.75rem;
     text-decoration: none;
   }
-  .nav a:hover { color: var(--gold); }
+  .nav a:hover { color: var(--silver); }
 }
 
 @media (min-width: 48em) {
@@ -357,6 +359,7 @@ mark.todo,
 
 @media (min-width: 60em) {
   .site-header__inner { gap: 2.5rem; height: 6rem; }
+  .wordmark { font-size: 3rem; }
   .nav-toggle { display: none; }
   .nav ul { display: flex; gap: 2.25rem; }
   .nav a {
@@ -366,7 +369,7 @@ mark.todo,
     letter-spacing: 0.16em;
     text-transform: uppercase;
     text-decoration: none;
-    background: linear-gradient(var(--gold), var(--gold)) no-repeat 0 100% / 0% 1px;
+    background: linear-gradient(var(--silver), var(--silver)) no-repeat 0 100% / 0% 1px;
     transition: background-size 0.4s var(--ease);
   }
   .nav a:hover,
@@ -406,24 +409,24 @@ mark.todo,
   inset: 0;
   background:
     linear-gradient(to right,
-      rgba(20, 17, 15, 0.9) 0%,
-      rgba(20, 17, 15, 0.72) 38%,
-      rgba(20, 17, 15, 0.25) 72%,
-      rgba(20, 17, 15, 0.05) 100%),
+      rgba(18, 34, 54, 0.9) 0%,
+      rgba(18, 34, 54, 0.72) 38%,
+      rgba(18, 34, 54, 0.25) 72%,
+      rgba(18, 34, 54, 0.05) 100%),
     linear-gradient(to bottom,
-      rgba(20, 17, 15, 0.45) 0%,
-      rgba(20, 17, 15, 0) 22%,
-      rgba(20, 17, 15, 0) 62%,
-      rgba(20, 17, 15, 0.8) 100%);
+      rgba(18, 34, 54, 0.45) 0%,
+      rgba(18, 34, 54, 0) 22%,
+      rgba(18, 34, 54, 0) 62%,
+      rgba(18, 34, 54, 0.8) 100%);
 }
 /* Op smalle schermen loopt de tekst over de hele breedte */
 @media (max-width: 47.99em) {
   .hero__overlay {
     background: linear-gradient(to bottom,
-      rgba(20, 17, 15, 0.55) 0%,
-      rgba(20, 17, 15, 0.6) 35%,
-      rgba(20, 17, 15, 0.82) 70%,
-      rgba(20, 17, 15, 0.94) 100%);
+      rgba(18, 34, 54, 0.55) 0%,
+      rgba(18, 34, 54, 0.6) 35%,
+      rgba(18, 34, 54, 0.82) 70%,
+      rgba(18, 34, 54, 0.94) 100%);
   }
 }
 
@@ -450,7 +453,7 @@ mark.todo,
   max-width: 34rem;
   margin-top: 1.75rem;
   font-size: clamp(1.0625rem, 0.4vw + 1rem, 1.25rem);
-  color: #E4DCCE;
+  color: #E6ECF2;
 }
 
 .hero__actions {
@@ -483,7 +486,7 @@ mark.todo,
   border-radius: 50%;
   border: 1px solid var(--muted-on-dark);
 }
-.open-status.is-open .open-status__dot { background: var(--gold); border-color: var(--gold); }
+.open-status.is-open .open-status__dot { background: var(--silver); border-color: var(--silver); }
 
 @media (min-width: 60em) {
   .hero { min-height: max(38rem, 100svh); }
@@ -494,13 +497,14 @@ mark.todo,
 /* ---------- 6. Secties algemeen ---------- */
 .section { padding-block: var(--section-y); }
 
-.section--cream {
-  background: var(--cream);
-  color: var(--text-on-cream);
-  --accent: var(--gold-deep);
-  --muted: var(--muted-on-cream);
-  --line: var(--line-on-cream);
-  --focus: var(--gold-deep);
+.section--light {
+  background: var(--paper);
+  color: var(--text-on-light);
+  --accent: var(--silver-deep);
+  --muted: var(--muted-on-light);
+  --line: var(--line-on-light);
+  --focus: var(--silver-deep);
+  --frame-line: var(--silver-frame);
 }
 .section--dark {
   background: var(--ink);
@@ -550,7 +554,7 @@ mark.todo,
 .service__photo--straps,
 .service__photo--repair { grid-column: 1 / -1; width: calc(100% - var(--frame-offset)); }
 .service__photo--straps .slot,
-.service__photo--repair .slot { --ratio: 2 / 1; box-shadow: 0 14px 26px -18px rgba(40, 25, 10, 0.3); }
+.service__photo--repair .slot { --ratio: 2 / 1; box-shadow: 0 14px 26px -18px rgba(10, 22, 40, 0.3); }
 .service__photo--straps::before,
 .service__photo--repair::before { inset: 0 calc(var(--frame-offset) * -1) calc(var(--frame-offset) * -1) 0; transform: none; }
 /* Horloge: rond het horloge uitgesneden, het merklogo op het deksel valt weg */
@@ -592,12 +596,73 @@ mark.todo,
 }
 
 
+/* ---------- 7b. Merken ---------- */
+.section--mist { background: var(--mist); }
+
+.brands__group + .brands__group { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.brands__title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1.5rem, 1vw + 1.2rem, 2rem);
+}
+
+.brands__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem 1.5rem;
+}
+
+.brand { display: grid; align-content: start; gap: 0.5rem; }
+
+/* Logo of, zolang het bestand er niet staat, de naam als tekst.
+   Alle logo's even hoog en in één kleur (marineblauw). De klasse .has-logo wordt gezet door onload op de <img>. */
+.brand__mark {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.brand__name {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-on-light);
+}
+.brand__logo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.brand.has-logo .brand__name { display: none; }
+.brand.has-logo .brand__logo {
+  position: static;
+  width: auto;
+  max-width: 100%;
+  height: 2.25rem;
+  opacity: 1;
+  /* één kleur: alles wordt marineblauw (#1E3550) */
+  filter: brightness(0) saturate(100%) invert(17%) sepia(21%) saturate(1900%) hue-rotate(176deg) brightness(95%) contrast(92%);
+}
+.brand__note { margin: 0; font-size: 0.9375rem; color: var(--muted); }
+
+@media (min-width: 48em) {
+  .brands__list { grid-template-columns: repeat(5, 1fr); gap: 2rem 2.5rem; }
+  .brands__list--jewels { grid-template-columns: repeat(3, 1fr); }
+}
+
+
 /* ---------- 8. Ons verhaal ---------- */
 .story {
   overflow: hidden;
-  /* Donkere sectie: alleen het gouden lijstje, zoals voorheen */
+  /* Donkere sectie: alleen het zilveren lijstje */
   --frame-offset: 14px;
-  --photo-shadow: 0 34px 70px -14px rgba(62, 38, 18, 0.38), 0 10px 28px -8px rgba(62, 38, 18, 0.18);
+  --photo-shadow: 0 34px 70px -14px rgba(8, 18, 34, 0.5), 0 10px 28px -8px rgba(8, 18, 34, 0.3);
 }
 @media (max-width: 47.99em) {
   .story { --frame-offset: 8px; }
@@ -614,11 +679,11 @@ mark.todo,
   font-weight: 300;
   line-height: 0.78;
   letter-spacing: -0.03em;
-  color: var(--gold);
+  color: var(--silver);
   font-variant-numeric: lining-nums;
 }
 
-.story__text p { color: #D9D0C2; }
+.story__text p { color: #D5DDE7; }
 .story__text h2 { max-width: 14ch; margin-bottom: 2rem; }
 
 .story__photo { margin: 0; }
@@ -709,7 +774,7 @@ mark.todo,
 }
 .hours td { text-align: right; font-variant-numeric: tabular-nums; }
 .hours .is-today th,
-.hours .is-today td { font-weight: 600; color: var(--text-on-cream); }
+.hours .is-today td { font-weight: 600; color: var(--text-on-light); }
 .hours .is-today th::after {
   content: "vandaag";
   margin-left: 0.75rem;
@@ -719,13 +784,13 @@ mark.todo,
   text-transform: uppercase;
   color: var(--accent);
 }
-.hours .is-today { box-shadow: inset 2px 0 0 var(--gold-deep); }
+.hours .is-today { box-shadow: inset 2px 0 0 var(--silver-deep); }
 .hours .is-today th { padding-left: 0.9rem; }
 
 .map {
   position: relative;
   aspect-ratio: 4 / 3;
-  background: #E7DECF;
+  background: #D9E0E8;
   overflow: hidden;
 }
 .map iframe {
@@ -734,7 +799,7 @@ mark.todo,
   width: 100%;
   height: 100%;
   border: 0;
-  filter: grayscale(0.35) sepia(0.12);
+  filter: grayscale(0.35);
 }
 .map__placeholder {
   position: absolute;
@@ -750,7 +815,7 @@ mark.todo,
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #62574C;
+  color: #455264;
 }
 .visit__maplink { margin-top: 1.25rem; }
 
@@ -799,7 +864,7 @@ mark.todo,
   font-size: 0.625rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--silver);
 }
 
 @media (min-width: 60em) {
@@ -824,6 +889,21 @@ mark.todo,
   padding: 0.625rem var(--gutter) calc(0.625rem + env(safe-area-inset-bottom));
   background: var(--ink);
   border-top: 1px solid var(--line-on-dark);
+}
+
+/* Staat de balk automatisch aan (main.js zet .mobile-bar--auto), dan schuift hij weg zolang de
+   knoppen in de hero in beeld zijn. Zonder JavaScript blijft hij gewoon zichtbaar. */
+.mobile-bar--auto {
+  transition: transform 0.25s var(--ease), visibility 0s linear 0s;
+}
+.mobile-bar--auto.is-hidden {
+  transform: translateY(100%);
+  visibility: hidden; /* ook niet met Tab bereikbaar zolang hij weg is */
+  transition: transform 0.25s var(--ease), visibility 0s linear 0.25s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-bar--auto,
+  .mobile-bar--auto.is-hidden { transform: none; transition: none !important; }
 }
 
 @media (min-width: 48em) {

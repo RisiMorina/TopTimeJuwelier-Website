@@ -267,6 +267,20 @@ function setupHeader() {
 }
 
 
+/* ---------- Mobiele actiebalk: weg zolang de knoppen in de hero in beeld zijn ---------- */
+function setupMobileBar() {
+  const bar = document.querySelector(".mobile-bar");
+  const heroActions = document.querySelector(".hero__actions");
+  if (!bar || !heroActions || !("IntersectionObserver" in window)) return; // dan blijft de balk gewoon staan
+
+  bar.classList.add("mobile-bar--auto");
+  new IntersectionObserver((entries) => {
+    const last = entries[entries.length - 1];
+    bar.classList.toggle("is-hidden", last.isIntersecting);
+  }).observe(heroActions);
+}
+
+
 /* ---------- Subtiele animaties (GSAP) ---------- */
 function setupMotion() {
   if (reduceMotion.matches || !window.gsap || !window.ScrollTrigger) return;
@@ -320,6 +334,7 @@ renderOpenStatus();
 renderHoursTable();
 setupMap();
 setupHeader();
+setupMobileBar();
 setupMotion();
 
 // Openingsstatus elke minuut bijwerken

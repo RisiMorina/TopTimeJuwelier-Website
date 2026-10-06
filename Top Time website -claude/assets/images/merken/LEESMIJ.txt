@@ -1,0 +1,24 @@
+Merklogo's voor de sectie "Onze merken" op index.html.
+
+Zet hier per merk één bestand met precies deze naam:
+
+  seiko.svg
+  danish-design.svg
+  jacob-jensen.svg
+  mondaine.svg
+  lorus.svg
+  yara.svg
+  blush.svg
+  fjory.svg
+
+Zolang een bestand ontbreekt, toont de site de merknaam als gewone tekst.
+
+Regels
+- De logo's moeten van het merk zelf of van de eigenaar komen (merkenpagina, persmap
+  of leverancier). Niet zelf natekenen en niet van een andere website halen.
+- Formaat: SVG (liefst) of PNG met transparante achtergrond. Bij PNG: gebruik de naam
+  met .png en pas de bestandsnaam aan in index.html.
+- Geef het logo een tekst- of lijnkleur die zich laat omzetten naar een kleur: de site
+  kleurt alle logo's zelf in marineblauw, zodat de rij rustig blijft. De achtergrond moet
+  dus echt transparant zijn (geen wit vlak).
+- Alle logo's worden even hoog getoond (2,25 rem). Snij overtollige witruimte rond het logo weg.
