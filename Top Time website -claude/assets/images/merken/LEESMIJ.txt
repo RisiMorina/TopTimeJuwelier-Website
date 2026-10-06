@@ -1,24 +1,28 @@
 Merklogo's voor de sectie "Onze merken" op index.html.
 
-Zet hier per merk één bestand met precies deze naam:
+Bestanden en bron (allemaal van de eigen website van het merk, onbewerkt, behalve waar vermeld):
 
-  seiko.svg
-  danish-design.svg
-  jacob-jensen.svg
-  mondaine.svg
-  lorus.svg
-  yara.svg
-  blush.svg
-  fjory.svg
+  seiko.svg          https://www.seikowatches.com/nl-nl/-/media/Images/GlobalEn/Seiko/Home/common/SeikoLogo/SeikoLogo-white.svg
+  danish-design.png  https://danishdesign.com/cdn/shop/files/Danish_Design_Logo.png?v=1614317903  (2038 x 1113, transparant)
+  jacob-jensen.svg   https://jacobjensen.com/cdn/shop/files/Logotype_JJblack__RGB.svg?v=1763891072
+  mondaine.png       https://mondaine.com/cdn/shop/files/Mondaine_logo_black_Final_1.png?v=1739030349  (1435 x 514, transparant)
+  lorus.svg          https://www.loruswatches.com/assets/frontend/common/en/images/logo.svg
+  yara.png           https://cdn.webshopapp.com/shops/356416/themes/185060/v/2723545/assets/logo.png  (logo in de header van https://www.yara-diamonds.com/)
+                     Bewerking: de witte achtergrond is transparant gemaakt en de lege rand bijgesneden (393 x 120). Er is niets getekend of veranderd.
+  blush.svg          logo uit de header van https://blush-jewels.com/en (inline SVG)
+                     Bewerking: alleen het attribuut "viewbox" is "viewBox" gemaakt, zodat het als los SVG-bestand werkt.
+  fjory.png          https://www.sgsonline.nl/ContentFiles/BrandLogo/Brand3/Brand_3_Big_2.jpg (merklogo van Fjory bij fabrikant SGS, Emmen)
+                     Bewerking: de witte achtergrond is transparant gemaakt, bijgesneden en verkleind naar 900 px breed.
+                     Het bronbestand was een JPG zonder transparantie. Vraag liever een transparante SVG/PNG bij SGS of de eigenaar.
 
-Zolang een bestand ontbreekt, toont de site de merknaam als gewone tekst.
+Let op bij Yara: de eigenaar noemt 9 karaat goud, de website yara-diamonds.com noemt 14 karaat gerecycled goud.
+Laat de eigenaar bevestigen dat dit het juiste Yara is.
+
+Een ontbrekend bestand? Dan toont de site de merknaam als tekst in dezelfde plek van het raster.
 
 Regels
-- De logo's moeten van het merk zelf of van de eigenaar komen (merkenpagina, persmap
-  of leverancier). Niet zelf natekenen en niet van een andere website halen.
-- Formaat: SVG (liefst) of PNG met transparante achtergrond. Bij PNG: gebruik de naam
-  met .png en pas de bestandsnaam aan in index.html.
-- Geef het logo een tekst- of lijnkleur die zich laat omzetten naar een kleur: de site
-  kleurt alle logo's zelf zilver (op de donkere merkenband), zodat de rij rustig blijft. De achtergrond moet
-  dus echt transparant zijn (geen wit vlak).
-- Alle logo's worden even hoog getoond (2,75 rem). Snij overtollige witruimte rond het logo weg.
+- Logo's moeten van het merk zelf of van de eigenaar komen (eigen website, persmap of leverancier).
+  Niet zelf natekenen en niet van een niet-officiele site halen.
+- Formaat: SVG (liefst) of PNG met transparante achtergrond. Wisselt u SVG voor PNG (of andersom), pas dan ook de bestandsnaam in index.html aan.
+- De site kleurt alle logo's zelf zilver (CSS-filter), op de donkere merkenband. De achtergrond moet dus echt transparant zijn (geen wit vlak).
+- Optische grootte: elk logo heeft in index.html een eigen breedte (style="--w: ...rem"), zodat brede en hoge logo's even groot ogen. Pas die aan bij een nieuw logo met een andere verhouding.

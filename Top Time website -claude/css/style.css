@@ -596,43 +596,46 @@ mark.todo,
 
 
 /* ---------- 7b. Merken ---------- */
-/* Donkere band, net als "Ons verhaal". Twee groepen naast elkaar (mobiel onder elkaar): foto boven, merken eronder. */
-.brands { overflow: hidden; --frame-offset: 14px; }
+/* Donkere band, net als "Ons verhaal". Twee groepen onder elkaar, per groep een rustig raster
+   met logo's (zilver, optisch even groot). Ontbreekt een logobestand, dan staat de naam als tekst in dezelfde cel. */
 .brands + .story { border-top: 1px solid var(--line-on-dark); }
 .brands .section-head { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .brands__intro { color: var(--muted); font-size: 1.125rem; }
 
-.brands__grid { display: grid; gap: 4.5rem; }
-@media (max-width: 47.99em) { .brands { --frame-offset: 8px; } }
-
-/* Foto's: zelfde zilveren lijst en schaduw als de andere foto's; de lijst steekt rechts en onder uit */
-.brands__photo { width: calc(100% - var(--frame-offset)); margin: 0 0 calc(2rem + var(--frame-offset)); }
-.brands__photo .slot { --ratio: 3 / 2; }
-.brands__photo img { filter: var(--photo-filter-light); }
-
+.brands__group + .brands__group { margin-top: clamp(3rem, 6vw, 5rem); }
 .brands__title {
-  margin-bottom: 0.5rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--muted);
 }
 
-/* Naamplaatjes: grote zilveren naam, dunne lijn eronder */
-.brands__list { list-style: none; margin: 0; padding: 0; }
-.brand {
-  padding-block: 1.1rem 1.15rem;
-  border-bottom: 1px solid var(--line);
-  transition: border-color 0.3s var(--ease);
+.brands__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2.5rem, 5vw, 4rem) 1.5rem;
 }
-@media (hover: hover) {
-  .brand:hover { border-bottom-color: rgba(195, 200, 206, 0.85); }
+@media (min-width: 48em) {
+  .brands__list { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 64em) {
+  .brands__list { grid-template-columns: repeat(5, 1fr); column-gap: 2rem; }
 }
 
-/* Logo of, zolang het bestand er niet staat, de naam als tekst. De klasse .has-logo wordt gezet door onload op de <img>. */
-.brand__mark { display: flex; align-items: center; min-height: 3rem; }
+.brand { display: grid; align-content: start; gap: 0.75rem; }
+
+/* Logo of, zolang het bestand er niet staat, de naam als tekst. De klasse .has-logo wordt gezet door onload op de <img>.
+   Optisch even groot: elk logo krijgt in de HTML een eigen breedte (--w), berekend uit zijn verhouding,
+   zodat brede en hoge logo's even groot ogen. */
+.brand__mark { display: flex; align-items: center; min-height: 4.25rem; }
 .brand__name {
   font-family: var(--serif);
-  font-size: clamp(2.1rem, 1.2vw + 1.7rem, 2.9rem);
+  font-size: clamp(2.1rem, 1.2vw + 1.7rem, 2.6rem);
   font-weight: 400;
   line-height: 1.05;
   color: var(--silver);
@@ -647,18 +650,16 @@ mark.todo,
 .brand.has-logo .brand__name { display: none; }
 .brand.has-logo .brand__logo {
   position: static;
-  width: auto;
-  max-width: 100%;
-  height: 2.75rem;
+  width: min(var(--w, 8rem), 100%);
+  height: auto;
+  max-height: 4.25rem;
+  object-fit: contain;
+  object-position: left center;
   opacity: 1;
-  /* één kleur: alle logo's worden zilver (ca. #C7C7C7) */
+  /* één kleur: elk logo wordt zilver (ca. #C7C7C7) */
   filter: brightness(0) invert(0.78);
 }
-.brand__note { margin: 0.35rem 0 0; font-size: 0.9375rem; color: var(--muted); }
-
-@media (min-width: 48em) {
-  .brands__grid { grid-template-columns: 1fr 1fr; gap: 0 clamp(3rem, 6vw, 6rem); align-items: start; }
-}
+.brand__note { margin: 0; font-size: 0.9375rem; color: var(--muted); }
 
 
 /* ---------- 8. Ons verhaal ---------- */
