@@ -281,6 +281,21 @@ function setupMobileBar() {
 }
 
 
+/* ---------- Reviews: pauzeknop voor de schuivende strook ---------- */
+function setupReviewsPause() {
+  const section = document.querySelector(".reviews");
+  const btn = document.querySelector("[data-reviews-pause]");
+  if (!section || !btn || reduceMotion.matches) return; // bij 'minder beweging' schuift er niets: geen knop nodig
+
+  btn.hidden = false; // zonder JavaScript blijft de knop verborgen (de strook werkt dan gewoon)
+  btn.addEventListener("click", () => {
+    const paused = section.classList.toggle("is-paused");
+    btn.textContent = paused ? "Afspelen" : "Pauzeren";
+    btn.setAttribute("aria-pressed", String(paused));
+  });
+}
+
+
 /* ---------- Onze merken: de lampen gaan aan en de logo's schuiven de vitrine in (eenmalig, per groep) ---------- */
 function setupBrandsIntro() {
   const groups = document.querySelectorAll(".brands__group");
@@ -380,6 +395,7 @@ renderHoursTable();
 setupMap();
 setupHeader();
 setupMobileBar();
+setupReviewsPause();
 setupMotion();
 setupBrandsIntro();
 

@@ -27,6 +27,7 @@
   --silver-hover: #DADEE3;
   --silver-deep: #4D5967;     /* zilvergrijs voor tekst/lijnen op licht (contrast AA) */
   --silver-frame: #9BA5B1;   /* fotolijst op licht (decoratief) */
+  --mist: #E3E9EF;           /* iets diepere lichte tint (reviews) */
   --text-on-dark: #EEF2F6;
   --muted-on-dark: #A9B6C6;
   --text-on-light: #14233A;
@@ -821,6 +822,87 @@ mark.todo,
 }
 
 
+/* ---------- 8b. Reviews ---------- */
+/* Strook die vanzelf van rechts naar links schuift (pure CSS). Twee identieke rijen naast elkaar; de animatie schuift
+   precies een rij op (-50%), dus zonder sprong. Elke kaart heeft een vaste breedte en een marge rechts, zodat beide rijen
+   even breed zijn. Tempo ca. 30px per seconde: --dur = rijbreedte / 30. */
+.section--mist { background: var(--mist); }
+.reviews { overflow: hidden; --card-w: 260px; --card-gap: 1rem; --dur: 140s; }
+@media (min-width: 48em) { .reviews { --card-w: 320px; --card-gap: 1.25rem; --dur: 172s; } }
+
+.reviews__head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem 2rem; }
+.reviews__score { margin: 1.25rem 0 clamp(2rem, 4vw, 3rem); color: var(--muted); }
+
+.reviews__pause {
+  min-height: 2.75rem;
+  padding: 0 1.1rem;
+  background: none;
+  border: 1px solid var(--silver-deep);
+  border-radius: 2px;
+  color: var(--text-on-light);
+  font: 600 0.75rem/1 var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.reviews__pause:hover { background: var(--silver-deep); color: var(--paper); }
+.reviews__pause[hidden] { display: none; }
+
+.reviews__marquee {
+  overflow: hidden;
+  /* zachte fade links en rechts */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+.reviews__track {
+  display: flex;
+  width: max-content;
+  animation: reviews-scroll var(--dur) linear infinite;
+}
+.reviews__row { display: flex; align-items: stretch; margin: 0; padding: 0; list-style: none; }
+@keyframes reviews-scroll { to { transform: translateX(-50%); } }
+
+/* Stil bij hover, aanraken, toetsenbordfocus en met de pauzeknop */
+@media (hover: hover) { .reviews__marquee:hover .reviews__track { animation-play-state: paused; } }
+.reviews__marquee:active .reviews__track,
+.reviews__marquee:focus-within .reviews__track,
+.reviews.is-paused .reviews__track { animation-play-state: paused; }
+
+.review {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: var(--card-w);
+  margin-right: var(--card-gap);
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+}
+.review__quote { margin: 0; }
+.review__quote p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.1875rem;
+  line-height: 1.4;
+  color: var(--text-on-light);
+}
+.review__by { margin: 0; font-size: 0.9375rem; font-weight: 600; color: var(--text-on-light); }
+.review__by span { display: block; margin-top: 0.15rem; font-weight: 400; color: var(--muted); }
+
+.reviews__more { margin: clamp(2rem, 4vw, 3rem) 0 0; }
+.reviews__more .link { display: inline-block; padding-block: 0.6rem; color: var(--text-on-light); }
+
+/* Minder beweging: niets schuift; een gewone rij die je zelf horizontaal scrolt, zonder de herhaalde kopie */
+@media (prefers-reduced-motion: reduce) {
+  .reviews__marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .reviews__track { animation: none; padding-inline: var(--gutter); }
+  .reviews__row[aria-hidden="true"] { display: none; }
+  .reviews__pause { display: none; }
+}
+
+
 /* ---------- 9. Bezoek ons ---------- */
 .visit__grid { display: grid; gap: 3.5rem; }
 
@@ -849,8 +931,6 @@ mark.todo,
 }
 .contact dd { margin: 0; overflow-wrap: anywhere; }
 
-.rating { margin: -2rem 0 3rem; font-size: 0.9375rem; color: var(--muted); }
-.rating .link { display: inline-block; padding-block: 0.6rem; color: inherit; }
 
 .visit__subhead { font-size: 2rem; margin-bottom: 1rem; }
 

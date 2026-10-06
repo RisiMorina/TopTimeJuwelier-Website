@@ -394,10 +394,156 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         4b. REVIEWS
+         Strook die langzaam vanzelf doorschuift (pure CSS). De tweede rij is een kopie voor een naadloze lus
+         (aria-hidden). De pauzeknop komt uit main.js. Quotes staan letterlijk zoals de klanten ze schreven.
+         ========================================================= -->
+    <section class="section section--light section--mist reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews__head" data-reveal>
+          <h2 id="reviews-title">Wat klanten zeggen</h2>
+          <button class="reviews__pause" type="button" data-reviews-pause aria-pressed="false" hidden>Pauzeren</button>
+        </div>
+        <p class="reviews__score" data-reveal><span data-config="googleRating">4,4</span> sterren uit <span data-config="googleReviewCount">74</span> Google-reviews</p>
+      </div>
 
+      <div class="reviews__marquee" tabindex="0" role="region" aria-label="Reviews van klanten">
+        <div class="reviews__track">
+          <ul class="reviews__row">
+            <li class="review">
+              <blockquote class="review__quote"><p>Hele fijne winkel. Nieuw batterijtje in klokje waar je bij staat. Voor weinig ook. En daarna ook weer waterdicht. Eerlijk advies. Heeft tegenwoordig ook sieraden. Echt een aanrader</p></blockquote>
+              <p class="review__by">Robbert<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Fijne zaak, probleem met de sluiting van mijn horloge werd meteen ter plekke opgelost. Heel blij mee! Dankjewel!</p></blockquote>
+              <p class="review__by">Dorien<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Supergoed zaakje, decennia aan kennis en ervaring, in combi met ouderwetse perfecte service. Dat zie je niet veel meer!</p></blockquote>
+              <p class="review__by">Jack<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Een horloge maker die de tijd voor je heeft.</p></blockquote>
+              <p class="review__by">Aad<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Zeer vriendelijke verkoper, leuke winkel midden in Deventer. Kralen herenarmband was na aantal maanden stuk geknapt, kreeg gewoon een nieuwe! Zonder vragen of argwaan. Top service</p></blockquote>
+              <p class="review__by">Gerrie<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Zeer deskundig en vriendelijke eigenaar. Connaisseur, zonder opdringerig te worden. Aanrader</p></blockquote>
+              <p class="review__by">Constant<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Eigenaar is een horlogeliefhebber! Zeer schappelijk prijzen en toch enkele leuke merken voor elke beurs wat wils. Mijn eerste klokje gekocht bij zijn ouders welke een zaak aan de Lange B. hadden.</p></blockquote>
+              <p class="review__by">Xander<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Heel vriendelijk geholpen en echt een goed advies voor een dierbaar horloge gegeven. Je kunt hier zeker terecht voor goed werk! De prijs viel ook echt mee.</p></blockquote>
+              <p class="review__by">M.<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Super aardige man en we werden mega snel geholpen. En hij doet zijn werk altijd met veel passie en plezier!!</p></blockquote>
+              <p class="review__by">Maroussia<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Aardige vent! Zelfs als je niets koopt, geweldige service, zelfs bij een horloge dat ik 8 jaar geleden kocht! Klasse!</p></blockquote>
+              <p class="review__by">Bart<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Keurig, snel en vriendelijk geholpen. Batterij van horloge snel vervangen voor een prima prijs.</p></blockquote>
+              <p class="review__by">Colette<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Een hele kundige en fijne juwelier waar ik al jaren klant ben.</p></blockquote>
+              <p class="review__by">Marieke<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Mooie winkel en aangenaam personeel. Prima geadviseerd en geholpen bij de aanschaf van een nieuw horloge bandje</p></blockquote>
+              <p class="review__by">G.J.<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Perfect, altijd goed geholpen met erg deskundig advies!</p></blockquote>
+              <p class="review__by">Sander<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Hele vriendelijke man, rustig en nette winkel en zeer mooie horloges verkopen ze.</p></blockquote>
+              <p class="review__by">Gezinus<span>via Google</span></p>
+            </li>
+          </ul>
+          <ul class="reviews__row" aria-hidden="true">
+            <li class="review">
+              <blockquote class="review__quote"><p>Hele fijne winkel. Nieuw batterijtje in klokje waar je bij staat. Voor weinig ook. En daarna ook weer waterdicht. Eerlijk advies. Heeft tegenwoordig ook sieraden. Echt een aanrader</p></blockquote>
+              <p class="review__by">Robbert<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Fijne zaak, probleem met de sluiting van mijn horloge werd meteen ter plekke opgelost. Heel blij mee! Dankjewel!</p></blockquote>
+              <p class="review__by">Dorien<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Supergoed zaakje, decennia aan kennis en ervaring, in combi met ouderwetse perfecte service. Dat zie je niet veel meer!</p></blockquote>
+              <p class="review__by">Jack<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Een horloge maker die de tijd voor je heeft.</p></blockquote>
+              <p class="review__by">Aad<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Zeer vriendelijke verkoper, leuke winkel midden in Deventer. Kralen herenarmband was na aantal maanden stuk geknapt, kreeg gewoon een nieuwe! Zonder vragen of argwaan. Top service</p></blockquote>
+              <p class="review__by">Gerrie<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Zeer deskundig en vriendelijke eigenaar. Connaisseur, zonder opdringerig te worden. Aanrader</p></blockquote>
+              <p class="review__by">Constant<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Eigenaar is een horlogeliefhebber! Zeer schappelijk prijzen en toch enkele leuke merken voor elke beurs wat wils. Mijn eerste klokje gekocht bij zijn ouders welke een zaak aan de Lange B. hadden.</p></blockquote>
+              <p class="review__by">Xander<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Heel vriendelijk geholpen en echt een goed advies voor een dierbaar horloge gegeven. Je kunt hier zeker terecht voor goed werk! De prijs viel ook echt mee.</p></blockquote>
+              <p class="review__by">M.<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Super aardige man en we werden mega snel geholpen. En hij doet zijn werk altijd met veel passie en plezier!!</p></blockquote>
+              <p class="review__by">Maroussia<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Aardige vent! Zelfs als je niets koopt, geweldige service, zelfs bij een horloge dat ik 8 jaar geleden kocht! Klasse!</p></blockquote>
+              <p class="review__by">Bart<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Keurig, snel en vriendelijk geholpen. Batterij van horloge snel vervangen voor een prima prijs.</p></blockquote>
+              <p class="review__by">Colette<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Een hele kundige en fijne juwelier waar ik al jaren klant ben.</p></blockquote>
+              <p class="review__by">Marieke<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Mooie winkel en aangenaam personeel. Prima geadviseerd en geholpen bij de aanschaf van een nieuw horloge bandje</p></blockquote>
+              <p class="review__by">G.J.<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Perfect, altijd goed geholpen met erg deskundig advies!</p></blockquote>
+              <p class="review__by">Sander<span>via Google</span></p>
+            </li>
+            <li class="review">
+              <blockquote class="review__quote"><p>Hele vriendelijke man, rustig en nette winkel en zeer mooie horloges verkopen ze.</p></blockquote>
+              <p class="review__by">Gezinus<span>via Google</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-
-
+      <div class="container">
+        <p class="reviews__more">
+          <!-- TODO: controleer dat deze Google Maps-link naar de reviews van Top Time (Spijkerboorsteeg 10, Deventer) gaat; hij gebruikt de place-id van de winkel (TOPTIME.googleReviewsUrl in main.js). -->
+          <a class="link" href="https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs" data-reviews-link target="_blank" rel="noopener">Alle reviews op Google<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
+        </p>
+      </div>
+    </section>
 
     <!-- =========================================================
          5. BEZOEK ONS
@@ -433,10 +579,6 @@
               <dd><a class="link" href="mailto:Info@toptimejuwelier.nl" data-mail data-config="email">Info@toptimejuwelier.nl</a></dd>
             </div>
           </dl>
-
-          <p class="rating" data-reveal>
-            <a class="link" href="https://www.google.com/maps/place/?q=place_id:ChIJvbNIimfqx0cRuLQy41AwDXs" data-reviews-link target="_blank" rel="noopener"><span data-config="googleRating">4,4</span> op Google &middot; <span data-config="googleReviewCount">74</span> reviews<span class="sr-only"> (opent in een nieuw tabblad)</span></a>
-          </p>
 
           <h3 class="visit__subhead" data-reveal>Openingstijden</h3>
           <table class="hours" data-reveal>
