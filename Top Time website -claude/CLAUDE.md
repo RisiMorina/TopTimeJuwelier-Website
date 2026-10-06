@@ -13,14 +13,14 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 - Bandjesfoto-uitsnede: de Morellato-stickers en de gespen horen goed zichtbaar te zijn; het prijskaartje op het bruine bandje (28,00 €) mag in beeld, want het staat echt in de foto. De punten met de gaatjes mogen deels wegvallen. Geen rand van de bak of tafel. Dit vervangt de oude regel "geen labels, geen prijssticker".
 
 ## Kleuren (huiskleur blauw met zilver, wens van de eigenaar)
-- Variabelen bovenin `css/style.css`: `--ink` #1E3550 (marineblauw, donkere secties, knoppen-tekst), `--silver` #C3C8CE (accent op donker, knoppen, de grote 1926), `--paper` #EEF2F6 (koel gebroken wit, lichte secties), `--mist` #E3E9EF (sectie merken), `--silver-deep` #4D5967 (accent/tekst op licht), `--silver-frame` #9BA5B1 (fotolijst op licht).
+- Variabelen bovenin `css/style.css`: `--ink` #1E3550 (marineblauw, donkere secties, knoppen-tekst), `--silver` #C3C8CE (accent op donker, knoppen, de grote 1926), `--paper` #EEF2F6 (koel gebroken wit, lichte secties), `--silver-deep` #4D5967 (accent/tekst op licht), `--silver-frame` #9BA5B1 (fotolijst op licht).
 - Klassen: `.section--light` (was cream), `.btn--silver` (was gold). Fotolijst is zilver; fotofilter is neutraal/koel (`--photo-filter`, geen sepia).
 - Contrast gecontroleerd op WCAG AA (laagste: 4,8 op fotovak-label, tekst minimaal 5,8). Houd dat aan bij nieuwe kleuren.
 - De eerdere regel "bruin/crème/goud" geldt niet meer.
 
 ## Merken
-- Sectie `#merken` (na diensten). Horloges: Seiko, Danish Design, Jacob Jensen, Mondaine, Lorus. Sieraden: Yara (9 karaat goud, lab grown diamant), Blush (14 karaat, lab grown diamant en goud), Fjory (Nederlands fabrikaat).
-- Logo's staan in `assets/images/merken/` als `seiko.svg`, `danish-design.svg`, `jacob-jensen.svg`, `mondaine.svg`, `lorus.svg`, `yara.svg`, `blush.svg`, `fjory.svg`. Zolang een bestand ontbreekt, staat de merknaam als tekst (de `onload` op de `<img>` zet `.has-logo`). CSS kleurt alle logo's marineblauw en zet ze op dezelfde hoogte. Zie `LEESMIJ.txt` in die map.
+- Sectie `#merken` (na diensten): donkere marineband zoals "Ons verhaal", twee groepen naast elkaar (mobiel onder elkaar), per groep een foto (`horloges-vitrine.jpg`, `gouden-kettingen.jpg`, met `.photo`-lijst) en daaronder de merken als naamplaatjes (grote zilveren serifnaam, haarlijn eronder die bij hover op desktop iets helderder wordt). Korte introregel: "Deze merken vindt u bij ons in de winkel." Horloges: Seiko, Danish Design, Jacob Jensen, Mondaine, Lorus. Sieraden: Yara (9 karaat goud, lab grown diamant), Blush (14 karaat, lab grown diamant en goud), Fjory (Nederlands fabrikaat).
+- Logo's staan in `assets/images/merken/` als `seiko.svg`, `danish-design.svg`, `jacob-jensen.svg`, `mondaine.svg`, `lorus.svg`, `yara.svg`, `blush.svg`, `fjory.svg`. Zolang een bestand ontbreekt, staat de merknaam als tekst (de `onload` op de `<img>` zet `.has-logo`). CSS kleurt alle logo's zilver (`filter: brightness(0) invert(0.78)`) en zet ze op dezelfde hoogte. Zie `LEESMIJ.txt` in die map.
 - **Logo-regel (de eigenaar heeft de oude regel "geen merklogo's" vervangen):** merklogo's mogen, maar alleen aangeleverd door het merk of de eigenaar. Nooit zelf tekenen of verzinnen, nooit hotlinken. Geen prijzen, productgrid of links naar webshops.
 
 ## Mobiele actiebalk

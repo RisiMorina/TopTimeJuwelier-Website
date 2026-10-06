@@ -259,73 +259,92 @@
          Logo's: assets/images/merken/<naam>.svg (zie LEESMIJ.txt daar). Zolang een bestand
          ontbreekt, staat de merknaam als tekst. Logo's moeten van het merk of de eigenaar komen.
          ========================================================= -->
-    <section class="section section--light section--mist brands" id="merken" aria-labelledby="merken-title">
+    <section class="section section--dark brands" id="merken" aria-labelledby="merken-title">
       <div class="container">
         <header class="section-head">
           <h2 id="merken-title" data-reveal>Onze merken</h2>
+          <p class="brands__intro" data-reveal>Deze merken vindt u bij ons in de winkel.</p>
         </header>
 
-        <div class="brands__group" data-reveal>
-          <h3 class="brands__title">Horloges</h3>
-          <ul class="brands__list">
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/seiko.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Seiko</span>
-              </span>
-            </li>
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/danish-design.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Danish Design</span>
-              </span>
-            </li>
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/jacob-jensen.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Jacob Jensen</span>
-              </span>
-            </li>
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/mondaine.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Mondaine</span>
-              </span>
-            </li>
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/lorus.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Lorus</span>
-              </span>
-            </li>
-          </ul>
-        </div>
+        <div class="brands__grid">
+          <div class="brands__group" data-reveal>
+            <figure class="brands__photo photo">
+              <div class="slot">
+                <span class="slot__label">FOTO: horloge in geschenkdoos</span>
+                <img src="assets/images/horloges-vitrine.jpg" style="object-position: 50% 82%"
+                     alt="Horloge met leren band in een geopende geschenkdoos"
+                     width="1200" height="1500" loading="lazy" decoding="async" onerror="this.remove()">
+              </div>
+            </figure>
+            <h3 class="brands__title">Horloges</h3>
+            <ul class="brands__list">
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/seiko.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Seiko</span>
+                </span>
+              </li>
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/danish-design.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Danish Design</span>
+                </span>
+              </li>
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/jacob-jensen.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Jacob Jensen</span>
+                </span>
+              </li>
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/mondaine.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Mondaine</span>
+                </span>
+              </li>
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/lorus.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Lorus</span>
+                </span>
+              </li>
+            </ul>
+          </div>
 
-        <div class="brands__group" data-reveal>
-          <h3 class="brands__title">Sieraden</h3>
-          <ul class="brands__list brands__list--jewels">
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/yara.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Yara</span>
-              </span>
-              <p class="brand__note">9 karaat goud, lab grown diamant</p>
-            </li>
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/blush.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Blush</span>
-              </span>
-              <p class="brand__note">14 karaat, lab grown diamant en goud</p>
-            </li>
-            <li class="brand">
-              <span class="brand__mark">
-                <img class="brand__logo" src="assets/images/merken/fjory.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
-                <span class="brand__name">Fjory</span>
-              </span>
-              <p class="brand__note">Nederlands fabrikaat</p>
-            </li>
-          </ul>
+          <div class="brands__group" data-reveal>
+            <figure class="brands__photo photo">
+              <div class="slot">
+                <span class="slot__label">FOTO: gouden kettingen</span>
+                <img src="assets/images/gouden-kettingen.jpg" style="object-position: 0% 50%"
+                     alt="Gouden kettingen op witte paspoppen in de vitrine"
+                     width="1932" height="869" loading="lazy" decoding="async" onerror="this.remove()">
+              </div>
+            </figure>
+            <h3 class="brands__title">Sieraden</h3>
+            <ul class="brands__list">
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/yara.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Yara</span>
+                </span>
+                <p class="brand__note">9 karaat goud, lab grown diamant</p>
+              </li>
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/blush.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Blush</span>
+                </span>
+                <p class="brand__note">14 karaat, lab grown diamant en goud</p>
+              </li>
+              <li class="brand">
+                <span class="brand__mark">
+                  <img class="brand__logo" src="assets/images/merken/fjory.svg" alt="" width="160" height="36" decoding="async" onload="this.closest('.brand').classList.add('has-logo')">
+                  <span class="brand__name">Fjory</span>
+                </span>
+                <p class="brand__note">Nederlands fabrikaat</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
