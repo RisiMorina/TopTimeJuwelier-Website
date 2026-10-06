@@ -281,45 +281,48 @@ function setupMobileBar() {
 }
 
 
-/* ---------- Onze merken: de lampen van de vitrine gaan aan (eenmalig) ---------- */
+/* ---------- Onze merken: de lampen gaan aan en de logo's schuiven de vitrine in (eenmalig, per groep) ---------- */
 function setupBrandsIntro() {
-  const section = document.querySelector(".brands");
-  if (!section || reduceMotion.matches || !window.gsap || !("IntersectionObserver" in window)) return;
+  const groups = document.querySelectorAll(".brands__group");
+  if (!groups.length || reduceMotion.matches || !window.gsap || !("IntersectionObserver" in window)) return;
 
-  const lists = section.querySelectorAll(".brands__list");
-  const cells = section.querySelectorAll(".brand");
-  const done = () => {
-    gsap.set([lists, cells, ".brand__mark", ".brand__note"], { clearProps: "all" });
-    section.classList.remove("brands--anim");
-  };
+  groups.forEach((group) => {
+    const list = group.querySelector(".brands__list");
+    const cells = group.querySelectorAll(".brand");
+    const done = () => {
+      gsap.set([list, cells, group.querySelectorAll(".brand__mark, .brand__note")], { clearProps: "all" });
+      group.classList.remove("brands__group--anim");
+    };
 
-  section.classList.add("brands--anim"); // verbergt de vakken tot de intro loopt
+    group.classList.add("brands__group--anim"); // verbergt de logo's tot de intro van deze groep loopt
 
-  const io = new IntersectionObserver((entries) => {
-    const e = entries[entries.length - 1];
-    // 25% van de sectie in beeld, of (bij een heel hoge sectie) het grootste deel van het scherm
-    const enough = e.isIntersecting &&
-      (e.intersectionRatio >= 0.25 || e.intersectionRect.height >= e.rootBounds.height * 0.6);
-    if (!enough) return;
-    io.disconnect(); // één keer, nooit opnieuw
+    const io = new IntersectionObserver((entries) => {
+      const e = entries[entries.length - 1];
+      // 30% van de groep in beeld, of (bij een heel hoge groep) het grootste deel van het scherm
+      const enough = e.isIntersecting &&
+        (e.intersectionRatio >= 0.3 || e.intersectionRect.height >= e.rootBounds.height * 0.6);
+      if (!enough) return;
+      io.disconnect(); // één keer, nooit opnieuw
 
-    try {
-      const tl = gsap.timeline({ onComplete: done });
-      // 1. de zilveren lijntjes trekken zich open
-      tl.to(lists, { "--line": 1, duration: 0.6, ease: "power2.out" });
-      // 2. de vakken gaan één voor één aan: eerst Horloges, dan Sieraden (volgorde van de pagina)
-      cells.forEach((cell, i) => {
-        const at = 0.6 + i * 0.08;
-        tl.to(cell, { "--spot": 1, duration: 0.5, ease: "power2.out" }, at);
-        tl.fromTo(cell.querySelectorAll(".brand__mark, .brand__note"),
-          { opacity: 0, y: 12, filter: "blur(6px)" },
-          { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, at);
-      });
-    } catch (err) {
-      done(); // gaat er iets mis: gewoon alles tonen
-    }
-  }, { threshold: [0, 0.25, 0.5] });
-  io.observe(section);
+      try {
+        const tl = gsap.timeline({ onComplete: done });
+        // 1. de zilveren lijntjes trekken zich open
+        tl.to(list, { "--line-scale": 1, duration: 0.6, ease: "power2.out" });
+        // 2. de logo's schuiven om en om van boven en van onder hun vak in (het vak knipt ze af)
+        cells.forEach((cell, i) => {
+          const at = 0.6 + i * 0.1;
+          const from = (i % 2 === 0 ? -1 : 1) * cell.offsetHeight; // 1e van boven, 2e van onder, enz.
+          tl.to(cell, { "--spot": 1, duration: 0.8, ease: "power3.out" }, at);
+          tl.fromTo(cell.querySelectorAll(".brand__mark, .brand__note"),
+            { opacity: 0, y: from },
+            { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, at);
+        });
+      } catch (err) {
+        done(); // gaat er iets mis: gewoon alles tonen
+      }
+    }, { threshold: [0, 0.3, 0.6] });
+    io.observe(group);
+  });
 }
 
 

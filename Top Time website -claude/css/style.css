@@ -628,7 +628,7 @@ mark.todo,
   inset: 0;
   z-index: -1;
   background: var(--line-on-dark);
-  transform: scaleX(var(--line, 1));
+  transform: scaleX(var(--line-scale, 1));
   transform-origin: 0 50%;
 }
 .brands__list--watches { grid-template-columns: repeat(2, 1fr); }
@@ -739,13 +739,15 @@ mark.todo,
 }
 
 
-/* Intro (main.js): de lampen van de vitrine gaan aan. De klasse .brands--anim komt er alleen als JavaScript en GSAP
-   werken en er geen 'minder beweging' is ingesteld; main.js haalt hem na afloop weer weg. Anders is alles gewoon zichtbaar. */
-.brands--anim .brands__list { --line: 0; }
-.brands--anim .brand { --spot: 0; }
-.brands--anim .brand::before { transition: none; }
-.brands--anim .brand__mark,
-.brands--anim .brand__note { opacity: 0; }
+/* Intro (main.js): de lampen van de vitrine gaan aan. De klasse .brands__group--anim komt er alleen als JavaScript en GSAP
+   werken en er geen 'minder beweging' is ingesteld; main.js haalt hem na afloop weer weg. Anders is alles gewoon zichtbaar.
+   Per groep (.brands__group), want elke groep speelt af als hij zelf in beeld komt. Het vak knipt de logo's af (overflow). */
+.brand { overflow: hidden; }
+.brands__group--anim .brands__list { --line-scale: 0; }
+.brands__group--anim .brand { --spot: 0; }
+.brands__group--anim .brand::before { transition: none; }
+.brands__group--anim .brand__mark,
+.brands__group--anim .brand__note { opacity: 0; }
 
 
 /* ---------- 8. Ons verhaal ---------- */
