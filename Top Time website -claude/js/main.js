@@ -281,6 +281,48 @@ function setupMobileBar() {
 }
 
 
+/* ---------- Onze merken: de lampen van de vitrine gaan aan (eenmalig) ---------- */
+function setupBrandsIntro() {
+  const section = document.querySelector(".brands");
+  if (!section || reduceMotion.matches || !window.gsap || !("IntersectionObserver" in window)) return;
+
+  const lists = section.querySelectorAll(".brands__list");
+  const cells = section.querySelectorAll(".brand");
+  const done = () => {
+    gsap.set([lists, cells, ".brand__mark", ".brand__note"], { clearProps: "all" });
+    section.classList.remove("brands--anim");
+  };
+
+  section.classList.add("brands--anim"); // verbergt de vakken tot de intro loopt
+
+  const io = new IntersectionObserver((entries) => {
+    const e = entries[entries.length - 1];
+    // 25% van de sectie in beeld, of (bij een heel hoge sectie) het grootste deel van het scherm
+    const enough = e.isIntersecting &&
+      (e.intersectionRatio >= 0.25 || e.intersectionRect.height >= e.rootBounds.height * 0.6);
+    if (!enough) return;
+    io.disconnect(); // één keer, nooit opnieuw
+
+    try {
+      const tl = gsap.timeline({ onComplete: done });
+      // 1. de zilveren lijntjes trekken zich open
+      tl.to(lists, { "--line": 1, duration: 0.6, ease: "power2.out" });
+      // 2. de vakken gaan één voor één aan: eerst Horloges, dan Sieraden (volgorde van de pagina)
+      cells.forEach((cell, i) => {
+        const at = 0.6 + i * 0.08;
+        tl.to(cell, { "--spot": 1, duration: 0.5, ease: "power2.out" }, at);
+        tl.fromTo(cell.querySelectorAll(".brand__mark, .brand__note"),
+          { opacity: 0, y: 12, filter: "blur(6px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power2.out" }, at);
+      });
+    } catch (err) {
+      done(); // gaat er iets mis: gewoon alles tonen
+    }
+  }, { threshold: [0, 0.25, 0.5] });
+  io.observe(section);
+}
+
+
 /* ---------- Subtiele animaties (GSAP) ---------- */
 function setupMotion() {
   if (reduceMotion.matches || !window.gsap || !window.ScrollTrigger) return;
@@ -336,6 +378,7 @@ setupMap();
 setupHeader();
 setupMobileBar();
 setupMotion();
+setupBrandsIntro();
 
 // Openingsstatus elke minuut bijwerken
 setInterval(renderOpenStatus, 60000);
