@@ -210,28 +210,22 @@ function renderHoursTable() {
 }
 
 
-/* ---------- Google Maps: pas laden als de kaart in beeld komt ---------- */
+/* ---------- Google Maps: pas laden na een klik op "Kaart laden" ---------- */
 function setupMap() {
   const box = document.querySelector("[data-map]");
-  if (!box || (!addressKnown() && !TOPTIME.mapsQuery)) return;
+  const consent = box && box.querySelector("[data-map-consent]");
+  const button = box && box.querySelector("[data-map-load]");
+  if (!box || !button || (!addressKnown() && !TOPTIME.mapsQuery)) return;
 
-  const load = () => {
+  consent.hidden = false;
+  button.addEventListener("click", () => {
     const iframe = document.createElement("iframe");
     iframe.src = "https://www.google.com/maps?output=embed&q=" + encodeURIComponent(mapsQuery());
     iframe.title = `Kaart met de locatie van ${TOPTIME.name} in ${TOPTIME.city}`;
-    iframe.loading = "lazy";
     iframe.referrerPolicy = "no-referrer-when-downgrade";
+    box.querySelector(".map__placeholder").remove();
     box.appendChild(iframe);
-  };
-
-  if (!("IntersectionObserver" in window)) return load();
-  const io = new IntersectionObserver((entries) => {
-    if (entries.some((e) => e.isIntersecting)) {
-      io.disconnect();
-      load();
-    }
-  }, { rootMargin: "300px" });
-  io.observe(box);
+  });
 }
 
 

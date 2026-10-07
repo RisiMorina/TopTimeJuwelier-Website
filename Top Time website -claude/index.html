@@ -26,10 +26,9 @@
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <!-- ===== Lettertypen ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- ===== Lettertypen (eigen bestanden, @font-face staat in css/style.css) ===== -->
+  <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/karla.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -93,8 +92,8 @@
   </script>
 
   <!-- GSAP alleen voor subtiele animaties. Zonder GSAP werkt de site gewoon. -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 
@@ -606,9 +605,15 @@
             </div>
           </figure>
 
-          <!-- De kaart wordt pas geladen als deze in beeld komt (scheelt laadtijd). -->
+          <!-- De kaart van Google wordt pas geladen na een klik op "Kaart laden" (privacy, zie js/main.js). -->
           <div class="map" data-map>
-            <p class="map__placeholder">KAART: verschijnt hier zodra het adres is ingevuld</p>
+            <div class="map__placeholder">
+              <p class="map__address">Spijkerboorsteeg 10<br>7411 JG Deventer</p>
+              <div class="map__consent" data-map-consent hidden>
+                <button class="btn btn--ink" type="button" data-map-load>Kaart laden</button>
+                <p class="map__note">De kaart wordt geladen via Google. Google kan daarbij cookies plaatsen.</p>
+              </div>
+            </div>
           </div>
           <p class="visit__maplink">
             <a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Top%20Time%2C%20Spijkerboorsteeg%2010%2C%207411%20JG%20Deventer" data-route target="_blank" rel="noopener">Open in Google Maps en plan uw route</a>

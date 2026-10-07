@@ -1,6 +1,6 @@
 # Top Time (juwelier, Deventer): one-page site
 
-Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/main.js`, `assets/images/`. Geen build, geen framework. GSAP via CDN voor subtiele scroll-animatie (de site werkt ook zonder).
+Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/main.js`, `assets/images/`. Geen build, geen framework. GSAP en ScrollTrigger 3.12.5 staan lokaal in `js/vendor/` voor subtiele scroll-animatie (de site werkt ook zonder).
 
 ## Structuur
 - Secties in `index.html`: header, hero, diensten, onze merken, ons verhaal, reviews, bezoek ons, footer, mobiele actiebalk.
@@ -17,6 +17,11 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 - Klassen: `.section--light` (was cream), `.btn--silver` (was gold). Fotolijst is zilver; fotofilter is neutraal/koel (`--photo-filter`, geen sepia).
 - Contrast gecontroleerd op WCAG AA (laagste: 4,8 op fotovak-label, tekst minimaal 5,8). Houd dat aan bij nieuwe kleuren.
 - De eerdere regel "bruin/crème/goud" geldt niet meer.
+
+## Zelf gehost, kaart na klik
+- Lettertypen staan in `assets/fonts/` (`cormorant-garamond.woff2`, `karla.woff2`; variabele fonts, alleen latin; de site gebruikt geen cursief) met `@font-face` bovenin `css/style.css`. Geen Google Fonts-links meer. Nieuw gewicht of cursief nodig: eerst het bestand toevoegen.
+- GSAP en ScrollTrigger: `js/vendor/gsap.min.js` en `ScrollTrigger.min.js`, met `defer`, in die volgorde.
+- Kaart in "Bezoek ons": `.map` toont een placeholder met adres en knop "Kaart laden" (`data-map-load`, via JavaScript zichtbaar gemaakt). Pas na de klik maakt `setupMap()` de Google Maps-iframe aan; zonder klik gaat er niets naar Google. De link "Route plannen" blijft gewoon werken.
 
 ## Merken
 - Sectie `#merken` (na diensten): donkere marineband zoals "Ons verhaal", zonder foto's, opgezet als verlichte vitrine. Twee groepen onder elkaar (Horloges, Sieraden) met een klein serif-label. Elk merk staat in een eigen vak; de vakken worden gescheiden door 1px zilveren lijntjes (het is de `gap` van het grid, de lijst heeft de lijnkleur als achtergrond), met een zachte radiale spot van boven (`.brand::before`). Geen kaarten, geen schaduw. Horloges: 5 vakken op een rij (desktop), 3+2 (tablet), 2 kolommen met het laatste vak over de volle breedte (mobiel). Sieraden: 3 brede vakken (vanaf 48em), 1 kolom op mobiel. Logo's staan gecentreerd, sub-regels (`.brand__note`) eronder.
@@ -54,5 +59,5 @@ Statische one-pager: `index.html` (plus `privacy.html`), `css/style.css`, `js/ma
 - **WhatsApp**: nog niet bevestigd door de eigenaar. De WhatsApp-regel in "Bezoek ons" staat in commentaar in `index.html` (nummer 06 57 54 87 22). Terugzetten (en "Bel ons gerust even" weer naar "Bel of app ons gerust even" op de plek in `visit__intro`) zodra de eigenaar akkoord geeft.
 - Site-URL is `https://toptimejuwelier.nl` (zonder www): canonical, og:url, og:image in de `<head>` en `TOPTIME.websiteUrl` in `main.js`. Bij een domeinwissel overal aanpassen.
 - `TOPTIME.priceBattery` is niet in gebruik; alleen invullen als de eigenaar een prijs wil tonen.
-- `privacy.html` (statisch, zonder JavaScript, gelinkt vanuit de footer) heeft nog drie gemarkeerde TODO's: bewaartermijn van berichten, of de Google Maps-kaart cookies plaatst, waar de site gehost wordt en of er IP-logs zijn. Controleer ook bij een nieuwe tool (analytics, formulier, WhatsApp) of de privacytekst nog klopt.
+- `privacy.html` (statisch, zonder JavaScript, gelinkt vanuit de footer) is ingevuld: geen open TODO's meer. Controleer bij een nieuwe tool (analytics, formulier, WhatsApp, externe lettertypen of scripts) of de privacytekst nog klopt. De tekst zegt dat er geen trackingcookies/analyse zijn en dat lettertypen en scripts van de eigen server komen; houd dat waar.
 - `robots.txt` en `sitemap.xml` staan in de root (sitemap: `index.html` en `privacy.html`).

@@ -18,6 +18,22 @@
    ========================================================= */
 
 
+/* Lettertypen: eigen bestanden (variabele woff2, alleen latin), geen verbinding met Google. */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("../assets/fonts/cormorant-garamond.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("../assets/fonts/karla.woff2") format("woff2");
+}
+
 /* ---------- 1. Variabelen ---------- */
 :root {
   /* Kleuren */
@@ -132,7 +148,7 @@ a { color: inherit; }
 .skip-link:focus { top: 1rem; }
 
 /* Plekken die u nog moet invullen vallen zo op. Verwijder de <mark> zodra de tekst er staat. */
-mark.todo,
+
 .is-placeholder {
   background: rgba(195, 200, 206, 0.28);
   color: inherit;
@@ -171,6 +187,9 @@ mark.todo,
 
 .btn--silver { background: var(--silver); color: var(--ink); }
 .btn--silver:hover { background: var(--silver-hover); }
+
+.btn--ink { background: var(--ink); color: var(--paper); }
+.btn--ink:hover { background: #2B4868; }
 
 .btn--ghost { border-color: rgba(238, 242, 246, 0.55); color: var(--text-on-dark); }
 .btn--ghost:hover { border-color: var(--silver); color: var(--silver); }
@@ -963,7 +982,7 @@ mark.todo,
 
 .map {
   position: relative;
-  aspect-ratio: 4 / 3;
+  height: 19rem;
   background: #D9E0E8;
   overflow: hidden;
 }
@@ -978,18 +997,32 @@ mark.todo,
 .map__placeholder {
   position: absolute;
   inset: 0.75rem;
-  display: grid;
-  place-items: center;
-  max-width: none;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
   padding: 1rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--silver-frame);
   text-align: center;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #455264;
+}
+.map__address {
+  margin: 0;
+  max-width: none;
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 1vw + 1.2rem, 2rem);
+  font-weight: 500;
+  font-variant-numeric: lining-nums;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.map__consent { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+.map__note {
+  margin: 0;
+  max-width: 28ch;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--silver-deep);
 }
 .visit__maplink { margin-top: 1.25rem; }
 
@@ -998,7 +1031,9 @@ mark.todo,
 .visit__photo { margin: 0 0 2.25rem; }
 .visit__photo .slot { --ratio: 4 / 3; }
 .visit__photo .slot img { filter: var(--photo-filter-light); }
-.visit__map .map { aspect-ratio: 16 / 9; }
+@media (min-width: 48em) {
+  .visit__map .map { aspect-ratio: 16 / 9; height: auto; }
+}
 
 @media (min-width: 64em) {
   .visit__grid { grid-template-columns: repeat(12, 1fr); gap: 0 2rem; }
